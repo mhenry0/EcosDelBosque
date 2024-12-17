@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure Packages | Ecos del Bosque</title>
+    <!-- Add icon link -->
+    <link rel="icon" href="../img/blackbg.png" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts: Lato and DM Serif Display -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <!-- Include Font Awesome if not already in your project -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../styles/styles.css"> 
+    <script src="../script/script.js"></script>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" id="navbar">
+    <div class="container">
+        <a class="navbar-brand" href="./Home.html">
+            <img src="../img/blackbg.png" alt="Ecos del Bosque Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="./Home.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="./Wildlife.html">Wildlife</a></li>
+                <li class="nav-item"><a class="nav-link" href="./Rooms.html">Rooms</a></li>
+                <li class="nav-item"><a class="nav-link" href="./Tours.html">Tours</a></li>
+                <li class="nav-item"><a class="nav-link" href="./Farm.html">Eco-Farm</a></li>
+                <li class="nav-item"><a class="nav-link" href="./Contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="">Booking</a></li>
+                <li class="nav-item"><a class="nav-link" href="./Us.html" style="color: #28a745;">Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="./About.html">About</a></li>
+                
+                <!-- Icon button to toggle translation element -->
+                <button class="btn btn-link" onclick="toggleTranslate()" aria-expanded="false" style="font-size: 1.5rem;">
+                    <i class="fas fa-globe"></i>
+                </button>
+
+                <!-- Translation element, initially hidden -->
+                <div id="translateContainer" style="display: none; text-align: center;">
+                    <div id="google_translate_element"></div>
+                </div>
+
+                <!-- Translation script -->
+                <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+                    }
+
+                    // Function to toggle the translation element
+                    function toggleTranslate() {
+                        const translateContainer = document.getElementById('translateContainer');
+                        translateContainer.style.display = translateContainer.style.display === 'none' ? 'block' : 'none';
+                    }
+                </script>
+
+                <!-- Load Google Translate script -->
+                <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section class="hero">
+    <img src="../img/packages.JPG" alt="Adventure Packages Background" class="hero-image">
+    <div class="container">
+        <h1>Ecos del Bosque</h1>
+        <a href="#" class="btn btn-custom">Book Your Adventure</a>
+    </div>
+</section>
+
+<br>
+
+<h1 style="text-align: center; font-size: 30px; color: #0C8A20">
+    <br>
+    <b>Adventure Packages</b>  
+</h1>
+
+<br>
+
+<div style="padding-left: 20px; font-style: lato; font-size: 30px; line-height: 1.6;">
+
+    <div style="font-family: 'lato'; line-height: 1.6; font-size: 20px; color: #333;">
+        <p style="text-align: center;">
+            <strong>Explore the Hidden Wonders of the Osa Peninsula</strong>
+        </p>
+        <p>
+            At <strong>Ecos del Bosque</strong>, we offer unique and immersive adventure packages designed to help you connect with the natural beauty of the Osa Peninsula. Whether you're seeking thrilling hikes, birdwatching tours, or a relaxing day immersed in the rainforest, we have something for every adventurer.
+        </p>
+        <p>
+            Our adventure packages provide guests with the opportunity to experience the wild, untouched landscapes of our private wildlife reserve. Guided by local experts, you'll discover secret trails, hidden waterfalls, and exotic wildlife that can only be found in this remote corner of Costa Rica.
+        </p>
+        <p>
+            From morning hikes to evening nature walks, each adventure is designed to offer an unforgettable experience in the heart of nature. Every package includes a blend of outdoor exploration, relaxation, and the chance to immerse yourself in the local culture.
+        </p>
+        <p><b>What does it include?</b> </p>
+        <p>
+            <ol>
+                <li>Half-Pension Package Breakfast and Dinner or Lunch</li>
+                <li>Free drinks and snacks on your arrival</li>
+                <li>Lodging</li>
+                <li>Private Tours</li>
+                <li>Free cocktail welcome drink</li>
+            </ol>
+        </p>
+        <p><b>Why are these packages suitable for you?</b></p>
+        <p>We offer a discounted price for clients who buy this packages before arriving. It is a money-wise decision since it is more expensive to do the private tours if not pre-arranged.
+        <br>
+        Therefore, we offer the option of having all organized by us.
+        </p>
+
+        <h3 style="font-family: lato;">Our Adventure Packages:</h3>
+
+        <ul>
+            <div class="accordion" id="adventurePackagesAccordion" >
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne" >
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"  style="font-size: 20px; font-family:lato">
+                            Golden Package
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#adventurePackagesAccordion">
+                        <div class="accordion-body">
+                            <p>
+                                The <strong>Golden Package</strong> offers the ultimate connection with nature through a curated adventure that showcases the Osa Peninsula’s most captivating secrets. 
+                                Perfect for those seeking a truly unforgettable experience, this package combines exploration, relaxation, and indulgence.
+                            </p>
+                            <p>
+                                <b>What does it include?</b>
+                                <br>
+                                <br>
+                                It includes 4 private tours + dinner or lunch during your stay. The breakfast is already included.
+                                <br>
+                                <br>
+                                First a thrilling <strong>1-Nightwalk Adventure</strong>, where you’ll witness the forest come alive after sunset and discover the fascinating behaviors of nocturnal creatures under the guidance of an expert naturalist. 
+                                The <strong>2-Natural History Hike</strong> takes you through lush trails, unveiling the unique flora, fauna, and geological wonders of the region. 
+                                On the <strong>3-Medicinal Plants and Farm Tour</strong>, you’ll gain valuable insights into the healing properties of local plants, and you will see firsthand how we work with the land.
+                            </p>
+                            <p>
+                                A highlight of the package is the <strong>4-Hidden Waterfall Tour</strong>, where you’ll venture off the beaten path to uncover a secluded waterfall, perfect for a refreshing swim or simply soaking in the serene ambiance. 
+                                To complete your experience, you’ll enjoy delicious meals, including dinner the first day and lunch the second day <strong></strong>, along with a <strong>freshly prepared breakfast</strong> crafted from local ingredients to energize and delight you.
+                            </p>
+                            <p>
+                                This all-inclusive experience allows you to explore the natural beauty of the Osa Peninsula while savoring its tastes and tranquility. 
+                                Book your <strong>Golden Package</strong> now to create memories that will last a lifetime!
+                                <br>
+                                <br>
+                                <b>The Schedule</b>
+                                <br>
+                                <br>
+                                The Nightwalk is done the first day. The second day we do the Natural History Hike, Medicinal Plants and Farm, and the Hidden Waterfall hike.
+                                <br>
+                                <br>
+                                <b>Time</b>
+                                <br>
+                                <br>
+                                The nightwalk takes 2 hours and it starts at 7 PM.
+                                The other 3 tours start at 6 AM with the Natural History Hike, it takes 2 - 2.5 hours (we can even start at 5.30 AM so that we can do early birding as well).
+                                <br><br>Then, when we return we eat breakfast. After that we do the Medicinal Plants and Farm Tour for 1 hour. Finally, we head to the Hidden Waterfall Hike which takes 2 hours. It is an approximation, it will depend on the interest of the client and how long they want to stay at each stop (the waterfall), we can stay for 2 - 2.5 hours, it is a 25 minutes walk each way.
+                                <br><br>Right after coming from the waterfall the lunch is included at a local restaurant, the best fried tilapia along the Pacific. At the place we also do a tour around to learn all about pisciculture: extra tour <b>5-The Agriculture of Fish Production</b>.
+                            </p>
+                            
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"  style="font-size: 20px; font-family:lato">
+                            Silver Package
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#adventurePackagesAccordion">
+                        <div class="accordion-body">
+                            <p>
+                                Immerse yourself in the wonders of the Osa Peninsula with our Silver Nature Package. <br>
+                                Perfect for those seeking a memorable yet concise adventure, this package combines exploration and tranquility, allowing you to connect deeply with nature.
+                                </p>
+                                
+                                <p>
+                                <b>What Does It Include?</b><br>
+                                This package includes 2 private tours along with a delightful lunch or dinner during your stay. <br>
+                                Breakfast is already included as part of your experience.
+                                </p>
+                                
+                                <p>
+                                <b>Included Tours:
+                                </b>
+                                <br>
+                                <br>
+                                <b>Nocturnal Wildlife Encounter:</b> An exciting Nightwalk, where you’ll experience the forest after dark and witness the fascinating activities of nocturnal wildlife. An expert naturalist will guide you through this captivating journey. <br><br>
+                                <b>Guided Natural History Hike:</b> Explore lush trails during the day and uncover the secrets of the region’s unique ecosystems, including its flora, fauna, and geological marvels.
+                                </p>
+                                
+                                <p>
+                                <b>The Schedule:</b><br>
+                                <p>This is a super flexible package, you can choose to do the nightwalk either the first or the second day, as well as the natural history hike.</p>
+                                Nightwalk at 7 PM, lasting approximately 2 hours. <br>
+                                Natural History Hike at 6 AM (or earlier if you’d like to enjoy some early birding), lasting 2 to 2.5 hours. <br><br>
+                                <b>IMPORTANT NOTICE:</b> You can take 2 dinners or 1 lunch + 1 dinner. It is your choice.
+                            </p>
+                         </div>
+                    </div>
+                </div>
+            
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"  style="font-size: 20px; font-family:lato">
+                            Emerald Package
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#adventurePackagesAccordion">
+                        <div class="accordion-body">
+                            <p>
+                            Immerse yourself in the enchanting beauty of the rainforest with our Emerald Package. <br>
+                            Perfect for nature enthusiasts, this package combines the thrill of nighttime exploration with delightful culinary experiences, offering a perfect balance of adventure and indulgence.
+                            </p>
+
+                            <p>
+                            <b>What Does It Include?</b><br>
+                            This package features the unique Nightwalk Tour and includes 2 delicious dinners during your stay. <br>
+                            Breakfast is already included as part of the experience.
+                            </p>
+
+                            <p>
+                            <b>Included Tour:</b><br>
+                            <b>Nocturnal Wildlife Encounter:</b> Discover the mysteries of the rainforest after sunset on our captivating Nightwalk. <br>
+                            Guided by an expert naturalist, you’ll uncover the fascinating behaviors of nocturnal wildlife and witness the forest come alive under the stars. <br>
+                            This thrilling journey offers a truly unforgettable experience for adventurers and nature lovers alike.
+                            </p>
+
+                            <p>
+                            <b>The Schedule:</b><br>
+                            <b>Day 1 (Arrival Day):</b> Enjoy a delicious dinner upon arrival, setting the tone for your rainforest adventure. <br>
+                            <b>Day 2:</b> Begin your day with a hearty breakfast and spend the day at your leisure. As night falls, embark on the Nightwalk Tour at 7 PM, lasting approximately 2 hours. <br>
+                            Return to a delightful dinner to end your evening. <br>
+                            <b>Day 3:</b> After breakfast, enjoy the Medicinal Plants Tour, which lasts approximately 1 hour. <br><br>
+                            This carefully curated package ensures a seamless blend of exploration and relaxation, making your stay truly memorable.
+                        
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"  style="font-size: 20px; font-family:lato">
+                            Diamond Package
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#adventurePackagesAccordion">
+                        <div class="accordion-body">
+                            <p>
+                            Experience the best of nature and discovery with our Diamond Package. <br>
+                            Perfect for those who want to delve deep into the natural wonders of the Osa Peninsula, this package combines exploration with insights into the region’s rich biodiversity and traditions.
+                            </p>
+                            
+                            <p>
+                            <b>What Does It Include?</b><br>
+                            This package features the Natural History Hike and the Medicinal Plants Tour, offering a comprehensive exploration of the area's unique ecosystems and cultural heritage. <br>
+                            Breakfast is included to start your day right.
+                            </p>
+                            
+                            <p>
+                            <b>Included Tours:</b><br>
+                            <b>Guided Natural History Hike:</b> Explore lush rainforest trails as you uncover the secrets of the region’s diverse flora, fauna, and geological wonders. <br>
+                            Led by an expert guide, this hike offers an in-depth look at the natural beauty of the Osa Peninsula. <br><br>
+                            <b>Medicinal Plants Tour:</b> Learn about the healing properties of local plants and their importance to the region’s heritage. <br>
+                            This interactive tour provides valuable insights into sustainable farming practices and the connection between people and nature.
+                            </p>
+                            
+                            <p>
+                            <b>The Schedule:</b><br>
+                            <b>Day 1 (Arrival Day): </b> Enjoy a warm dinner at a local restaurant, and get used to the surroundings. <br>
+                            <b>Day 2:</b> Start your stay with a refreshing breakfast before embarking on the Natural History Hike at 6 AM. This hike lasts 2 to 2.5 hours and offers an opportunity for early birdwatching. <br>
+                            <b>Day 3:</b> After breakfast, enjoy the Medicinal Plants Tour, which lasts approximately 1 hour. <br><br>
+                            This package provides the perfect balance of adventure and learning, ensuring a meaningful connection with the natural world.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+            
+            
+        </ul>
+      
+
+        <p style="text-align: center;">
+            All packages are customizable to fit your interests, duration, and fitness level. Whether you're an avid hiker or a first-time adventurer, we guarantee an unforgettable experience.
+        </p>
+
+        <div style="margin-top: 20px;">
+            <a href="./Contact.html" class="btn btn-success" style="color: white; font-weight: bold; text-decoration: none;">Contact Us for More Info</a>
+        </div>
+    </div>
+</div>
+
+<br>
+<br>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3103.614074142465!2d-83.622501!3d9.082476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOcKwMDQnNTYuOSJOIDgzwrAzNycyMS4wIlc!5e1!3m2!1ses-419!2scr!4v1731192246232!5m2!1ses-419!2scr" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+
+
+
+
+<!-- Footer Section -->
+<footer class="footer text-center text-md-start">
+    <div class="container">
+        <div class="row">
+            <!-- Logo and Description -->
+            <div class="col-md-4 text-center footer-logo mb-3 mb-md-0">
+                <img src="../img/whitelogo.png" alt="Ecos del Bosque Logo">
+                <p class="description mt-2">
+                    "Because what we do to nature we do to ourselves. Take care of the planet and leave a green footprint on your path."
+                </p>
+                <p><i class="fas fa-coins"></i> We are crypto-friendly: BTC / ETH</p>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="col-md-4 text-md-start mb-3 mb-md-0">
+                <h5>Ecos del Bosque: Private Wildlife Reserve and Eco-Lodge</h5>
+                <p>Puntarenas Province<br>Vergel, Osa Peninsula, Costa Rica</p>
+                <p><i class="fas fa-phone-alt"></i> +506 8577-6163</p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:reservations@ecosdelbosque.com">reservations@ecosdelbosque.com</a></p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+
+                </div>
+            </div>
+
+            
+                <!-- Footer Links -->
+                <div class="col-md-4 text-md-end">
+                    <ul class="list-unstyled">
+                        <li><a href="./Contact.html">FAQ</a></li>
+                        <li><a href="./Contact.html">Contact</a></li>
+                        <li><a href="./Us.html">About Us</a></li>
+                        <li><a href="./Contact.html">How to Support</a></li>
+                        <li><a href="./Contact.html">Help</a></li>
+                        <li><a href="./About.html">Sustainability and Impact</a></li>
+                        <li><a href="./Tours.html">Tours</a></li>
+                        <li><a href="./About.html">How to Get Here</a></li>
+                    </ul>
+                </div>
+            </div>
+        
+        <!-- Bottom Bar -->
+        <div class="row">
+            <div class="col-12 bottom-bar mt-4">
+                <a href="./Policies.html">Terms of Use</a> - <a href="./Policies.html">Privacy Policy</a>
+                <p class="mt-2">Website developed by Nativa Innovations - All Rights Reserved 2024</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS (necessary for Navbar toggle functionality) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

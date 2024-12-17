@@ -1,0 +1,37 @@
+/* Centering both logo and heading */
+.centerlogo, .welcome-text {
+    width: 80%;              /* Ensures both logo and text take up 80% of the container width */
+    margin: 0 auto;          /* Centers them horizontally */
+    text-align: center;      /* Centers the text */
+}
+
+/* Styling for the image */
+.centerlogo img {
+    max-width: 100%;    /* Ensures the image never exceeds the container width */
+    height: auto;       /* Maintains the image aspect ratio */
+    width: auto;        /* Allows the image to scale down while keeping its aspect ratio */
+    margin:auto}
+
+/* Styling for the heading */
+.welcome-text {
+    font-size: 25px;     /* Sets the font size for the heading */
+}
+
+/* Styling for the <i> icon element within the heading */
+.welcome-text i {
+    display: block;      /* Makes the icon a block-level element */
+    margin-bottom: 10px; /* Adds vertical space after the icon */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

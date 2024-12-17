@@ -1,0 +1,624 @@
+/* Apply Lato font */
+body, .nav-link, .btn-custom {
+    font-family: 'Lato', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    padding: 0.5rem 0rem;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+    font-size: 18px;
+}
+
+    /* Transparent navbar when scrolling */
+    #navbar {
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .navbar-transparent {
+        background-color: transparent !important;
+    }
+    .navbar-scrolled {
+        background-color: rgba(255, 255, 255, 0.8) !important; /* Change to preferred color */
+    }
+    .navbar-hidden {
+        transform: translateY(-100%); /* Hide navbar */
+    }
+.navbar-brand img {
+    height: 150px;
+}
+
+.nav-link {
+    color: #000000;
+    font-weight: 600;
+    margin: 0 0.5rem;
+    font-size: 20px;
+}
+
+.nav-link:hover {
+    color: #28a745;
+}
+
+/* Hero Section */
+.hero {
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 70px;
+}
+
+
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the section without distortion */
+    z-index: -1; /* Places the image behind the content */
+}
+
+
+.container {
+    position: relative;
+    z-index: 1; /* Ensures text and buttons appear above the image */
+    text-align: center;
+    color: #fff; /* Adjust text color as needed */
+}
+
+/* Use DM Serif Display for the title */
+.hero h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 5rem;
+    font-weight: 400;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1.5rem;
+    word-spacing: 30px;
+}
+
+.btn-custom {
+    background-color: #28a745;
+    color: #ffffff;
+    padding: 0.60rem 2rem;
+    margin-top: 30px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.btn-custom:hover {
+    background-color: #218838;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .btn-custom {
+        font-size: 1rem;
+        padding: 0.6rem 1.5rem;
+    }
+}
+
+/* Custom Styles */
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 2rem 0;
+}
+.footer .footer-logo img {
+    width: 100px;
+}
+.footer .description {
+    font-style: italic;
+    font-size: 0.9rem;
+}
+.footer .social-icons a {
+    color: #fff;
+    margin-right: 10px;
+}
+.footer .bottom-bar {
+    border-top: 1px solid #555;
+    padding-top: 1rem;
+    font-size: 0.85rem;
+    text-align: center;
+}
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.centerlogo {
+    display: flex;
+    justify-content: center; /* Centers the image horizontally */
+    align-items: center;     /* Centers the image vertically */
+    height: 80vh;           /* Makes the container take full viewport height */
+}
+
+.custom-container {
+    padding-left: 100px; /* Adjust this value to add more or less padding */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Feature and Amenity styles */
+.feature, .amenity {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+.feature img, .amenity img {
+    width: 24px;
+    height: 24px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Style for WhatsApp floating button */
+/* WhatsApp Floating Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px; /* Distance from the bottom */
+    right: 20px; /* Distance from the right */
+    background-color: #25D366; /* WhatsApp green */
+    color: white;
+    border-radius: 50%; /* Circular button */
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    z-index: 1000; /* Ensure it overlays other elements */
+}
+
+.whatsapp-float i {
+    font-size: 28px; /* Adjust icon size */
+}
+
+.whatsapp-float:hover {
+    background-color: #128C7E; /* Darker green on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+    transition: all 0.3s ease;
+}
+
+
+.whatsapp-float:hover {
+    background-color: #128C7E;
+}
+
+.whatsapp-float i {
+    display: block;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Keyword bubbles */
+.keyword-bubbles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px; /* Space between bubbles */
+    margin-top: 10px; /* Space above the bubbles */
+}
+
+.bubble {
+    background-color: #4CAF50; /* Bubble color */
+    color: white; /* Text color */
+    padding: 5px 10px; /* Reduced padding */
+    border-radius: 10px; /* Reduced border radius */
+    font-size: 14px; /* Reduced font size */
+    text-align: center; /* Center the text */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.bubble:hover {
+    background-color: #45a049; /* Darker shade on hover */
+}
+
+
+
+
+
+/* Hero section for Blog */
+.HeroBlog {
+    background: url('../img/blogbg.JPG') center/cover no-repeat;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.HeroBlog h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 6rem;
+    color: #ffbb00;
+}
+
+.card-title-blog {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.btn-blog {
+    background-color: #ffbb00;
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.btn-blog:hover {
+    background-color: #ffee00;
+}
+
+/* Dropdown Menu Styles */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* Optional: adjust positioning */
+}
+
+.dropdown-menu .dropdown-item:hover {
+    color: #45c509; /* Text color */
+    background-color: transparent; /* Optional: Remove background color if any */
+}
+
+
+
+.Entry1 {
+    background: url('/img/Entry1.JPG') center/cover no-repeat;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+.Entry1 h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 6rem;
+    color: #f8be00;
+}
+
+
+
+
+
+
+
+
+
+.blog-entry {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+
+.hero-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 3rem;
+    color: #ffbb00;
+}
+
+.content-container {
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    margin-top: -50px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.content-container p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.content-container ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.content-container ul li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.content-container strong {
+    font-weight: bold;
+    color: #333;
+}
+
+.content-container p, .content-container ul {
+    font-family: 'Lato', sans-serif;
+}
+
+/* Optional - Add some spacing around the content */
+.content-container p, .content-container ul {
+    margin-top: 15px;
+}
+
+/* Add responsiveness for smaller devices */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .content-container {
+        padding: 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.nav-link {
+    position: relative;
+    padding: 10px;
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #28a745;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+  }
+
+  .nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  .nav-link:hover {
+    color: #28a745;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .card-container {
+    width: 18rem;
+    height: 25rem;
+    position: relative;
+    margin: 10px 10px 10px 10px; /* Top, Right, Bottom, Left */
+}
+
+
+.card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transform-style: preserve-3d;
+}
+.card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the card */
+    border-radius: 8px;
+}
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+.card-back {
+    background-color: #f8f9fa;
+}
+
+/* Hover message */
+.hover-message {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card-front:hover .hover-message {
+    opacity: 1;
+}
+
+
+
+
+/* Smooth Transition for Slide Number */
+.slide-number {
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease-in-out; /* Smooth fade-in and fade-out */
+}
+
+/* When the carousel item is active, show the slide number */
+.carousel-item.active .slide-number {
+    opacity: 1; /* Fully visible */
+}
+
+
+
+
+
+
+
+
+
+.parallax {
+    background-image: url('your-image.jpg'); /* Replace with your image URL */
+    height: 130vh; /* Full viewport height */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 20px;
+    color: white; /* Ensure text is visible against the background */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add contrast for readability */
+}
+
+.letter-content {
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for the text */
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 800px;
+    text-align: justify;
+}
+
+.letter-content p {
+    margin: 20px 0;
+}
+
+.letter-content p:last-child {
+    font-style: italic;
+    text-align: center;
+}
+
+.letter-content strong {
+    font-size: 20px;
+}
+
+
+
+/* Apply changes specifically to the carousel with id 'gallerycarousel' */
+/* Default styles for the carousel controls */
+#gallerycarousel .carousel-control-prev,
+#gallerycarousel .carousel-control-next {
+    width: 10%;  /* Default width */
+    padding: 15px; /* Default padding */
+}
+
+#gallerycarousel .carousel-control-prev-icon,
+#gallerycarousel .carousel-control-next-icon {
+    width: 30px; /* Default icon size */
+    height: 30px; /* Default icon size */
+}
+
+
+/* Media Query for extra small screens (up to 400px) */
+@media (max-width: 600px) {
+    #gallerycarousel .carousel-control-prev,
+    #gallerycarousel .carousel-control-next {
+        width: 30%;  /* Make the buttons even larger */
+        padding: 25px;  /* More padding */
+    }
+    #gallerycarousel .carousel-control-prev-icon,
+    #gallerycarousel .carousel-control-next-icon {
+        width: 30px;  /* Increase icon size further */
+        height: 30px; /* Increase icon size further */
+    }
+}
+
+
+
+
+
+
+#map {
+    height: 500px;
+}

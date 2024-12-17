@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecos del Bosque: Private Wildlife Reserve and Eco-lodge</title>
+           <!-- add icon link -->
+           <link rel="icon" href=
+           "../img/blackbg.webp"
+                   type="image/x-icon" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts: Lato and DM Serif Display -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    
+
+    <!-- Include Font Awesome if not already in your project -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+
+
+       <!-- add icon link -->
+       <link rel="icon" href=
+       "./img/New Logo Reserve.webp"
+               type="image/x-icon" />
+    <meta name="keywords" content="wildlife reserve, nature preserve, animal sanctuary, conservation area, biodiversity, wildlife protection, eco-tourism, outdoor adventure, nature trails, wildlife habitat, bird watching, avian species, bird photography, migratory birds, birding trails, bird habitats, ornithology, bird conservation, birdwatching tours, bird identification, hiking trails, nature walks, scenic hikes, eco-trails, walking paths, trail maps, guided hikes, forest trails, wildlife conservation, habitat restoration, endangered species, conservation programs, eco-friendly practices, sustainability, nature preservation, environmental education, species recovery">
+    <link rel="stylesheet" href="../styles/styles.css"> 
+    <link rel="stylesheet" href="../styles/media_queries.css"> 
+
+    <script src="../script/script.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+
+
+
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" id="navbar">
+    <div class="container">
+        <a class="navbar-brand" href="./Home.html">
+            <img src="../img/blackbg.webp" alt="Ecos del Bosque Logo"> <!-- Replace with actual logo path -->
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="./Home.html" style="color: #28a745;">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="./Wildlife.html">Wildlife</a></li>
+                <li class="nav-item"><a class="nav-link" href="./Rooms.html">Rooms</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="./Tours.html" id="toursDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Tours
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="toursDropdown">
+                        <!-- Repeated link for "Tours" -->
+                        <li><a class="dropdown-item" href="./Tours.html">Tours</a></li>
+                        <li><a class="dropdown-item" href="./Packages.html">Packages</a></li>
+                    </ul>
+                </li>
+                
+                
+                <li class="nav-item"><a class="nav-link" href="./Farm.html">Eco-Farm</a></li>
+ <!-- Dropdown for Contact -->
+ <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="./Contact.html" id="contactDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Contact
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="contactDropdown">
+        <li><a class="dropdown-item" href="./Contact.html">Contact Us</a></li>
+        <li><a class="dropdown-item" href="./GettingHere.html">Getting Here</a></li>
+    </ul>
+</li>                <li class="nav-item"><a class="nav-link" href="">Booking</a></li>
+                <li class="nav-item"><a class="nav-link" href="./Us.html">Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="./About.html">About</a></li>
+
+                <!-- Icon button to toggle translation element -->
+                <button class="btn btn-link" onclick="toggleTranslate()" aria-expanded="false" style="font-size: 1.5rem;">
+                    <i class="fas fa-globe"></i>
+                </button>
+
+                <!-- Translation element, initially hidden -->
+                <div id="translateContainer" style="display: none; text-align: center;">
+                    <div id="google_translate_element"></div>
+                </div>
+
+                <!-- Translation script -->
+                <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+                    }
+
+                    // Function to toggle the translation element
+                    function toggleTranslate() {
+                        const translateContainer = document.getElementById('translateContainer');
+                        translateContainer.style.display = translateContainer.style.display === 'none' ? 'block' : 'none';
+                    }
+                </script>
+
+                <!-- Load Google Translate script -->
+                <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+<section class="hero">
+    <img src="../img/DSCF0095.webp" alt="Background Image" class="hero-image">
+    <div class="container">
+        
+        <h1>Ecos del Bosque</h1>
+        <a href="#" class="btn btn-custom">Book Here</a>
+    </div>
+</section>
+
+
+<div class="centerlogo">
+    <img src="../img/blackbg.webp" alt="Logo">
+</div>
+
+
+<h1 class="welcome-text" style="font-family: 'pacifico';">
+    <i>Welcome to Ecos del Bosque: Private Wildlife Reserve and Eco-Lodge
+    <br>
+    <br>
+    9,0824163° N, -83,6224764° W
+    <br>
+    <br>
+    The Natural Hideaway!
+    </i>
+</h1>
+
+<br>
+<p style="padding-left: 20px; font-size: 20px; text-align: start;">The Private Wildlife Reserve and Lodge Ecos del Bosque is a paradisical hideaway nestled in the Osa region.
+    This privileged biodiverse reserve spans across 32 acres of primary forest where 6 km of trails extend under
+    lush primal vegetation. A natural landscape untouched by humans, and our natural haven.
+    <br>
+    <br>
+    It offers a one of a kind connection with our natural elements. And
+    it is often described by visitors as a place to feel at peace and feel each heartbeat.
+    <br>
+    <br>
+    Besides, the reserve is located in a community called Vergel (A Vergel is a garden with a variety of flowers and fruit trees.). It honors up to its name, and you will see how life thrives here in all colors.
+    <br>
+    <br>
+
+<br>
+<br>
+<h2 style="text-align: center; font-size: 30px; "><b>LOCATION</b></h2>
+<br>
+<br>
+<p style="font-size: 25px; padding-left: 20px; font-weight: 400;"><b>The Osa Region</b></p>
+<p style="padding-left: 20px; font-size: 20px;">
+
+    As the biological bridge between North and South America, Osa region is a unique haven of biodiversity. 
+    
+    This lush paradise boasts a staggering 5% of the world's plant and animal species, making it a must-visit for nature
+    
+    enthusiasts.
+    
+    
+    
+    Beyond its breathtaking landscapes, Osa holds centuries-old secrets rooted in indigenous traditions. 
+    
+    <br>
+    <br>
+    Explore 
+    
+    trails, learn about local cultures, and immerse yourself in the rich natural history of this extraordinary 
+    
+    region.
+    
+    
+    
+    Ready to experience the magic of Osa? 
+    
+    <br>
+    <br>Check out our listings for unforgettable accommodations and tours that 
+    
+    will bring you closer to nature and its wonders. We strongly advise reading this article: <a href="https://viajes.nationalgeographic.com.es/a/pacifico-sur-costa-rica-naturaleza-manglares-sabiduria-indigena_21296" target="_blank" style="text-decoration: none;">The most biologically active area in the world is in Costa Rica</a>.
+    </p>
+    <br>
+    <br>
+    <div style="position: relative; height: 500px; overflow: hidden;">
+        <!-- Parallax Image with Lazy Loading -->
+        <img src="../img/uvitabeach2.webp" 
+             loading="lazy" 
+             alt="Uvita Beach with tropical sunset and clear skies" 
+             style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                filter: brightness(0.8); /* Optional: Slight darkening for readability */
+                z-index: -1;
+             ">
+    
+        <!-- Caption -->
+        <div style="
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            font-style: italic;
+            font-size: 30px;
+            z-index: 1;
+        ">
+            Uvita Beach and Unforgettable Tropical Sunsets
+        </div>
+    </div>
+    
+      
+    
+    <br>
+    <br>
+
+<h3 style="text-align: center; font-size: 30px; "><b>ACCOMMODATIONS</b></h3>
+<br>
+<br>
+<div class="container">
+  <div class="row">
+<!-- First Carousel Column -->
+    <div class="col-md-6 mb-4">
+
+  <div id="casitaCarousel" class="carousel slide text-center" data-bs-ride="false" style="max-width: 100%; margin: 0 auto;">
+      <div class="carousel-inner">
+          <div class="carousel-item active">
+              <!-- First Tour Card -->
+              <div class="card">
+                  <img src="../img/DJI_0299.webp" loading="lazy" class="card-img-top mx-auto" alt="Nightwalk" style="width: 100%; object-fit: cover;">
+                  <div class="card-body">
+                      <h5 class="card-title" style="font-size: 25px; font-weight: bold;">Cativo Deluxe Casita</h5>
+                      <p class="card-text" style="text-align: left;">
+                        <i>52m2 / 559ft2</i>
+                        <br>
+                        <br>
+                      Discover your own private oasis in our charming 52-square-meter casita, nestled amidst the lush rainforest.
+                      </p>
+                        <!-- Slide Number -->
+        <div class="slide-number position-absolute top-0 start-0 p-2 bg-dark text-white rounded">
+            Slide 3 / 10 
+        </div>
+                      <a href="./Rooms.html" class="btn btn-primary" target="_blank">Read More</a>
+                  </div>
+              </div>
+          </div>
+          <div class="carousel-item">
+              <!-- Second Tour Card -->
+              <div class="card">
+                <img src="../img/DJI_0299.webp" loading="lazy" class="card-img-top mx-auto" alt="Nightwalk" style="width: 100%; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-size: 25px; font-weight: bold;">Cativo Deluxe Casita</h5>
+                    <p class="card-text" style="text-align: left;">
+                      This cozy cabin features a comfortable queen bed. Relax on your 
+                      private open terrace, crafted from exquisite Maria Cativo 
+                      wood, and enjoy the tranquility of the creek running by the
+                      side.
+                    </p>
+                    <a href="./Rooms.html" class="btn btn-primary" target="_blank">Read More</a>
+                </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <!-- Third Tour Card -->
+            <div class="card">
+              <img src="../img/DJI_0299.webp" loading="lazy" class="card-img-top mx-auto" alt="Nightwalk" style="width: 100%; object-fit: cover;">
+              <div class="card-body">
+                  <h5 class="card-title" style="font-size: 25px; font-weight: bold;">Cativo Deluxe Casita</h5>
+                  <p class="card-text" style="text-align: left;">
+                    The casita also boasts a fully equipped kitchen with 
+                    high-end utensils, a minibar, and a comfortable resting area
+                    for your convenience.
+                  </p>
+                  <a href="./Rooms.html" class="btn btn-primary" target="_blank">Read More</a>
+              </div>
+          </div>
+        </div>
+        
+        <div class="carousel-item">
+          <!-- Fourth Tour Card -->
+          <div class="card">
+            <img src="../img/DJI_0299.webp" loading="lazy" class="card-img-top mx-auto" alt="Nightwalk" style="width: 100%; object-fit: cover;">
+            <div class="card-body">
+                <h5 class="card-title" style="font-size: 25px; font-weight: bold;">Cativo Deluxe Casita</h5>
+                <p class="card-text" style="text-align: left;">
+                  The casita is the perfect retreat for 
+                  couples seeking a peaceful 
+                  and unforgettable getaway.
+                </p>
+                <a href="./Rooms.html" class="btn btn-primary" target="_blank">Read More</a>
+            </div>
+        </div>
+        
+      </div>
+      </div>
+
+      <!-- Carousel controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#casitaCarousel" data-bs-slide="prev">
+
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#casitaCarousel" data-bs-slide="next">
+          
+      </button>
+  </div>
+</div>
+
+
+
+
+<!-- Second Carousel Column -->
+    <div class="col-md-6 mb-4">
+
+  <div id="domeCarousel" class="carousel slide text-center" data-bs-ride="false" style="max-width: 100%; margin: 0 auto;">
+      <div class="carousel-inner">
+          <div class="carousel-item active">
+              <!-- First Tour Card -->
+              <div class="card">
+                  <img src="../img/DJI_0299.webp" loading="lazy" class="card-img-top mx-auto" alt="Nightwalk" style="width: 100%; object-fit: cover;">
+                  <div class="card-body">
+                      <h5 class="card-title" style="font-size: 25px; font-weight: bold;">Euphonia Dome</h5>
+                      <p class="card-text" style="text-align: left;">
+                        <i>28m2 / 301ft2</i>
+                        <br>
+                        <br>
+                        Immerse yourself in the heart of Costa Rica's lush 
+                        rainforest with our 28-square-meter Dome.
+                      </p>
+                        <!-- Slide Number -->
+        <div class="slide-number position-absolute top-0 start-0 p-2 bg-dark text-white rounded">
+            Slide 3 / 10 
+        </div>
+                      <a href="./img/.html" class="btn btn-primary" target="_blank">Read More</a>
+                  </div>
+              </div>
+          </div>
+          <div class="carousel-item">
+              <!-- Second Tour Card -->
+              <div class="card">
+                  <img src="../img/DJI_0299.webp" loading="lazy" class="card-img mx-auto" alt="Twilight Tour" style="width: 100%; object-fit: cover;">
+                  <div class="card-body">
+                      <h5 class="card-title" style="font-size: 25px; font-weight: bold;">Sunset Eco Hike</h5>
+                      <p class="card-text" style="text-align: left;">
+                        This unique and cozy accommodation offers the perfect blend
+                        of comfort and adventure. Step inside to discover a fully
+                        equipped kitchen featuring high-end utensils, and a comfortable resting area to unwind after a day of exploration.
+                      </p>
+                        <!-- Slide Number -->
+        <div class="slide-number position-absolute top-0 start-0 p-2 bg-dark text-white rounded">
+            Slide 3 / 10 
+        </div>
+                      <a href="./Rooms.html" class="btn btn-primary" target="_blank">Read More</a>
+                  </div>
+              </div>
+          </div>
+          <div class="carousel-item">
+              <!-- Third Tour Card -->
+              <div class="card">
+                  <img src="../img/DJI_0299.webp" loading="lazy" class="card-img mx-auto" alt="Twilight Tour" style="width: 100%; object-fit: cover;">
+                  <div class="card-body">
+                      <h5 class="card-title" style="font-size: 25px; font-weight: bold;">Sunset Eco Hike</h5>
+                      <p class="card-text" style="text-align: left;">
+                        Enjoy your morning coffee or a delicious breakfast on your
+                        private outdoor terrace, overlooking breathtaking river
+                        and mountain views.
+                      </p>
+                        <!-- Slide Number -->
+        <div class="slide-number position-absolute top-0 start-0 p-2 bg-dark text-white rounded">
+            Slide 3 / 10 
+        </div>
+                      <a href="./Rooms.html" class="btn btn-primary" target="_blank">Read More</a>
+                  </div>
+              </div>
+          </div>
+          <div class="carousel-item">
+              <!-- Fourth Tour Card -->
+              <div class="card">
+                  <img src="../img/DJI_0299.webp" loading="lazy" class="card-img mx-auto" alt="Twilight Tour" style="width: 100%; object-fit: cover;">
+                  <div class="card-body">
+                      <h5 class="card-title" style="font-size: 25px; font-weight: bold;">Sunset Eco Hike</h5>
+                      <p class="card-text" style="text-align: left;">
+                        The Dome Room is the ideal retreat for those seeking a truly unforgettable experience in one of the world's most beautiful destinations.
+                      </p>
+                        <!-- Slide Number -->
+        <div class="slide-number position-absolute top-0 start-0 p-2 bg-dark text-white rounded">
+            Slide 3 / 10 
+        </div>
+                      <a href="https://wa.me/+50663576163" class="btn btn-primary" target="_blank">Book Here!</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#domeCarousel" data-bs-slide="prev">
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#domeCarousel" data-bs-slide="next">
+            </button>
+
+  </div>   
+</div>
+
+
+
+
+  </div>
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<h4 style="text-align: center; font-size: 30px; justify-content: center; "><b>TOURS</b></h4>
+<br>
+
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p style="padding-left: 20px; font-size: 20px; text-align: center;">
+    We have the following tours available at the reserve (We offer many more from external providers):
+    <br>
+    <br>
+</p>
+<div class="container mt-5">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      <!-- First Tour Card -->
+      <div class="col">
+        <div class="card h-100">
+            <a href="/html/Tours.html">
+                <img src="../img/tours/nightwalk.jpeg" loading="lazy" class="card-img-top" alt="Nightwalk">
+            </a>          <div class="card-body">
+            <h5 class="card-title">Nightwalk 1/5</h5>
+            <div class="keyword-bubbles mb-3">
+              <span class="bubble">Nocturnal Adventures</span>
+              <span class="bubble">Wildlife Encounters</span>
+              <span class="bubble">Life after dark</span>
+              <span class="bubble">Snakes Spotting</span>
+              <span class="bubble">Walk under the stars</span>
+            </div>
+            <p class="card-text">
+              Join us for a thrilling Night Walk through the enchanting wildlife reserve, where the magic of the nocturnal world comes alive. Discover Tiger Frogs, the cautious Fer de Lance, and more!
+            </p>
+            <a href="../html/Tours.html" class="btn btn-primary">Learn More!</a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Second Tour Card -->
+      <div class="col">
+        <div class="card h-100">
+            <a href="/html/Tours.html">
+                <img src="../img/tours/twilight.jpeg" loading="lazy" class="card-img-top" alt="Twilight Tour">
+            </a>          <div class="card-body">
+            <h5 class="card-title">Twilight Tour 2/5</h5>
+            <div class="keyword-bubbles mb-3">
+              <span class="bubble">Magical Sunset</span>
+              <span class="bubble">Eco-friendly Tour</span>
+              <span class="bubble">Twilight Nature Walk</span>
+              <span class="bubble">Nocturnal Wildlife</span>
+              <span class="bubble">Both worlds</span>
+            </div>
+            <p class="card-text">
+              Explore the magical twilight hours as day transitions to night. Witness the fascinating flora and fauna in this serene eco-tour.
+            </p>
+            <a href="../html/Tours.html" class="btn btn-primary">Learn More!</a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Third Tour Card -->
+      <div class="col">
+        <div class="card h-100">
+            <a href="/html/Tours.html">
+                <img src="../img/tours/farm.webp" loading="lazy" class="card-img-top" alt="Farm and Medicinal Plants">
+            </a>          <div class="card-body">
+            <h5 class="card-title">Farm and Medicinal Plants 3/5</h5>
+            <div class="keyword-bubbles mb-3">
+              <span class="bubble">Cultural Heritage</span>
+              <span class="bubble">Rainforest Botanicals</span>
+              <span class="bubble">Eco-friendly Practices</span>
+              <span class="bubble">Natural Remedies</span>
+              <span class="bubble">Plant-Based Wellness</span>
+            </div>
+            <p class="card-text">
+              Learn about sustainable farming and the rich botanical heritage of Costa Rica on this engaging tour of our farm and medicinal plants.
+            </p>
+            <a href="../html/Tours.html" class="btn btn-primary">Learn More!</a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Fourth Tour Card -->
+      <div class="col">
+        <div class="card h-100">
+            <a href="/html/Tours.html">
+                <img src="../img/tours/naturalhistory.webp" loading="lazy" class="card-img-top" alt="Natural History Hike">
+            </a>          <div class="card-body">
+            <h5 class="card-title">Natural History Hike 4/5</h5>
+            <div class="keyword-bubbles mb-3">
+              <span class="bubble">Nature Immersion</span>
+              <span class="bubble">Ecotourism</span>
+              <span class="bubble">First Settlers</span>
+              <span class="bubble">Tropical Wilderness</span>
+              <span class="bubble">Archeology</span>
+            </div>
+            <p class="card-text">
+              Experience a guided hike through Costa Rica’s diverse rainforest and learn about its biodiversity, history, and archaeology.
+            </p>
+            <a href="../html/Tours.html" class="btn btn-primary">Learn More!</a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Fifth Tour Card -->
+      <div class="col">
+        <div class="card h-100">
+            <a href="/html/Tours.html">
+                <img src="../img/tours/farmnmedicine.webp" loading="lazy" class="card-img-top" alt="Natural History + Farm">
+            </a>          <div class="card-body">
+            <h5 class="card-title">Natural History Hike + Farm and Medicinal Plants 5/5</h5>
+            <div class="keyword-bubbles mb-3">
+              <span class="bubble">Biodiversity</span>
+              <span class="bubble">Ecological Conservation</span>
+              <span class="bubble">Medicinal Plants</span>
+              <span class="bubble">Farm-to-Table</span>
+              <span class="bubble">Sustainable Agriculture</span>
+            </div>
+            <p class="card-text">
+              Combine two amazing tours: the Natural History Hike and the Farm & Medicinal Plants for a comprehensive eco-adventure.
+            </p>
+            <a href="../html/Tours.html" class="btn btn-primary">Learn More!</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+  <h5 style="text-align: center; font-size: 30px; "><b>GALLERY</b></h5>
+  <br>
+  <br>
+  <div class="d-flex justify-content-center">
+    <iframe width="600" height="315" src="https://www.youtube.com/embed/7FYo-QTwuwE?si=Z2uFRFipDmcPWyD4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+<br>
+  <div id="gallerycarousel" class="carousel slide text-center" data-bs-ride="false" style="max-width: 600px; margin: 0 auto;">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <!-- First Tour Card -->
+            <div class="card">
+                <img src="../img/gallerycarroussel/img1.webp" loading="lazy" class="card-img-top mx-auto" alt="The Tropical Rainforest of the Osa region." style="width: 100%; object-fit: cover;">
+                <div class="card-body">
+                    <p class="card-text">The Tropical Rainforest of the Osa region.</p>
+                </div>
+                  <!-- Slide Number -->
+        <div class="slide-number position-absolute top-0 start-0 p-2 bg-dark text-white rounded">
+            Slide 1 / 9
+        </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <!-- Second Tour Card -->
+            <div class="card">
+                <img src="../img/gallerycarroussel/img2.webp" loading="lazy" class="card-img mx-auto" alt="Golden Hour" style="width: 100%; object-fit: cover;">
+                <div class="card-body">
+                    <p class="card-text">The Golden Hour, otherwise, known as La Hora de los Monos by locals (The Monkeys' Time) since it is typical of howler monkeys to howl at dusk.</p>
+                </div>
+                <div class="slide-number position-absolute top-0 start-0 p-2 bg-dark text-white rounded">
+                    Slide 2 / 9
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <!-- Third Tour Card -->
+            <div class="card">
+                <img src="../img/gallerycarroussel/img0.webp" loading="lazy" class="card-img mx-auto" alt="Frog, Dendobrates auratus" style="width: 100%; object-fit: cover;">
+                <div class="card-body">
+                    <p class="card-text">The biggest poisonous frog in Costa Rica; Dendrobates auratus.</p>
+                </div>
+                <div class="slide-number position-absolute top-0 start-0 p-2 bg-dark text-white rounded">
+                    Slide 3 / 9
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <!-- Fourth Tour Card -->
+            <div class="card">
+                <img src="../img/gallerycarroussel/img3.webp" loading="lazy" class="card-img mx-auto" alt="Crested Guan" style="width: 100%; object-fit: cover;">
+                <div class="card-body">
+                    <p class="card-text">The Crested Guan (Penelope purpurascens) lives within the property. They are very curious animals.</p>
+                </div>
+                <div class="slide-number position-absolute top-0 start-0 p-2 bg-dark text-white rounded">
+                    Slide 4 / 9 
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <!-- Fifth Tour Card -->
+            <div class="card">
+                <img src="../img/gallerycarroussel/img4.webp" loading="lazy" class="card-img mx-auto" alt="Capuchin Monkey" style="width: 100%; object-fit: cover;">
+                <div class="card-body">
+                    <p class="card-text">A Capuchin Monkey enjoying the seasonal fruit. (Rámbutan, it is an exotic fruit)</p>
+                </div>
+                <div class="slide-number position-absolute top-0 start-0 p-2 bg-dark text-white rounded">
+                    Slide 5 / 9 
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <!-- Sixth Tour Card -->
+            <div class="card">
+                <img src="../img/gallerycarroussel/img5.webp" loading="lazy" class="card-img mx-auto" alt="Waterfall El Pavon" style="width: 100%; object-fit: cover;">
+                <div class="card-body">
+                    <p class="card-text">El Pavón waterfall attracts visitors from all parts of the world. It is one of the most popular waterfalls in Costa Rica. And it is just 5 minutes from the reserve.</p>
+                </div>
+                <div class="slide-number position-absolute top-0 start-0 p-2 bg-dark text-white rounded">
+                    Slide 6 / 9 
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <!-- Seventh Tour Card -->
+            <div class="card">
+                <img src="../img/gallerycarroussel/img6.webp" loading="lazy" class="card-img mx-auto" alt="Uvita Beach" style="width: 100%; object-fit: cover;">
+                <div class="card-body">
+                    <p class="card-text">Uvita Beach is just 25 minutes from us. Discover the Marino Ballena National Park where the world-famous whale-shaped tombole is.</p>
+                </div>
+                <div class="slide-number position-absolute top-0 start-0 p-2 bg-dark text-white rounded">
+                    Slide 7 / 9 
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <!-- Eighth Tour Card -->
+            <div class="card">
+                <img src="../img/gallerycarroussel/img7.webp" loading="lazy" class="card-img mx-auto" alt="Great Curassow" style="width: 100%; object-fit: cover;">
+                <div class="card-body">
+                    <p class="card-text">Crax rubra (Great Curassow) taking a mornign walk. They are extremely rare to be seen and they also are in ways of extintion.</p>
+                </div>
+                <div class="slide-number position-absolute top-0 start-0 p-2 bg-dark text-white rounded">
+                    Slide 8 / 9
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <!-- Ninth Tour Card -->
+            <div class="card">
+                <img src="../img/gallerycarroussel/img8.webp" loading="lazy" class="card-img mx-auto" alt="Eira barbara" style="width: 100%; object-fit: cover;">
+                <div class="card-body"> 
+                    <p class="card-text">Eira barbara (Tayra) is part of the Mustelidae family, yes, it is a relative of the weasels! It is a carnivorous mammal, though.  </p>
+                </div>
+                <div class="slide-number position-absolute top-0 start-0 p-2 bg-dark text-white rounded">
+                    Slide 9 / 9
+                </div>
+            </div>
+        </div>
+    </div>
+  
+  
+        <!-- Exclusive Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#gallerycarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Go Back</span> <!-- Custom label for this carousel -->
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#gallerycarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Go Forward</span> <!-- Custom label for this carousel -->
+        </button>
+    </div>
+    
+</div>
+<style>
+    /* Make images fit the card container */
+    .carta {
+        overflow: hidden; /* Ensures any overflow is hidden */
+        height: 100%; /* Ensures consistent height for the card */
+    }
+    
+    .carta-img-top {
+        object-fit: cover; /* Ensures the image covers the container without distortion */
+        width: 100%; /* Stretches the image to fit the container's width */
+        height: 200px; /* Defines a consistent height for all images */
+    }
+</style>
+
+<div class="container py-5">
+    <div class="row g-4">
+        <!-- Gallery Item -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="carta">
+                <img src="../img/gallery2/1.webp" class="carta-img-top gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" alt="The Tropical Rainforest" loading="lazy">
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="carta">
+                <img src="../img/gallery2/2.webp" class="carta-img-top gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" alt="A Pristine River" loading="lazy">
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="carta">
+                <img src="../img/gallery2/3.webp" class="carta-img-top gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" alt="A Natural Gateaway" loading="lazy">
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="carta">
+                <img src="../img/gallery2/4.webp" class="carta-img-top gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" alt="Cookeina speciosa" loading="lazy">
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="carta">
+                <img src="../img/gallery2/5.webp" class="carta-img-top gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" alt="Oophaga granulifera. A poinonous snake." loading="lazy">
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="carta">
+                <img src="../img/gallery2/6.webp" class="carta-img-top gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" alt="" loading="lazy">
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="carta">
+                <img src="../img/gallery2/7.webp" class="carta-img-top gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" alt="Kapok (Ceiba) tree. A giaant from the rainforest,  it is thought to be over 800 years old." loading="lazy">
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="carta">
+                <img src="../img/gallery2/8.webp" class="carta-img-top gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" alt="The king of the jungle: Puma concolor costaricensis." loading="lazy">
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="carta">
+                <img src="../img/gallery2/9.JPG" class="carta-img-top gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" alt="Uvita beach marvels visitors with its endless sunsets all year round." loading="lazy">
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="carta">
+                <img src="../img/gallery2/10.webp" class="carta-img-top gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" alt="The Great Curassow is a rare and unique specimen to see." loading="lazy">
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="carta">
+                <img src="../img/gallery2/11.webp" class="carta-img-top gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" alt="Placeholder Image 3">
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="carta">
+                <img src="../img/gallery2/12.webp" class="carta-img-top gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" alt="Placeholder Image 4">
+            </div>
+        </div>
+     
+      
+        <!-- Add more items as needed -->
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="galleryModalLabel">Image Preview</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <!-- Image Display -->
+                <img id="modalImage" src="" alt="Full-size preview" class="img-fluid mb-3" style="max-height: 70vh;">
+
+                <!-- Caption -->
+                <p id="modalCaption" class="text-muted"></p>
+            </div>
+            <div class="modal-footer d-flex justify-content-between">
+                <!-- Navigation Arrows -->
+                <button type="button" class="btn btn-outline-secondary" id="prevImage" aria-label="Previous Image">&larr; Prev</button>
+                <button type="button" class="btn btn-outline-secondary" id="nextImage" aria-label="Next Image">Next &rarr;</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Bootstrap JS -->
+<script>
+    // Select all gallery images
+    const galleryImages = document.querySelectorAll('.gallery-img');
+    let currentIndex = 0; // Keeps track of the current image index
+
+    // Update the modal content with the current image
+    function updateModal(index) {
+        const modalImage = document.getElementById('modalImage');
+        const modalCaption = document.getElementById('modalCaption');
+        const selectedImage = galleryImages[index];
+
+        modalImage.src = selectedImage.src;
+        modalImage.alt = selectedImage.alt;
+        modalCaption.textContent = selectedImage.alt || "No caption available";
+
+        currentIndex = index;
+    }
+
+    // Add click event listener to all gallery images
+    galleryImages.forEach((img, index) => {
+        img.addEventListener('click', () => {
+            updateModal(index);
+        });
+    });
+
+    // Handle previous button click
+    document.getElementById('prevImage').addEventListener('click', () => {
+        const newIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+        updateModal(newIndex);
+    });
+
+    // Handle next button click
+    document.getElementById('nextImage').addEventListener('click', () => {
+        const newIndex = (currentIndex + 1) % galleryImages.length;
+        updateModal(newIndex);
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+  <h6 style="text-align: center; font-size: 30px; margin-top: 150px; "><b>CLIENTS REVIEWS</b></h6>
+
+  <p style="padding-left: 20px; font-size: 20px;">
+    <section id="reviews" class="container py-5">
+      <h2 class="text-center mb-4">What Our Clients Say</h2>
+      <div class="row">
+          <!-- Review 1 -->
+          <div class="col-md-4 mb-4">
+              <div class="card shadow-sm border-light">
+                  <div class="card-body">
+                      <p class="card-text">"The best experience I've ever had in the jungle! The hidden waterfall tour was absolutely breathtaking. I felt connected to nature in a way I never expected."</p>
+                      <div class="d-flex align-items-center">
+                          <img src="https://via.placeholder.com/50" loading="lazy" alt="Client 1" class="rounded-circle me-3">
+                          <div>
+                              <h5 class="mb-0">Anna S.</h5>
+                              <small class="text-muted">Traveler from Germany</small>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+  
+          <!-- Review 2 -->
+          <div class="col-md-4 mb-4">
+              <div class="card shadow-sm border-light">
+                  <div class="card-body">
+                      <p class="card-text">"Incredible experience! The staff was amazing and made the whole trip unforgettable. I highly recommend this place to anyone who loves nature and adventure."</p>
+                      <div class="d-flex align-items-center">
+                          <img src="https://via.placeholder.com/50" loading="lazy" alt="Client 2" class="rounded-circle me-3">
+                          <div>
+                              <h5 class="mb-0">James P.</h5>
+                              <small class="text-muted">Traveler from the USA</small>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+  
+          <!-- Review 3 -->
+          <div class="col-md-4 mb-4">
+              <div class="card shadow-sm border-light">
+                  <div class="card-body">
+                      <p class="card-text">"A truly magical place. The eco-lodge is so peaceful, and the wildlife reserve is a hidden gem. We felt so close to nature, and the whole experience was enriching."</p>
+                      <div class="d-flex align-items-center">
+                          <img src="https://via.placeholder.com/50" loading="lazy" alt="Client 3" class="rounded-circle me-3">
+                          <div>
+                              <h5 class="mb-0">Maria G.</h5>
+                              <small class="text-muted">Traveler from Brazil</small>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          
+          <!-- Review 3 -->
+          <div class="col-md-4 mb-4">
+            <div class="card shadow-sm border-light">
+                <div class="card-body">
+                    <p class="card-text">"A truly magical place. The eco-lodge is so peaceful, and the wildlife reserve is a hidden gem. We felt so close to nature, and the whole experience was enriching."</p>
+                    <div class="d-flex align-items-center">
+                        <img src="https://via.placeholder.com/50" loading="lazy" alt="Client 3" class="rounded-circle me-3">
+                        <div>
+                            <h5 class="mb-0">Maria G.</h5>
+                            <small class="text-muted">Traveler from Brazil</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+          <!-- Review 3 -->
+          <div class="col-md-4 mb-4">
+            <div class="card shadow-sm border-light">
+                <div class="card-body">
+                    <p class="card-text">"A truly magical place. The eco-lodge is so peaceful, and the wildlife reserve is a hidden gem. We felt so close to nature, and the whole experience was enriching."</p>
+                    <div class="d-flex align-items-center">
+                        <img src="https://via.placeholder.com/50" loading="lazy" alt="Client 3" class="rounded-circle me-3">
+                        <div>
+                            <h5 class="mb-0">Maria G.</h5>
+                            <small class="text-muted">Traveler from Brazil</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+          <!-- Review 3 -->
+          <div class="col-md-4 mb-4">
+            <div class="card shadow-sm border-light">
+                <div class="card-body">
+                    <p class="card-text">"A truly magical place. The eco-lodge is so peaceful, and the wildlife reserve is a hidden gem. We felt so close to nature, and the whole experience was enriching."</p>
+                    <div class="d-flex align-items-center">
+                        <img src="https://via.placeholder.com/50" loading="lazy" alt="Client 3" class="rounded-circle me-3">
+                        <div>
+                            <h5 class="mb-0">Maria G.</h5>
+                            <small class="text-muted">Traveler from Brazil</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+  </section>
+     
+  
+
+  
+
+  <p style="text-align: center; font-size: 30px; margin-top: 50px;"><b>SCHEDULE AND CONTACT</b></p>
+  <br>
+  <br>
+  <p style="padding-left: 20px; font-size: 20px; text-align: center; line-height: 2;">
+    Phone Number:  +506 8577-6163 <br>
+        Email: reservations@ecosdelbosque.com <br>
+        Address: Provincia de Puntarenas, Osa. Vergel de Punta Mala. <br>
+        4km north from the highway. How to get here? <a href="[Insert link here]">Click here to see instructions.</a> <br>
+        Business Hours: Open all year round. 7 AM until 8 PM. <br>
+        We accept crypto!
+      <br>
+      <br>
+      <img src="../img/cryptocurrency.webp" loading="lazy" alt="Company Logo" width="50px">
+      <br>
+  </p>
+  <br>
+  <br>
+  <p style="text-align: center; font-size: 30px; "><b>GETTING HERE</b></p>
+
+   
+
+    <div class="container my-5">
+     
+            <div class="row justify-content-center">
+                <!-- Plane -->
+                <div class="col-md-3 mb-4 text-center">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <i class="bi bi-airplane-engines fs-1 mb-3"></i> <!-- Airplane Icon -->
+                            <h5 class="card-title">By Plane</h5>
+                            <p class="card-text">Fly into the Osa Region from San José with local airline Sansa <a href="https://www.flysansa.com/" target="_blank">Sansa Airline</a> The airport is just 30 minutes from the lodge, Palmar Norte Airport.
+                            <br>
+                            Otherwise, you can fly to Quepos (La Managua Airport). It is 1 hour and 30 minutes from the lodge.</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Car -->
+                <div class="col-md-3 mb-4 text-center">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <i class="bi bi-car-front fs-1 mb-3"></i> <!-- Car Icon -->
+                            <h5 class="card-title">By Car</h5>
+                            <p class="card-text">Drive along the Costanera Sur highway. To get here you have to pass Manuel Antonio, Dominical, and Uvita. Then take a left exit at Punta Mala and a 10-minute drive to the lodge, follow this instructions from the Juan Santamaria Airport <a href="https://maps.app.goo.gl/Pq2NTScaWS88SrQF7" target="_blank">See Instructions</a> A 4x4 vehicle is recommended for the best experience.</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Bus -->
+                <div class="col-md-3 mb-4 text-center">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <i class="bi bi-bus-front fs-1 mb-3"></i> <!-- Bus Icon -->
+                            <h5 class="card-title">By Bus</h5>
+                            <p class="card-text">Buses from San José and other cities stop in Uvita, we can arrange a taxi from there.
+                            <br>
+                            <br>
+                            <b>Private Transfer</b>
+                            <br>
+                            <br>
+                            You can contact EasyRide, Interbus or Costa Rica Shuttle to organize a private transportation. Besides, we can arrange a taxi from our trusted provider. A private service, at your disposal. Your ride, your time. <a href="https://osaswavestravel.com/en/">Osa's Waves Travel</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    
+      <br>
+      <br>
+
+
+
+
+
+
+
+<div class="container my-5">
+    <div class="row">
+            <div class="col-md-6 mb-4">
+
+          <p style="font-size: 18px; color: black; text-align: left; line-height: 2;">
+            An Unmatched Location in the Heart of the Osa region
+            <br>
+            <br>
+            Even many Costa Rican locals have yet to discover the untouched beauty of the Osa region. 
+            <br>
+            Our wildlife reserve offers everything that nature lovers and adventure seekers could ever dream of— 
+            <br>
+            lush jungle trails and abundant wildlife.
+            <br>
+            The home of the puma, trogon, great curassow, howler monkey, agouti, yellow-throated toucan, guans, coati and many more species.
+            <br>
+            At our reserve, the untamed beauty of the Osa region is waiting to be experienced, offering a truly 
+            <br>
+            immersive connection with nature.
+        </p>
+        
+        </div>
+
+
+
+            <div class="col-md-6 mb-4">
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3103.614074142465!2d-83.622501!3d9.082476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOcKwMDQnNTYuOSJOIDgzwrAzNycyMS4wIlc!5e1!3m2!1ses-419!2scr!4v1731192246232!5m2!1ses-419!2scr" 
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        
+        </div>
+            <!-- WhatsApp Floating Button -->
+        <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+</div>
+
+
+<br>
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 40px; justify-items: center; max-width: 100%; min-width: fit-content; padding: 30px;">
+
+    
+   
+
+    <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DBOn7xjxiMt/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/DBOn7xjxiMt/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">Ver esta publicación en Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/DBOn7xjxiMt/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Una publicación compartida por Reserva de Vida Silvestre Ecos del Bosque (@ecos_del_bosque_)</a></p></div></blockquote>
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DCA8IA9sgMC/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/DCA8IA9sgMC/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">Ver esta publicación en Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/DCA8IA9sgMC/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Una publicación compartida por Reserva de Vida Silvestre Ecos del Bosque (@ecos_del_bosque_)</a></p></div></blockquote>
+
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/C-kniWeMQHi/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/reel/C-kniWeMQHi/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">Ver esta publicación en Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/reel/C-kniWeMQHi/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Una publicación compartida por Reserva de Vida Silvestre Ecos del Bosque (@ecos_del_bosque_)</a></p></div></blockquote>
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DAH58dNMRa1/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/DAH58dNMRa1/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">Ver esta publicación en Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/DAH58dNMRa1/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Una publicación compartida por Reserva de Vida Silvestre Ecos del Bosque (@ecos_del_bosque_)</a></p></div></blockquote>
+
+<script async src="//www.instagram.com/embed.js"></script>
+  
+    </div>
+
+<!-- Footer Section -->
+<footer class="footer text-center text-md-start">
+    <div class="container">
+        <div class="row">
+            <!-- Logo and Description -->
+            <div class="col-md-4 text-center footer-logo mb-3 mb-md-0">
+                <img src="../img/LOGO BLANCO EDIT.webp" loading="lazy" alt="Ecos del Bosque Logo">
+                <p class="description mt-2">
+                    "Because what we do to nature we do to ourselves. Take care of the planet and leave a green footprint on your path."
+                </p>
+                <p><i class="fas fa-coins"></i> We are crypto-friendly: BTC / ETH</p>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="col-md-4 text-md-start mb-3 mb-md-0">
+                <h5>Ecos del Bosque: Private Wildlife Reserve and Eco-Lodge</h5>
+                <p>Puntarenas Province<br>Vergel, Osa region, Costa Rica</p>
+                <p><i class="fas fa-phone-alt"></i> +506 8577-6163</p>
+                <p>
+                    <a href="https://wa.me/50685776163" style="text-decoration: none; color: inherit;">
+                        <i class="fab fa-whatsapp"></i> +506 8577-6163
+                    </a>
+                </p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:reservations@ecosdelbosque.com">reservations@ecosdelbosque.com</a></p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/@ecosdelbosquecr" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/ecos_del_bosque_" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@ecosdelbosquecr" target="_blank" aria-label="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Footer Links -->
+            <div class="col-md-4 text-md-end">
+                <ul class="list-unstyled">
+                    <li><a href="./Contact.html" target="_blank">FAQ</a></li>
+                    <li><a href="./Contact.html" target="_blank">Contact</a></li>
+                    <li><a href="./Us.html" target="_blank">About Us</a></li>
+                    <li><a href="./Contact.html" target="_blank">How to Support</a></li>
+                    <li><a href="./Contact.html" target="_blank">Help</a></li>
+                    <li><a href="./About.html" target="_blank">Sustainability and Impact</a></li>
+                    <li><a href="./Tours.html" target="_blank">Tours</a></li>
+                    <li><a href="./About.html" target="_blank">How to Get Here</a></li>
+                </ul>
+            </div>
+        </div>
+
+        
+
+        <!-- Bottom Bar -->
+        <div class="row">
+            <div class="col-12 bottom-bar mt-4">
+                <a href="./Policies.html"><i class="fas fa-file-alt"></i> Terms of Use</a> | 
+                <a href="./Policies.html"><i class="fas fa-lock"></i> Privacy Policy</a>
+                <p class="mt-2"><a href="https://www.nativainnovations.com" target="_blank">Website developed by Nativa Innovations</a> - All Rights Reserved 2024</p>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+
+
+
+<!-- Bootstrap JS (necessary for Navbar toggle functionality) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0-alpha1/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+
+
+</body>
+</html>
