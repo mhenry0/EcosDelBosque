@@ -278,7 +278,7 @@ body, .nav-link, .btn-custom {
 
 /* Hero section for Blog */
 .HeroBlog {
-    background: url('../img/blogbg.JPG') center/cover no-repeat;
+    background: url('../img/blog/blogbg.JPG') center/cover no-repeat;
     height: 600px;
     display: flex;
     align-items: center;
