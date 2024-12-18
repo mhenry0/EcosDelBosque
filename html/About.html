@@ -6,7 +6,7 @@
     <title>Ecos del Bosque: Private Wildlife Reserve and Eco-lodge</title>
     <!-- add icon link -->
     <link rel="icon" href=
-    "../img/blackbg.webp"
+    "../img/logos/blackbg.webp"
             type="image/x-icon" />
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -35,59 +35,86 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" id="navbar">
     <div class="container">
         <a class="navbar-brand" href="./Home.html">
-            <img src="../img/blackbg.webp" alt="Ecos del Bosque Logo"> <!-- Replace with actual logo path -->
+            <img src="../img/logos/blackbg.webp" alt="Ecos del Bosque Logo"> <!-- Replace with actual logo path -->
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="./Home.html" >Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="./Home.html">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="./Wildlife.html">Wildlife</a></li>
-                <li class="nav-item"><a class="nav-link" href="./Rooms.html" >Rooms</a></li>
-                <li class="nav-item"><a class="nav-link" href="./Tours.html"  >Tours</a></li>
-                <li class="nav-item"><a class="nav-link" href="./Farm.html" >Eco-Farm</a></li>
-                <li class="nav-item"><a class="nav-link" href="./Contact.html" >Contact</a></li>
-                <li class="nav-item"><a class="nav-link" href="">Booking</a></li>
-                <li class="nav-item"><a class="nav-link" href="./Us.html" >Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="./Rooms.html">Rooms</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="./Tours.html" id="toursDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Tours
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="toursDropdown">
+                        <!-- Repeated link for "Tours" -->
+                        <li><a class="dropdown-item" href="./Tours.html">Tours</a></li>
+                        <li><a class="dropdown-item" href="./Packages.html">Packages</a></li>
+                    </ul>
+                </li>
+                
+                
+                <li class="nav-item"><a class="nav-link" href="./Farm.html">Eco-Farm</a></li>
+ <!-- Dropdown for Contact -->
+ <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="./Contact.html" id="contactDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Contact
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="contactDropdown">
+        <li><a class="dropdown-item" href="./Contact.html">Contact Us</a></li>
+        <li><a class="dropdown-item" href="./GettingHere.html">Getting Here</a></li>
+    </ul>
+</li>                <li class="nav-item"><a class="nav-link" href="">Booking</a></li>
+ <!-- Dropdown for Contact -->
+ <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="./Us.html" id="contactDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Us
+    </a>                <ul class="dropdown-menu" aria-labelledby="toursDropdown">
+                    <!-- Repeated link for "Tours" -->
+                    <li><a class="dropdown-item" href="./Us.html">Our Story</a></li>
+                    <li><a class="dropdown-item" href="./Blog.html">Blog</a></li>
+                </ul>
                 <li class="nav-item"><a class="nav-link" href="./About.html" style="color: #28a745;">About</a></li>
-  
+
                 <!-- Icon button to toggle translation element -->
                 <button class="btn btn-link" onclick="toggleTranslate()" aria-expanded="false" style="font-size: 1.5rem;">
                     <i class="fas fa-globe"></i>
                 </button>
-  
+
                 <!-- Translation element, initially hidden -->
                 <div id="translateContainer" style="display: none; text-align: center;">
                     <div id="google_translate_element"></div>
                 </div>
-  
+
                 <!-- Translation script -->
                 <script type="text/javascript">
                     function googleTranslateElementInit() {
                         new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
                     }
-  
+
                     // Function to toggle the translation element
                     function toggleTranslate() {
                         const translateContainer = document.getElementById('translateContainer');
                         translateContainer.style.display = translateContainer.style.display === 'none' ? 'block' : 'none';
                     }
                 </script>
-  
+
                 <!-- Load Google Translate script -->
                 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
             </ul>
         </div>
     </div>
-  </nav>
+</nav>
 
 
 
 
 
 <section class="hero">
-    <img src="../img/aboutbg.webp" alt="Background Image" class="hero-image">
+    <img src="../img/banners/aboutbg.webp" alt="Background Image" class="hero-image">
     <div class="container">
         <h1>Ecos del Bosque</h1>
         <a href="#" class="btn btn-custom">Book Here</a>
@@ -164,7 +191,7 @@
         <!-- SDG 11 Card -->
 <div class="col-lg-4 col-md-6 col-sm-12 col-12 mb-4">
     <div class="card">
-        <img src="../img/ods11.webp" class="card-img-top" alt="SDG 11 Image">
+        <img src="../img/logos/ods11.webp" class="card-img-top" alt="SDG 11 Image">
         <div class="card-header bg-primary text-white">
             <h5>SDG 11: Sustainable Cities and Communities</h5>
         </div>
@@ -178,22 +205,11 @@
                     </h2>
                     <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionSDG11">
                         <div class="accordion-body">
-                            We use eco-friendly construction materials and renewable energy sources to reduce our environmental impact.
+                            We are planning on using fallen wood, and bamboo to build our next rooms. We are installing solar pannels in 2025.
                         </div>
                     </div>
                 </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Sustainable Transportation
-                        </button>
-                    </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionSDG11">
-                        <div class="accordion-body">
-                            Our transportation options within the reserve, including electric vehicles and bicycles, promote sustainable travel.
-                        </div>
-                    </div>
-                </div>
+          
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingThree">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
@@ -226,7 +242,7 @@
                     </h2>
                     <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionSDG11">
                         <div class="accordion-body">
-                            We are dedicated to fostering a sustainable community by collaborating with local initiatives and businesses.
+                            We are dedicated to fostering a sustainable community by collaborating with local initiatives and businesses. Specially with local-owned businesses.
                         </div>
                     </div>
                 </div>
@@ -238,7 +254,7 @@
         <!-- SDG 12 Card -->
 <div class="col-lg-4 col-md-6 mb-4">
     <div class="card">
-        <img src="../img/ods12.webp" class="card-img-top" alt="SDG 12 Image">
+        <img src="../img/logos/ods12.webp" class="card-img-top" alt="SDG 12 Image">
         <div class="card-header bg-success text-white">
             <h5>SDG 12: Responsible Consumption and Production</h5>
         </div>
@@ -312,7 +328,7 @@
 <!-- SDG 13 Card -->
 <div class="col-lg-4 col-md-6 mb-4">
     <div class="card">
-        <img src="../img/ods13.webp" class="card-img-top" alt="SDG 13 Image">
+        <img src="../img/logos/ods13.webp" class="card-img-top" alt="SDG 13 Image">
         <div class="card-header bg-info text-white">
             <h5>SDG 13: Climate Action</h5>
         </div>
@@ -326,7 +342,7 @@
                     </h2>
                     <div id="collapseOneSDG13" class="accordion-collapse collapse " aria-labelledby="headingOneSDG13" data-bs-parent="#accordionSDG13">
                         <div class="accordion-body">
-                            We utilize renewable energy, such as solar and wind, to power our facilities and reduce our carbon footprint.
+                            At the time, we are not using Solar Pannels in 2025 (I, Sebastian Mora, will upadte this section when we have them) but it is part of our goals to have them by July 2025.
                         </div>
                     </div>
                 </div>
@@ -386,7 +402,7 @@
 <!-- SDG 15 Card -->
 <div class="col-lg-4 col-md-6 mb-4">
     <div class="card">
-        <img src="../img/ods15.webp" class="card-img-top" alt="SDG 15 Image">
+        <img src="../img/logos/ods15.webp" class="card-img-top" alt="SDG 15 Image">
         <div class="card-header bg-warning text-white">
             <h5>SDG 15: Life on Land</h5>
         </div>
@@ -460,7 +476,7 @@
 <!-- SDG 17 Card -->
 <div class="col-lg-4 col-md-6 mb-4">
     <div class="card">
-        <img src="../img/ods17.webp" class="card-img-top" alt="SDG 17 Image">
+        <img src="../img/logos/ods17.webp" class="card-img-top" alt="SDG 17 Image">
         <div class="card-header bg-dark text-white">
             <h5>SDG 17: Partnerships for the Goals</h5>
         </div>
@@ -646,7 +662,7 @@
         <div class="row">
             <!-- Logo and Description -->
             <div class="col-md-4 text-center footer-logo mb-3 mb-md-0">
-                <img src="../img/whitelogo.webp" alt="Ecos del Bosque Logo">
+                <img src="../img/logos/whitebg.webp" loading="lazy" alt="Ecos del Bosque Logo">
                 <p class="description mt-2">
                     "Because what we do to nature we do to ourselves. Take care of the planet and leave a green footprint on your path."
                 </p>
@@ -656,41 +672,54 @@
             <!-- Contact Information -->
             <div class="col-md-4 text-md-start mb-3 mb-md-0">
                 <h5>Ecos del Bosque: Private Wildlife Reserve and Eco-Lodge</h5>
-                <p>Puntarenas Province<br>Vergel, Osa Peninsula, Costa Rica</p>
+                <p>Puntarenas Province<br>Vergel, Osa region, Costa Rica</p>
                 <p><i class="fas fa-phone-alt"></i> +506 8577-6163</p>
+                <p>
+                    <a href="https://wa.me/50685776163" style="text-decoration: none; color: inherit;">
+                        <i class="fab fa-whatsapp"></i> +506 8577-6163
+                    </a>
+                </p>
                 <p><i class="fas fa-envelope"></i> <a href="mailto:reservations@ecosdelbosque.com">reservations@ecosdelbosque.com</a></p>
                 <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-tiktok"></i></a>
-
+                    <a href="https://www.facebook.com/@ecosdelbosquecr" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/ecos_del_bosque_" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@ecosdelbosquecr" target="_blank" aria-label="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
                 </div>
             </div>
 
-            
-                <!-- Footer Links -->
-                <div class="col-md-4 text-md-end">
-                    <ul class="list-unstyled">
-                        <li><a href="./Contact.html">FAQ</a></li>
-                        <li><a href="./Contact.html">Contact</a></li>
-                        <li><a href="./Us.html">About Us</a></li>
-                        <li><a href="./Contact.html">How to Support</a></li>
-                        <li><a href="./Contact.html">Help</a></li>
-                        <li><a href="./About.html">Sustainability and Impact</a></li>
-                        <li><a href="./Tours.html">Tours</a></li>
-                        <li><a href="./About.html">How to Get Here</a></li>
-                    </ul>
-                </div>
+            <!-- Footer Links -->
+            <div class="col-md-4 text-md-end">
+                <ul class="list-unstyled">
+                    <li><a href="./Contact.html" target="_blank">FAQ</a></li>
+                    <li><a href="./Contact.html" target="_blank">Contact</a></li>
+                    <li><a href="./Us.html" target="_blank">About Us</a></li>
+                    <li><a href="./Contact.html" target="_blank">How to Support</a></li>
+                    <li><a href="./Contact.html" target="_blank">Help</a></li>
+                    <li><a href="./About.html" target="_blank">Sustainability and Impact</a></li>
+                    <li><a href="./Tours.html" target="_blank">Tours</a></li>
+                    <li><a href="./About.html" target="_blank">How to Get Here</a></li>
+                </ul>
             </div>
+        </div>
+
         
+
         <!-- Bottom Bar -->
         <div class="row">
             <div class="col-12 bottom-bar mt-4">
-                <a href="./Policies.html">Terms of Use</a> - <a href="./Policies.html">Privacy Policy</a>
-                <p class="mt-2">Website developed by Nativa Innovations - All Rights Reserved 2024</p>
+                <a href="./Policies.html"><i class="fas fa-file-alt"></i> Terms of Use</a> | 
+                <a href="./Policies.html"><i class="fas fa-lock"></i> Privacy Policy</a>
+                <p class="mt-2"><a href="https://www.nativainnovations.com" target="_blank">Website developed by Nativa Innovations</a> - All Rights Reserved 2024</p>
             </div>
         </div>
     </div>
+
 </footer>
 
 <!-- Bootstrap JS (necessary for Navbar toggle functionality) -->

@@ -6,7 +6,7 @@
     <title>Ecos del Bosque: Private Wildlife Reserve and Eco-lodge</title>
     <!-- add icon link -->
     <link rel="icon" href=
-    "../img/blackbg.png"
+    "../img/logos/blackbg.webp"
             type="image/x-icon" />
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -29,10 +29,10 @@
 <body>
 
 <!-- Navigation Bar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" id="navbar">
     <div class="container">
         <a class="navbar-brand" href="./Home.html">
-            <img src="../img/blackbg.webp" alt="Ecos del Bosque Logo"> <!-- Replace with actual logo path -->
+            <img src="../img/logos/blackbg.webp" alt="Ecos del Bosque Logo"> <!-- Replace with actual logo path -->
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -42,11 +42,38 @@
                 <li class="nav-item"><a class="nav-link" href="./Home.html">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="./Wildlife.html">Wildlife</a></li>
                 <li class="nav-item"><a class="nav-link" href="./Rooms.html">Rooms</a></li>
-                <li class="nav-item"><a class="nav-link" href="./Tours.html">Tours</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="./Tours.html" id="toursDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Tours
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="toursDropdown">
+                        <!-- Repeated link for "Tours" -->
+                        <li><a class="dropdown-item" href="./Tours.html">Tours</a></li>
+                        <li><a class="dropdown-item" href="./Packages.html">Packages</a></li>
+                    </ul>
+                </li>
+                
+                
                 <li class="nav-item"><a class="nav-link" href="./Farm.html">Eco-Farm</a></li>
-                <li class="nav-item"><a class="nav-link" href="./Contact.html">Contact</a></li>
-                <li class="nav-item"><a class="nav-link" href="">Booking</a></li>
-                <li class="nav-item"><a class="nav-link" href="./Us.html" style="color: #28a745;">Us</a></li>
+ <!-- Dropdown for Contact -->
+ <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="./Contact.html" id="contactDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Contact
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="contactDropdown">
+        <li><a class="dropdown-item" href="./Contact.html">Contact Us</a></li>
+        <li><a class="dropdown-item" href="./GettingHere.html">Getting Here</a></li>
+    </ul>
+</li>                <li class="nav-item"><a class="nav-link" href="">Booking</a></li>
+ <!-- Dropdown for Contact -->
+ <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="./Us.html" id="contactDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #28a745;">
+        Us
+    </a>                <ul class="dropdown-menu" aria-labelledby="toursDropdown">
+                    <!-- Repeated link for "Tours" -->
+                    <li><a class="dropdown-item" href="./Us.html">Our Story</a></li>
+                    <li><a class="dropdown-item" href="./Blog.html">Blog</a></li>
+                </ul>
                 <li class="nav-item"><a class="nav-link" href="./About.html">About</a></li>
 
                 <!-- Icon button to toggle translation element -->
@@ -79,113 +106,137 @@
     </div>
 </nav>
 
+
 <!-- HeroBlog Section -->
 <section class="HeroBlog">
     <h1>Blog: Letters from the Wild</h1>
 </section>
+<!-- Blog: Letters from the Wild -->
+<section style="margin: 30px 0; padding: 30px; background-color: #f9f9f9; border-left: 8px solid #ffbb00;">
+    <h2 style="color: #333; font-size: 2rem; margin-bottom: 15px;">Letters from the Wild</h2>
+    <p style="color: #555; font-size: 1.1rem; line-height: 1.8; margin-bottom: 20px;">
+        Step into a world where the whispers of the forest, the songs of birds, and the rustling leaves come alive. 
+        <em>Letters from the Wild</em> is a heartfelt collection of stories, observations, and reflections from deep within 
+        nature's untouched corners. Each entry brings you closer to the untamed beauty of the wilderness — from majestic animals 
+        that roam freely to the fragile ecosystems we strive to protect.
+    </p>
+    <p style="color: #555; font-size: 1.1rem; line-height: 1.8; margin-bottom: 20px;">
+        Through these letters, we share our encounters with wildlife, insights into conservation challenges, and 
+        personal moments of awe and wonder. Whether it's the quiet grace of a jaguar in the early morning mist, 
+        the vibrant hum of a hidden waterfall, or the delicate blooms of rainforest orchids, our stories invite you 
+        to pause, reflect, and reconnect with the natural world.
+    </p>
+    <p style="color: #555; font-size: 1.1rem; line-height: 1.8; margin-bottom: 20px;">
+        Join us as we document the extraordinary biodiversity of the Osa and beyond, offering a glimpse 
+        into the magic of wildlife and the importance of preserving these treasures for generations to come. 
+        These letters are a tribute to nature’s resilience and a call to nurture the delicate bond we share 
+        with our planet.
+    </p>
+
+</section>
 
 <!-- Blog Content -->
-<div class="container my-5">
+<div class="container my-5" style="font-size: 20px;">
     <div class="row g-4">
        <!-- Blog Entry 1 -->
-<div class="col-md-6 col-lg-4">
-    <div class="card shadow-sm" style="background-image: url('../img/DSCF0095.webp'); background-size: cover; background-position: center; color: white; height: 250px; display: flex; justify-content: flex-end;">
-        <div class="card-body" style="background: rgba(0, 0, 0, 0.2); padding: 1rem;">
-            <h5 class="card-title-blog" style="color: white;">The Osa Peninsula: A Biodiversity Hotspot</h5>
-            <p class="card-text">Discover the incredible array of species unique to the Osa Peninsula and our reserve.</p>
-            <a href="./blog/entry1.html" class="btn btn-blog" style="background-color: #ffbb00; color: white;">Read More</a>
+        <div class="col-md-6 col-lg-4">
+            <div class="card shadow-sm" style="background-image: url('../img/DSCF0095.webp'); background-size: cover; background-position: center; color: white; height: 250px; display: flex; justify-content: flex-end;">
+                <div class="card-body" style="background: rgba(0, 0, 0, 0.2); padding: 1rem;">
+                    <p>Visiting Osa for the First Time</p>
+                    <p class="card-text">Read about all what you need to know before and all the eco-adventures waiting for you.</p>
+                    <a href="./blog/entry1.html" class="btn btn-blog">Read More</a>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
 
         <!-- Blog Entry 2 -->
         <div class="col-md-6 col-lg-4">
-            <div class="card shadow-sm">
-                <div class="card-body">
-                    <h5 class="card-title-blog">The Natural Medicine from Osa.
-                    </h5>
+            <div class="card shadow-sm" style="background-image: url('../img/DSCF0095.webp'); background-size: cover; background-position: center; color: white; height: 250px; display: flex; justify-content: flex-end;">
+                <div class="card-body" style="background: rgba(0, 0, 0, 0.2); padding: 1rem;">
+                    <p>The Natural Medicine from Osa
+                    </p>
                     <p class="card-text">Learn about how to use natural plants as remedies.</p>
-                    <a href="./blog/entries/entry2.html" class="btn btn-blog">Read More</a>
+                    <a href="./blog/entry2.html" class="btn btn-blog">Read More</a>
                 </div>
             </div>
         </div>
         <!-- Blog Entry 3 -->
         <div class="col-md-6 col-lg-4">
-            <div class="card shadow-sm">
-                <div class="card-body">
-                    <h5 class="card-title-blog">Top 5 Birds to Spot at Ecos del Bosque</h5>
+            <div class="card shadow-sm" style="background-image: url('../img/DSCF0095.webp'); background-size: cover; background-position: center; color: white; height: 250px; display: flex; justify-content: flex-end;">
+                <div class="card-body" style="background: rgba(0, 0, 0, 0.2); padding: 1rem;">
+                    <p class="card-title-blog">Top 5 Birds to Spot at Ecos del Bosque</p>
                     <p class="card-text">Birdwatchers, take note! Here are the species you must see at our reserve.</p>
-                    <a href="./blog/entries/entry3.html" class="btn btn-blog">Read More</a>
+                    <a href="./blog/entry3.html" class="btn btn-blog">Read More</a>
                 </div>
             </div>
         </div>
         <!-- Blog Entry 4 -->
         <div class="col-md-6 col-lg-4">
-            <div class="card shadow-sm">
-                <div class="card-body">
-                    <h5 class="card-title-blog">Visit a Secret Hidden Waterfall</h5>
+            <div class="card shadow-sm" style="background-image: url('../img/DSCF0095.webp'); background-size: cover; background-position: center; color: white; height: 250px; display: flex; justify-content: flex-end;">
+                <div class="card-body" style="background: rgba(0, 0, 0, 0.2); padding: 1rem;">
+                    <p class="card-title-blog">Visit a Hidden Waterfall</p>
                     <p class="card-text">Make the most out of your day and enjoy a visit to a hidden waterfall in the jungle.</p>
-                    <a href="#" class="btn btn-blog">Read More</a>
+                    <a href="./blog/entry4.html" class="btn btn-blog">Read More</a>
                 </div>
             </div>
         </div>
         <!-- Blog Entry 5 -->
         <div class="col-md-6 col-lg-4">
-            <div class="card shadow-sm">
-                <div class="card-body">
-                    <h5 class="card-title-blog">A Day in the Life of a Conservationist at Ecos del Bosque</h5>
+            <div class="card shadow-sm" style="background-image: url('../img/DSCF0095.webp'); background-size: cover; background-position: center; color: white; height: 250px; display: flex; justify-content: flex-end;">
+                <div class="card-body" style="background: rgba(0, 0, 0, 0.2); padding: 1rem;">
+                    <p class="card-title-blog">A Day in the Life of a Conservationist at Ecos del Bosque</p>
                     <p class="card-text">Take a behind-the-scenes look at what it means to protect wildlife every day.</p>
-                    <a href="#" class="btn btn-blog">Read More</a>
+                    <a href="./blog/entry5.html" class="btn btn-blog">Read More</a>
                 </div>
             </div>
         </div>
         <!-- Blog Entry 6 -->
         <div class="col-md-6 col-lg-4">
-            <div class="card shadow-sm">
-                <div class="card-body">
-                    <h5 class="card-title-blog">Sustainable Farming: The Finca Project</h5>
+            <div class="card shadow-sm" style="background-image: url('../img/DSCF0095.webp'); background-size: cover; background-position: center; color: white; height: 250px; display: flex; justify-content: flex-end;">
+                <div class="card-body" style="background: rgba(0, 0, 0, 0.2); padding: 1rem;">
+                    <p class="card-title-blog">Sustainable Farming: The Finca Project</p>
                     <p class="card-text">Explore how we use sustainable practices to farm and support the local community.</p>
-                    <a href="#" class="btn btn-blog">Read More</a>
+                    <a href="./blog/entry6.html" class="btn btn-blog">Read More</a>
                 </div>
             </div>
         </div>
         <!-- Blog Entry 7 -->
         <div class="col-md-6 col-lg-4">
-            <div class="card shadow-sm">
-                <div class="card-body">
-                    <h5 class="card-title-blog">Top 5 Eco-Tours for Nature Enthusiasts</h5>
-                    <p class="card-text">From cacao tours to waterfall hikes, discover our best eco-adventures.</p>
-                    <a href="#" class="btn btn-blog">Read More</a>
+            <div class="card shadow-sm" style="background-image: url('../img/DSCF0095.webp'); background-size: cover; background-position: center; color: white; height: 250px; display: flex; justify-content: flex-end;">
+                <div class="card-body" style="background: rgba(0, 0, 0, 0.2); padding: 1rem;">
+                    <p class="card-title-blog">Top 5 Eco-Tours for Nature Enthusiasts</p>
+                    <p class="card-text">There is something for everyone out here but we have select our favorite activitities for you.</p>
+                    <a href="./blog/entry7.html" class="btn btn-blog">Read More</a>
                 </div>
             </div>
         </div>
         <!-- Blog Entry 8 -->
         <div class="col-md-6 col-lg-4">
-            <div class="card shadow-sm">
-                <div class="card-body">
-                    <h5 class="card-title-blog">Why Protecting Wildlife Matters</h5>
+            <div class="card shadow-sm" style="background-image: url('../img/DSCF0095.webp'); background-size: cover; background-position: center; color: white; height: 250px; display: flex; justify-content: flex-end;">
+                <div class="card-body" style="background: rgba(0, 0, 0, 0.2); padding: 1rem;">
+                    <p class="card-title-blog">Why Protecting Wildlife Matters</p>
                     <p class="card-text">Heartwarming stories of animals and conservation success at our reserve.</p>
-                    <a href="#" class="btn btn-blog">Read More</a>
+                    <a href="./blog/entry8.html" class="btn btn-blog">Read More</a>
                 </div>
             </div>
         </div>
         <!-- Blog Entry 9 -->
         <div class="col-md-6 col-lg-4">
-            <div class="card shadow-sm">
-                <div class="card-body">
-                    <h5 class="card-title-blog">Local Flavors of Costa Rica</h5>
+            <div class="card shadow-sm" style="background-image: url('../img/DSCF0095.webp'); background-size: cover; background-position: center; color: white; height: 250px; display: flex; justify-content: flex-end;">
+                <div class="card-body" style="background: rgba(0, 0, 0, 0.2); padding: 1rem;">
+                    <p class="card-title-blog">Local Flavors of Costa Rica</p>
                     <p class="card-text">Learn about the local cuisine of Costa Rica beyond gallo pinto.</p>
-                    <a href="#" class="btn btn-blog">Read More</a>
+                    <a href="./blog/entry9.html" class="btn btn-blog">Read More</a>
                 </div>
             </div>
         </div>
         <!-- Blog Entry 10 -->
         <div class="col-md-6 col-lg-4">
-            <div class="card shadow-sm">
-                <div class="card-body">
-                    <h5 class="card-title-blog">Visiting Costa Rica in the Green Season</h5>
+            <div class="card shadow-sm" style="background-image: url('../img/DSCF0095.webp'); background-size: cover; background-position: center; color: white; height: 250px; display: flex; justify-content: flex-end;">
+                <div class="card-body" style="background: rgba(0, 0, 0, 0.2); padding: 1rem;">
+                    <p class="card-title-blog">Visiting Costa Rica in the Green Season</p>
                     <p class="card-text">Get tips for exploring Costa Rica during its lush, rainy season.</p>
-                    <a href="#" class="btn btn-blog">Read More</a>
+                    <a href="./blog/entry10.html" class="btn btn-blog">Read More</a>
                 </div>
             </div>
         </div>
@@ -209,13 +260,14 @@
 
 
 
+
 <!-- Footer Section -->
 <footer class="footer text-center text-md-start">
     <div class="container">
         <div class="row">
             <!-- Logo and Description -->
             <div class="col-md-4 text-center footer-logo mb-3 mb-md-0">
-                <img src="../img/whitelogo.png" alt="Ecos del Bosque Logo">
+                <img src="../img/logos/whitebg.webp" loading="lazy" alt="Ecos del Bosque Logo">
                 <p class="description mt-2">
                     "Because what we do to nature we do to ourselves. Take care of the planet and leave a green footprint on your path."
                 </p>
@@ -225,41 +277,54 @@
             <!-- Contact Information -->
             <div class="col-md-4 text-md-start mb-3 mb-md-0">
                 <h5>Ecos del Bosque: Private Wildlife Reserve and Eco-Lodge</h5>
-                <p>Puntarenas Province<br>Vergel, Osa Peninsula, Costa Rica</p>
+                <p>Puntarenas Province<br>Vergel, Osa region, Costa Rica</p>
                 <p><i class="fas fa-phone-alt"></i> +506 8577-6163</p>
+                <p>
+                    <a href="https://wa.me/50685776163" style="text-decoration: none; color: inherit;">
+                        <i class="fab fa-whatsapp"></i> +506 8577-6163
+                    </a>
+                </p>
                 <p><i class="fas fa-envelope"></i> <a href="mailto:reservations@ecosdelbosque.com">reservations@ecosdelbosque.com</a></p>
                 <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-tiktok"></i></a>
-
+                    <a href="https://www.facebook.com/@ecosdelbosquecr" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/ecos_del_bosque_" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@ecosdelbosquecr" target="_blank" aria-label="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
                 </div>
             </div>
 
-            
-                <!-- Footer Links -->
-                <div class="col-md-4 text-md-end">
-                    <ul class="list-unstyled">
-                        <li><a href="./Contact.html">FAQ</a></li>
-                        <li><a href="./Contact.html">Contact</a></li>
-                        <li><a href="./Us.html">About Us</a></li>
-                        <li><a href="./Contact.html">How to Support</a></li>
-                        <li><a href="./Contact.html">Help</a></li>
-                        <li><a href="./About.html">Sustainability and Impact</a></li>
-                        <li><a href="./Tours.html">Tours</a></li>
-                        <li><a href="./About.html">How to Get Here</a></li>
-                    </ul>
-                </div>
+            <!-- Footer Links -->
+            <div class="col-md-4 text-md-end">
+                <ul class="list-unstyled">
+                    <li><a href="./Contact.html" target="_blank">FAQ</a></li>
+                    <li><a href="./Contact.html" target="_blank">Contact</a></li>
+                    <li><a href="./Us.html" target="_blank">About Us</a></li>
+                    <li><a href="./Contact.html" target="_blank">How to Support</a></li>
+                    <li><a href="./Contact.html" target="_blank">Help</a></li>
+                    <li><a href="./About.html" target="_blank">Sustainability and Impact</a></li>
+                    <li><a href="./Tours.html" target="_blank">Tours</a></li>
+                    <li><a href="./About.html" target="_blank">How to Get Here</a></li>
+                </ul>
             </div>
+        </div>
+
         
+
         <!-- Bottom Bar -->
         <div class="row">
             <div class="col-12 bottom-bar mt-4">
-                <a href="./Policies.html">Terms of Use</a> - <a href="./Policies.html">Privacy Policy</a>
-                <p class="mt-2">Website developed by Nativa Innovations - All Rights Reserved 2024</p>
+                <a href="./Policies.html"><i class="fas fa-file-alt"></i> Terms of Use</a> | 
+                <a href="./Policies.html"><i class="fas fa-lock"></i> Privacy Policy</a>
+                <p class="mt-2"><a href="https://www.nativainnovations.com" target="_blank">Website developed by Nativa Innovations</a> - All Rights Reserved 2024</p>
             </div>
         </div>
     </div>
+
 </footer>
 
 
