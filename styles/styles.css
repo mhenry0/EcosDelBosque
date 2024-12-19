@@ -220,7 +220,7 @@ body, .nav-link, .btn-custom {
 }
 
 .whatsapp-float i {
-    font-size: 28px; /* Adjust icon size */
+    font-size: 35px; /* Adjust icon size */
 }
 
 .whatsapp-float:hover {
@@ -240,6 +240,10 @@ body, .nav-link, .btn-custom {
 }
 
 
+.ecosdelbosque {
+    font-size: 100px;
+    font-family: 'DM Serif Display', 'serif';
+}
 
 
 
@@ -324,7 +328,7 @@ body, .nav-link, .btn-custom {
 
 
 .Entry1 {
-    background: url('/img/Entry1.JPG') center/cover no-repeat;
+    background: url('../img/blog/blogbg.JPG') center/cover no-repeat;
     height: 600px;
     display: flex;
     align-items: center;
