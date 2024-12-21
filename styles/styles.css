@@ -325,10 +325,11 @@ body, .nav-link, .btn-custom {
     background-color: transparent; /* Optional: Remove background color if any */
 }
 
+/*BLOG ENTRIES*/
 
 
 .Entry1 {
-    background: url('../img/blog/blogbg.JPG') center/cover no-repeat;
+    background: url('../img/blog/nature.webp') center/cover no-repeat;
     height: 600px;
     display: flex;
     align-items: center;
@@ -342,14 +343,134 @@ body, .nav-link, .btn-custom {
     color: #f8be00;
 }
 
+.Entry2 {
+    background: url('../img/blog/farmnmedicine.webp') center/cover no-repeat;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+.Entry2 h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 6rem;
+    color: #f8be00;
+}
 
+.Entry3 {
+    background: url('../img/blog/guan.webp') center/cover no-repeat;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+.Entry3 h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 6rem;
+    color: #f8be00;
+}
 
-
-
-
-
-
-
+.Entry4 {
+    background: url('../img/blog/waterfall.JPG') center/cover no-repeat;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+.Entry4 h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 6rem;
+    color: #f8be00;
+}
+.Entry5 {
+    background: url('../img/blog/conservation.JPG') center/cover no-repeat;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+.Entry5 h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 6rem;
+    color: #f8be00;
+}
+.Entry6 {
+    background: url('../img/blog/chili.webp') center/cover no-repeat;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+.Entry6 h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 6rem;
+    color: #f8be00;
+}
+.Entry7 {
+    background: url('../img/blog/nauyaca.webp') center/cover no-repeat;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+.Entry7 h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 6rem;
+    color: #f8be00;
+}
+.Entry8 {
+    background: url('../img/blog/wildlife.webp') center/cover no-repeat;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+.Entry8 h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 6rem;
+    color: #f8be00;
+}
+.Entry9 {
+    background: url('../img/blog/arrozconleche.jpg') center/cover no-repeat;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+.Entry9 h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 6rem;
+    color: #f8be00;
+}
+.Entry10 {
+    background: url('../img/blog/Passiflora.webp') center/cover no-repeat;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+.Entry10 h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 6rem;
+    color: #f8be00;
+}
 .blog-entry {
     max-width: 1200px;
     margin: 0 auto;
