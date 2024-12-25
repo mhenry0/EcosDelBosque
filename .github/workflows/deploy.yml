@@ -3,24 +3,36 @@ name: Deploy to EC2
 on:
   push:
     branches:
-      - main
+      - main  # Trigger the workflow when code is pushed to the main branch
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    
     steps:
-      - name: Checkout Code
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Install SSH Key
-        uses: webfactory/ssh-agent@v0.5.3
-        with:
-          ssh-private-key: ${{ secrets.EC2_SSH_KEY }}
+      - name: Set up SSH
+        run: |
+          # Create the private key file and set proper permissions
+          echo "${{ secrets.EC2_SSH_PRIVATE_KEY }}" > private_key.pem
+          chmod 600 private_key.pem
 
       - name: Deploy to EC2
         run: |
-          ssh -o StrictHostKeyChecking=no ec2-user@your-ec2-public-ip << 'EOF'
-          cd /var/www/html
-          git pull origin main
-          sudo systemctl restart nginx  # or your web server
+          # SSH into EC2 and deploy the code
+          ssh -i private_key.pem ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} << 'EOF'
+            # Change to the application directory on the EC2 instance
+            cd /var/www/html
+            # Pull the latest changes from the repository
+            git pull origin main
+            # Example: Restart services or install dependencies (if needed)
+            # sudo systemctl restart nginx
+            # sudo npm install
           EOF
+
+      - name: Clean up private key
+        run: |
+          # Remove the private key for security
+          rm private_key.pem
