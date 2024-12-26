@@ -788,7 +788,7 @@ body, .nav-link, .btn-custom {
  /* Button Styling */
  .btn-custom {
     display: inline-block;
-    padding: 12px 24px;
+    padding: 9px 24px;
     font-size: 1.2rem;
     font-weight: bold;
     text-transform: uppercase;
