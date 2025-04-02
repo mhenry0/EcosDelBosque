@@ -1,42 +1,126 @@
 /* Apply Lato font */
 body, .nav-link, .btn-custom {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400 ;
+    
 }
 
-/* Navbar */
+
+  /* Scale the logo image by 1.5 (150% of its original size) */
+  .navbar-brand img {
+    transform: scale(2.5);
+
+    transform-origin: center; /* Adjust as needed (e.g., left, right) */
+
+  }
+
+
+/* Permite que el contenedor del navbar muestre elementos fuera de sus límites */
+.navbar,
+.navbar .container,
+.navbar .row {
+  overflow: visible;
+}
+
+/* Posicionamiento del dropdown */
+.nav-item.dropdown {
+  position: relative; /* Permite que el .dropdown-menu se posicione relativo a este contenedor */
+}
+
+/* Estilos del menú desplegable */
+.nav-item.dropdown .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 180px;
+  margin: 0;
+  padding: 0.5rem 0;
+  display: none;
+  z-index: 9999;
+}
+
+/* Muestra el dropdown al hacer hover (opcional, para escritorio) */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Estilos para los items del dropdown */
+.dropdown-menu .dropdown-item:hover {
+  color: #1ac41f;
+  background-color: transparent;
+}
+
+/* Estilos generales del navbar */
 .navbar {
-    padding: 0.5rem 0rem;
-    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
-    font-size: 18px;
+  padding: 0.5rem 0;
+  box-shadow: 0 2px 4px rgba(247, 0, 0, 0.1);
+  font-size: 18px;
+  background-color: transparent;
 }
 
-    /* Transparent navbar when scrolling */
-    #navbar {
-        transition: background-color 0.3s ease, transform 0.3s ease;
-    }
-    .navbar-transparent {
-        background-color: transparent !important;
-    }
-    .navbar-scrolled {
-        background-color: rgba(255, 255, 255, 0.8) !important; /* Change to preferred color */
-    }
-    .navbar-hidden {
-        transform: translateY(-100%); /* Hide navbar */
-    }
+#navbar {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.navbar-transparent {
+  background-color: transparent !important;
+}
+.navbar-scrolled {
+  background-color: rgba(255, 255, 255, 1) !important;
+}
+.navbar-hidden {
+  transform: translateY(-100%);
+}
 .navbar-brand img {
-    height: 150px;
+  height: 80px;
 }
 
+/* Consolidación de estilos para los enlaces */
 .nav-link {
-    color: #000000;
-    font-weight: 600;
-    margin: 0 0.5rem;
-    font-size: 20px;
+  position: relative;
+  padding: 10px;
+  font-size: 18px;
+  color: #333;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  font-weight: 400;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #1ac41f;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom center;
 }
 
 .nav-link:hover {
-    color: #1ac41f;
+  color: #1ac41f;
 }
+
+
+
+.btn-bookhere {
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+
+  .btn-bookhere:hover {
+    background-color: #3a9a2b !important;
+    border-color: #3a9a2b !important;
+  }
+
+
+
+
 
 /* Hero Section */
 .hero {
@@ -49,7 +133,7 @@ body, .nav-link, .btn-custom {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding-top: 70px;
+    padding-top: 10px;
 }
 
 
@@ -81,7 +165,6 @@ body, .nav-link, .btn-custom {
 
 /* Use DM Serif Display for the title */
 .hero h1 {
-    font-family: 'DM Serif Display', serif;
     font-size: 5rem;
     font-weight: 400;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
@@ -89,21 +172,22 @@ body, .nav-link, .btn-custom {
     word-spacing: 30px;
 }
 
+/* Estilo para los botones personalizados */
 .btn-custom {
-    background-color: #1ac41f;
-    color: #ffffff;
-    padding: 0.60rem 2rem;
-    margin-top: 30px;
-    font-size: 1.25rem;
-    font-weight: 600;
+    background-color: #1ac41f; /* Color verde */
+    color: white;
+    padding: 12px 30px;
     border-radius: 30px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    transition: background-color 0.3s, box-shadow 0.3s;
+    font-size: 20px;
+    text-align: center;
+    display: inline-block;
+    margin-right: 15px; /* Agrega separación entre los botones */
+    transition: background-color 0.3s ease;
 }
 
 .btn-custom:hover {
-    background-color: #218838;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    background-color: #3a9a2b; /* Cambio de color en hover */
+    text-decoration: none;
 }
 
 /* Responsive adjustments */
@@ -157,9 +241,8 @@ body, .nav-link, .btn-custom {
 }
 
 .custom-container {
-    padding-left: 100px; /* Adjust this value to add more or less padding */
+    padding-left: 50px; /* Adjust this value to add more or less padding */
 }
-
 
 
 
@@ -219,6 +302,7 @@ body, .nav-link, .btn-custom {
     z-index: 1000; /* Ensure it overlays other elements */
 }
 
+
 .whatsapp-float i {
     font-size: 35px; /* Adjust icon size */
 }
@@ -258,15 +342,15 @@ body, .nav-link, .btn-custom {
     display: flex;
     flex-wrap: wrap;
     gap: 8px; /* Space between bubbles */
-    margin-top: 10px; /* Space above the bubbles */
+    margin-top: 7px; /* Space above the bubbles */
 }
 
 .bubble {
-    background-color: #1ac41f; /* Bubble color */
+    background-color: #0d620f ; /* Bubble color */
     color: white; /* Text color */
     padding: 5px 10px; /* Reduced padding */
     border-radius: 10px; /* Reduced border radius */
-    font-size: 14px; /* Reduced font size */
+    font-size: 12px; /* Reduced font size */
     text-align: center; /* Center the text */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow */
     cursor: pointer; /* Change cursor to pointer */
@@ -280,7 +364,7 @@ body, .nav-link, .btn-custom {
 
 /* Hero section for Blog */
 .HeroBlog {
-    background: url('../img/banners/puma.png') center/cover no-repeat;
+    background: url('../img/banners/puma.webp') center/cover no-repeat;
     height: 600px;
     display: flex;
     align-items: center;
@@ -310,17 +394,6 @@ body, .nav-link, .btn-custom {
 
 .btn-blog:hover {
     background-color: #ffee00;
-}
-
-/* Dropdown Menu Styles */
-.nav-item.dropdown:hover .dropdown-menu {
-    display: block;
-    margin-top: 0; /* Optional: adjust positioning */
-}
-
-.dropdown-menu .dropdown-item:hover {
-    color: #45c509; /* Text color */
-    background-color: transparent; /* Optional: Remove background color if any */
 }
 
 /*BLOG ENTRIES*/
@@ -551,36 +624,6 @@ body, .nav-link, .btn-custom {
 
 
 
-.nav-link {
-    position: relative;
-    padding: 10px;
-    font-size: 18px;
-    color: #333;
-    text-decoration: none;
-  }
-
-  .nav-link::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: #1ac41f;
-    bottom: 0;
-    left: 0;
-    transform: scaleX(0);
-    transform-origin: bottom right;
-    transition: transform 0.3s ease;
-  }
-
-  .nav-link:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  }
-
-  .nav-link:hover {
-    color: #1ac41f;
-  }
-
 
 
 
@@ -669,21 +712,7 @@ body, .nav-link, .btn-custom {
 
 
 
-.parallax {
-    background-image: url('your-image.jpg'); /* Replace with your image URL */
-    height: 130vh; /* Full viewport height */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    padding: 20px;
-    color: white; /* Ensure text is visible against the background */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add contrast for readability */
-}
+
 
 .letter-content {
     background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for the text */
@@ -749,14 +778,13 @@ body, .nav-link, .btn-custom {
 
 
 
-
 .btn-hover-effect {
     position: relative;
-    overflow: hidden; /* Confine the hover effect within the button */
+    overflow: hidden;
     color: white;
     text-decoration: none;
     padding: 10px 20px;
-    background-color: #0015b3;
+    background-color: #1ac41f;
     border: none;
     border-radius: 4px;
     display: inline-block;
@@ -770,19 +798,50 @@ body, .nav-link, .btn-custom {
     left: -100%;
     width: 100%;
     height: 100%;
-    background-color: #1ac41f ; /* Hover background color */
-    transition: left 0.4s ease; /* Smooth transition */
-    z-index: 0; /* Layer below the text */
+    background-color: #0d620f;
+    transition: left 0.4s ease;
+    z-index: -1; /* Cambiado a -1 para que quede detrás del texto */
 }
 
 .btn-hover-effect:hover::before {
-    left: 0; /* Move the background from left to right */
+    left: 0;
 }
 
+/* Asegurar que el texto esté por encima */
 .btn-hover-effect > span {
-    position: relative; /* Ensure the text stays above the background */
-    z-index: 1; /* Layer above the background */
+    position: relative;
+    z-index: 2;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
  /* Button Styling */
@@ -792,18 +851,73 @@ body, .nav-link, .btn-custom {
     font-size: 1.2rem;
     font-weight: bold;
     text-transform: uppercase;
-    color: #1ac41f;
-    background-color: #fff;
-    border: 2px solid #ffffff;
-    border-radius: 25px;
+    color: #ffffff;
+    background-color: #1ac41f;
+    border: 2px solid #1ac41f;
     text-decoration: none;
     transition: all 0.3s ease;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
 .btn-custom:hover {
-    background-color: #1ac41f;
-    color: white;
+    background-color: #ffffff;
+    color: #1ac41f;
     transform: scale(1.05);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+    background: url('../img/banners/puma.webp') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 40px 0;
+    position: relative;
+
+}
+
+
+.footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Semi-transparent black */
+    z-index: 1;
+}
+
+.footer * {
+    position: relative;
+    z-index: 2; /* Ensures the text appears above the overlay */
+}
+
+
+.footer h2, .footer p {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* Adjust values as needed */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

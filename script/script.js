@@ -86,3 +86,26 @@ carousel.addEventListener('slid.bs.carousel', function () {
 
 
 
+
+
+
+
+
+
+
+
+  const positionIndicator = document.getElementById('carouselPosition');
+  const carouselElement = document.getElementById('carouselExampleCaptions');
+  const items = carouselElement.querySelectorAll('.carousel-item');
+  const total = items.length;
+
+  function updatePosition() {
+    const activeIndex = Array.from(items).findIndex(item => item.classList.contains('active')) + 1;
+    positionIndicator.textContent = `${activeIndex} / ${total}`;
+  }
+
+  // Actualiza cuando cambia de slide
+  carouselElement.addEventListener('slid.bs.carousel', updatePosition);
+
+  // Inicializa
+  updatePosition();

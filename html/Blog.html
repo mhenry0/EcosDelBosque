@@ -27,83 +27,109 @@
     </head>
 <body>
 
-<!-- Navigation Bar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" id="navbar">
-    <div class="container">
-        <a class="navbar-brand" href="./Home.html">
-            <img src="../img/logos/blackbg.webp" alt="Ecos del Bosque Logo"> <!-- Replace with actual logo path -->
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="./Home.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="./Wildlife.html">Wildlife</a></li>
-                <li class="nav-item"><a class="nav-link" href="./Rooms.html">Rooms</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="./Tours.html" id="toursDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Tours
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="toursDropdown">
-                        <!-- Repeated link for "Tours" -->
-                        <li><a class="dropdown-item" href="./Tours.html">Tours</a></li>
-                        <li><a class="dropdown-item" href="./Packages.html">Packages</a></li>
-                    </ul>
-                </li>
-                
-                
-                <li class="nav-item"><a class="nav-link" href="./Farm.html">Eco-Farm</a></li>
- <!-- Dropdown for Contact -->
- <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="./Contact.html" id="contactDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-        Contact
+
+ <!-- Navigation Bar -->
+ <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" id="navbar">
+  <div class="container">
+    <a class="navbar-brand" href="./Home.html">
+      <img src="../img/logos/logoecosdelbosque.png" alt="Ecos del Bosque Logo" style="width: 100px; height: 100px;" loading="lazy">
     </a>
-    <ul class="dropdown-menu" aria-labelledby="contactDropdown">
-        <li><a class="dropdown-item" href="./Contact.html">Contact Us</a></li>
-        <li><a class="dropdown-item" href="./GettingHere.html">Getting Here</a></li>
-    </ul>
-</li>                <li class="nav-item"><a class="nav-link" href="">Booking</a></li>
- <!-- Dropdown for Contact -->
- <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="./Us.html" id="contactDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #28a745;">
-        Us
-    </a>                <ul class="dropdown-menu" aria-labelledby="toursDropdown">
-                    <!-- Repeated link for "Tours" -->
-                    <li><a class="dropdown-item" href="./Us.html">Our Story</a></li>
-                    <li><a class="dropdown-item" href="./Blog.html">Blog</a></li>
-                </ul>
-                <li class="nav-item"><a class="nav-link" href="./About.html">About</a></li>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link" href="./Home.html" >Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="./Wildlife.html">Wildlife</a></li>
+              <li class="nav-item"><a class="nav-link" href="./Rooms.html">Rooms</a></li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="./Tours.html" id="toursDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Tours
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="toursDropdown">
+                      <!-- Repeated link for "Tours" -->
+                      <li><a class=" nav-link " href="./Tours.html">Tours</a></li>
+                      <li><a class=" nav-link " href="./Packages.html">Packages</a></li>
+                  </ul>
+              </li>
+              
+              
+              <li class="nav-item"><a class="nav-link" href="./Farm.html">Eco-Farm</a></li>
+<!-- Dropdown for Contact -->
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="./Contact.html" id="contactDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+      Contact
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="contactDropdown">
+      <li class="nav-item"><a class=" nav-link " href="./Contact.html">Contact</a></li>
+      <li class="nav-item"><a class=" nav-link " href="./GettingHere.html">Getting Here</a></li>
+      <li class="nav-item"><a class=" nav-link " href="./FAQ.html">Frequently Asked Questions</a></li>
+  </ul>
+</li>
+  
+<!-- Dropdown for Contact -->
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="./Us.html" id="contactDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #1ac41f;">
+      Us
+  </a>                <ul class="dropdown-menu" aria-labelledby="toursDropdown">
+                  <!-- Repeated link for "Tours" -->
+                  <li><a class=" nav-link" href="./Us.html">Our Story</a></li>
+                  <li><a class=" nav-link" href="./Blog.html" >Blog</a></li>
+              </ul>
+              <li class="nav-item"><a class="nav-link" href="./About.html" >About</a></li>
 
-                <!-- Icon button to toggle translation element -->
-                <button class="btn btn-link" onclick="toggleTranslate()" aria-expanded="false" style="font-size: 1.5rem;">
-                    <i class="fas fa-globe"></i>
-                </button>
 
-                <!-- Translation element, initially hidden -->
-                <div id="translateContainer" style="display: none; text-align: center;">
-                    <div id="google_translate_element"></div>
-                </div>
 
-                <!-- Translation script -->
-                <script type="text/javascript">
-                    function googleTranslateElementInit() {
-                        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
-                    }
+                  <!-- Botón con ícono para alternar traducción -->
+                  <button onclick="toggleTranslate()" aria-expanded="false"
+                  style="color: #1ac41f; font-size: 20px; background-color: transparent; border: none; cursor: pointer; margin-left: 10px;">
+                      <!-- Icono de idioma (puedes cambiarlo por otro si lo prefieres) -->
+                  <i class="fas fa-language"></i>
+                  </button>
 
-                    // Function to toggle the translation element
-                    function toggleTranslate() {
-                        const translateContainer = document.getElementById('translateContainer');
-                        translateContainer.style.display = translateContainer.style.display === 'none' ? 'block' : 'none';
-                    }
-                </script>
 
-                <!-- Load Google Translate script -->
-                <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-            </ul>
-        </div>
-    </div>
+      <!-- Translation element, inicialmente oculto -->
+<div id="translateContainer" style="display: none; text-align: center;">
+  <div id="google_translate_element"></div>
+</div>
+
+<!-- Translation script -->
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      // Solo se incluirán estos idiomas: Español, Francés, Alemán y Portugués
+      includedLanguages: 'es,fr,de,pt'
+    }, 'google_translate_element');
+  }
+
+  // Función para mostrar/ocultar el elemento de traducción
+  function toggleTranslate() {
+    const translateContainer = document.getElementById('translateContainer');
+    translateContainer.style.display = 
+      translateContainer.style.display === 'none' ? 'block' : 'none';
+  }
+</script>
+
+<!-- Carga del script de Google Translate -->
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+                              <!-- Book Here Button -->
+<li class="nav-item">
+  <a class="btn btn-success text-white ms-3 btn-bookhere" 
+  href="#" 
+  style="margin: 2px; align-items: center; background-color: #1ac41f; border-color: #1ac41f;">
+ Book Here
+</a>
+
+
+
+    </li>
+          </ul>
+      </div>
+  </div>
 </nav>
+
 
 
 <!-- HeroBlog Section -->
@@ -134,113 +160,152 @@
 
 </section>
 
-<!-- Blog Content -->
+<!-- Blog Content with Lazy Loading and Accessible Images -->
 <div class="container my-5" style="font-size: 20px;">
     <div class="row g-4">
-       <!-- Blog Entry 1 -->
-        <div class="col-md-6 col-lg-4">
-            <div class="card shadow-sm" style="background-image: url('../img/blog/nature.webp'); background-size: cover; background-position: center; color: white; height: 250px; display: flex; justify-content: flex-end;">
-                <div class="card-body" style="background: rgba(0, 0, 0, 0.2); padding: 1rem;">
-                    <p>Visiting Osa for the First Time</p>
-                    <p class="card-text">Read about all what you need to know before and all the eco-adventures waiting for you.</p>
-                    <a href="./blog/entry1.html" class="btn btn-blog">Read More</a>
-                </div>
+  
+      <!-- Blog Entry 1 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card shadow-sm text-white" style="height: 250px; position: relative; overflow: hidden;">
+          <img src="../img/blog/nature.webp" loading="lazy" alt="Tropical rainforest trail for eco-adventures" class="card-img" style="height: 100%; object-fit: cover;">
+          <div class="card-img-overlay d-flex align-items-end" style="background: rgba(0, 0, 0, 0.2); padding: 1rem;">
+            <div>
+              <p class="card-title-blog">Visiting Osa for the First Time</p>
+              <p class="card-text">Read about all what you need to know before and all the eco-adventures waiting for you.</p>
+              <a href="./blog/entry1.html" class="btn btn-blog">Read More</a>
             </div>
+          </div>
         </div>
-
-        <!-- Blog Entry 2 -->
-        <div class="col-md-6 col-lg-4">
-            <div class="card shadow-sm" style="background-image: url('../img/tours/farmnmedicine.webp'); background-size: cover; background-position: center; color: white; height: 250px; display: flex; justify-content: flex-end;">
-                <div class="card-body" style="background: rgba(0, 0, 0, 0.2); padding: 1rem;">
-                    <p>The Natural Medicine from Osa
-                    </p>
-                    <p class="card-text">Learn about how to use natural plants as remedies.</p>
-                    <a href="./blog/entry2.html" class="btn btn-blog">Read More</a>
-                </div>
+      </div>
+  
+      <!-- Blog Entry 2 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card shadow-sm text-white" style="height: 250px; position: relative; overflow: hidden;">
+          <img src="../img/tours/farmnmedicine.webp" loading="lazy" alt="Medicinal plants and farm tour in Osa" class="card-img" style="height: 100%; object-fit: cover;">
+          <div class="card-img-overlay d-flex align-items-end" style="background: rgba(0, 0, 0, 0.2); padding: 1rem;">
+            <div>
+              <p class="card-title-blog">The Natural Medicine from Osa</p>
+              <p class="card-text">Learn about how to use natural plants as remedies.</p>
+              <a href="./blog/entry2.html" class="btn btn-blog">Read More</a>
             </div>
+          </div>
         </div>
-        <!-- Blog Entry 3 -->
-        <div class="col-md-6 col-lg-4">
-            <div class="card shadow-sm" style="background-image: url('../img/blog/guan.webp'); background-size: cover; background-position: center; color: white; height: 250px; display: flex; justify-content: flex-end;">
-                <div class="card-body" style="background: rgba(0, 0, 0, 0.2); padding: 1rem;">
-                    <p class="card-title-blog">Top 5 Birds to Spot at Ecos del Bosque</p>
-                    <p class="card-text">Birdwatchers, take note! Here are the species you must see at our reserve.</p>
-                    <a href="./blog/entry3.html" class="btn btn-blog">Read More</a>
-                </div>
+      </div>
+  
+      <!-- Blog Entry 3 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card shadow-sm text-white" style="height: 250px; position: relative; overflow: hidden;">
+          <img src="../img/blog/guan.webp" loading="lazy" alt="Guan bird spotted in Osa Peninsula" class="card-img" style="height: 100%; object-fit: cover;">
+          <div class="card-img-overlay d-flex align-items-end" style="background: rgba(0, 0, 0, 0.2); padding: 1rem;">
+            <div>
+              <p class="card-title-blog">Top 5 Birds to Spot at Ecos del Bosque</p>
+              <p class="card-text">Birdwatchers, take note! Here are the species you must see at our reserve.</p>
+              <a href="./blog/entry3.html" class="btn btn-blog">Read More</a>
             </div>
+          </div>
         </div>
-        <!-- Blog Entry 4 -->
-        <div class="col-md-6 col-lg-4">
-            <div class="card shadow-sm" style="background-image: url('../img/blog/waterfall.JPG'); background-size: cover; background-position: center; color: white; height: 250px; display: flex; justify-content: flex-end;">
-                <div class="card-body" style="background: rgba(0, 0, 0, 0.2); padding: 1rem;">
-                    <p class="card-title-blog">Visit a Hidden Waterfall</p>
-                    <p class="card-text">Make the most out of your day and enjoy a visit to a hidden waterfall in the jungle.</p>
-                    <a href="./blog/entry4.html" class="btn btn-blog">Read More</a>
-                </div>
+      </div>
+  
+      <!-- Blog Entry 4 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card shadow-sm text-white" style="height: 250px; position: relative; overflow: hidden;">
+          <img src="../img/blog/waterfall.webp" loading="lazy" alt="Hidden waterfall in the jungle of Osa" class="card-img" style="height: 100%; object-fit: cover;">
+          <div class="card-img-overlay d-flex align-items-end" style="background: rgba(0, 0, 0, 0.2); padding: 1rem;">
+            <div>
+              <p class="card-title-blog">Visit a Hidden Waterfall</p>
+              <p class="card-text">Make the most out of your day and enjoy a visit to a hidden waterfall in the jungle.</p>
+              <a href="./blog/entry4.html" class="btn btn-blog">Read More</a>
             </div>
+          </div>
         </div>
-        <!-- Blog Entry 5 -->
-        <div class="col-md-6 col-lg-4">
-            <div class="card shadow-sm" style="background-image: url('../img/blog/protectnature.JPG'); background-size: cover; background-position: center; color: white; height: 250px; display: flex; justify-content: flex-end;">
-                <div class="card-body" style="background: rgba(0, 0, 0, 0.2); padding: 1rem;">
-                    <p class="card-title-blog">A Day in the Life of a Conservationist at Ecos del Bosque</p>
-                    <p class="card-text">Take a behind-the-scenes look at what it means to protect wildlife every day.</p>
-                    <a href="./blog/entry5.html" class="btn btn-blog">Read More</a>
-                </div>
+      </div>
+  
+      <!-- Blog Entry 5 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card shadow-sm text-white" style="height: 250px; position: relative; overflow: hidden;">
+          <img src="../img/blog/protectnature.webp" loading="lazy" alt="Conservationist working to protect wildlife" class="card-img" style="height: 100%; object-fit: cover;">
+          <div class="card-img-overlay d-flex align-items-end" style="background: rgba(0, 0, 0, 0.2); padding: 1rem;">
+            <div>
+              <p class="card-title-blog">A Day at Ecos del Bosque</p>
+              <p class="card-text">Take a behind-the-scenes look at what it means to protect wildlife every day.</p>
+              <a href="./blog/entry5.html" class="btn btn-blog">Read More</a>
             </div>
+          </div>
         </div>
-        <!-- Blog Entry 6 -->
-        <div class="col-md-6 col-lg-4">
-            <div class="card shadow-sm" style="background-image: url('../img/blog/chili.webp'); background-size: cover; background-position: center; color: white; height: 250px; display: flex; justify-content: flex-end;">
-                <div class="card-body" style="background: rgba(0, 0, 0, 0.2); padding: 1rem;">
-                    <p class="card-title-blog">Sustainable Farming: The Finca Project</p>
-                    <p class="card-text">Explore how we use sustainable practices to farm and support the local community.</p>
-                    <a href="./blog/entry6.html" class="btn btn-blog">Read More</a>
-                </div>
+      </div>
+  
+      <!-- Blog Entry 6 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card shadow-sm text-white" style="height: 250px; position: relative; overflow: hidden;">
+          <img src="../img/blog/chili.webp" loading="lazy" alt="Chili peppers grown at the finca" class="card-img" style="height: 100%; object-fit: cover;">
+          <div class="card-img-overlay d-flex align-items-end" style="background: rgba(0, 0, 0, 0.2); padding: 1rem;">
+            <div>
+              <p class="card-title-blog">Sustainable Farming: The Finca Project</p>
+              <p class="card-text">Explore how we use sustainable practices to farm and support the local community.</p>
+              <a href="./blog/entry6.html" class="btn btn-blog">Read More</a>
             </div>
+          </div>
         </div>
-        <!-- Blog Entry 7 -->
-        <div class="col-md-6 col-lg-4">
-            <div class="card shadow-sm" style="background-image: url('../img/blog/nauyaca.webp'); background-size: cover; background-position: center; color: white; height: 250px; display: flex; justify-content: flex-end;">
-                <div class="card-body" style="background: rgba(0, 0, 0, 0.2); padding: 1rem;">
-                    <p class="card-title-blog">Top 5 Eco-Tours for Nature Enthusiasts</p>
-                    <p class="card-text">There is something for everyone out here but we have select our favorite activitities for you.</p>
-                    <a href="./blog/entry7.html" class="btn btn-blog">Read More</a>
-                </div>
+      </div>
+  
+      <!-- Blog Entry 7 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card shadow-sm text-white" style="height: 250px; position: relative; overflow: hidden;">
+          <img src="../img/blog/nauyaca.webp" loading="lazy" alt="Nauyaca waterfall image" class="card-img" style="height: 100%; object-fit: cover;">
+          <div class="card-img-overlay d-flex align-items-end" style="background: rgba(0, 0, 0, 0.2); padding: 1rem;">
+            <div>
+              <p class="card-title-blog">Top 5 Eco-Tours for Nature Enthusiasts</p>
+              <p class="card-text">There is something for everyone out here but we have selected our favorite activities for you.</p>
+              <a href="./blog/entry7.html" class="btn btn-blog">Read More</a>
             </div>
+          </div>
         </div>
-        <!-- Blog Entry 8 -->
-        <div class="col-md-6 col-lg-4">
-            <div class="card shadow-sm" style="background-image: url('../img/blog/wildlife.webp'); background-size: cover; background-position: center; color: white; height: 250px; display: flex; justify-content: flex-end;">
-                <div class="card-body" style="background: rgba(0, 0, 0, 0.2); padding: 1rem;">
-                    <p class="card-title-blog">Why Protecting Wildlife Matters</p>
-                    <p class="card-text">Heartwarming stories of animals and conservation success at our reserve.</p>
-                    <a href="./blog/entry8.html" class="btn btn-blog">Read More</a>
-                </div>
+      </div>
+  
+      <!-- Blog Entry 8 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card shadow-sm text-white" style="height: 250px; position: relative; overflow: hidden;">
+          <img src="../img/blog/wildlife.webp" loading="lazy" alt="Oophaga granulifera as the background. It is an endemic species of frogs from Costa Rica." class="card-img" style="height: 100%; object-fit: cover;">
+          <div class="card-img-overlay d-flex align-items-end" style="background: rgba(0, 0, 0, 0.2); padding: 1rem;">
+            <div>
+              <p class="card-title-blog">Why Protecting Wildlife Matters</p>
+              <p class="card-text">Heartwarming stories of animals and conservation success at our reserve.</p>
+              <a href="./blog/entry8.html" class="btn btn-blog">Read More</a>
             </div>
+          </div>
         </div>
-        <!-- Blog Entry 9 -->
-        <div class="col-md-6 col-lg-4">
-            <div class="card shadow-sm" style="background-image: url('../img/blog/arrozconleche.jpg'); background-size: cover; background-position: center; color: white; height: 250px; display: flex; justify-content: flex-end;">
-                <div class="card-body" style="background: rgba(0, 0, 0, 0.2); padding: 1rem;">
-                    <p class="card-title-blog">Local Flavors of Costa Rica</p>
-                    <p class="card-text">Learn about the local cuisine of Costa Rica beyond gallo pinto.</p>
-                    <a href="./blog/entry9.html" class="btn btn-blog">Read More</a>
-                </div>
+      </div>
+  
+      <!-- Blog Entry 9 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card shadow-sm text-white" style="height: 250px; position: relative; overflow: hidden;">
+          <img src="../img/blog/arrozconleche.webp" loading="lazy" alt="Costa Rican traditional dessert arroz con leche" class="card-img" style="height: 100%; object-fit: cover;">
+          <div class="card-img-overlay d-flex align-items-end" style="background: rgba(0, 0, 0, 0.2); padding: 1rem;">
+            <div>
+              <p class="card-title-blog">Local Flavors of Costa Rica</p>
+              <p class="card-text">Learn about the local cuisine of Costa Rica beyond gallo pinto.</p>
+              <a href="./blog/entry9.html" class="btn btn-blog">Read More</a>
             </div>
+          </div>
         </div>
-        <!-- Blog Entry 10 -->
-        <div class="col-md-6 col-lg-4">
-            <div class="card shadow-sm" style="background-image: url('../img/wildlife/flora/Passiflora.webp'); background-size: cover; background-position: center; color: white; height: 250px; display: flex; justify-content: flex-end;">
-                <div class="card-body" style="background: rgba(0, 0, 0, 0.2); padding: 1rem;">
-                    <p class="card-title-blog">Visiting Costa Rica in the Green Season</p>
-                    <p class="card-text">Get tips for exploring Costa Rica during its lush, rainy season.</p>
-                    <a href="./blog/entry10.html" class="btn btn-blog">Read More</a>
-                </div>
+      </div>
+  
+      <!-- Blog Entry 10 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card shadow-sm text-white" style="height: 250px; position: relative; overflow: hidden;">
+          <img src="../img/wildlife/flora/Passiflora.webp" loading="lazy" alt="Passiflora flower blooming in Costa Rica" class="card-img" style="height: 100%; object-fit: cover;">
+          <div class="card-img-overlay d-flex align-items-end" style="background: rgba(0, 0, 0, 0.2); padding: 1rem;">
+            <div>
+              <p class="card-title-blog">Visiting Costa Rica in the Green Season</p>
+              <p class="card-text">Get tips for exploring Costa Rica during its lush, rainy season.</p>
+              <a href="./blog/entry10.html" class="btn btn-blog">Read More</a>
             </div>
+          </div>
         </div>
+      </div>
+  
     </div>
-</div>
+  </div>
 
 
 
@@ -252,7 +317,6 @@
   
 
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3103.614074142465!2d-83.622501!3d9.082476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOcKwMDQnNTYuOSJOIDgzwrAzNycyMS4wIlc!5e1!3m2!1ses-419!2scr!4v1731192246232!5m2!1ses-419!2scr" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 
 

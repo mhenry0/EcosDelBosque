@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ecos del Bosque: Private Wildlife Reserve and Eco-lodge</title>
+        <title>Ecos del Bosque: Private Wildlife Reserve and lodge</title>
                <!-- add icon link -->
                <link rel="icon" href=
                "../img/logos/blackbg.webp"
@@ -18,7 +18,7 @@
         
        
         <meta name="keywords" content="wildlife reserve, nature preserve, animal sanctuary, biodiversity, eco-tourism, nature trails, bird watching, bird photography, migratory birds, hiking trails, guided hikes, wildlife conservation, habitat restoration, sustainability, nature preservation, environmental education, endangered species, eco-friendly practices">
-        <meta name="description" content="Discover Ecos del Bosque, a private wildlife reserve and eco-lodge on Costa Rica's Osa Region. Immerse yourself in nature with sustainable eco-tours, biodiversity conservation, and eco-friendly accommodations. Explore, connect, and preserve.">
+        <meta name="description" content="Discover Ecos del Bosque, a private wildlife reserve and lodge on Costa Rica's Osa Region. Immerse yourself in nature with sustainable eco-tours, biodiversity conservation, and eco-friendly accommodations. Explore, connect, and preserve.">
         <link rel="stylesheet" href="../styles/styles.css"> 
         <script src="../script/script.js"></script>
     
@@ -27,80 +27,104 @@
     </head>
 <body>
 
-<!-- Navigation Bar -->
+ <!-- Navigation Bar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" id="navbar">
     <div class="container">
-        <a class="navbar-brand" href="./Home.html">
-            <img src="../img/logos/blackbg.webp" alt="Ecos del Bosque Logo"> <!-- Replace with actual logo path -->
-        </a>
+      <a class="navbar-brand" href="./Home.html">
+        <img src="../img/logos/logoecosdelbosque.png" alt="Ecos del Bosque Logo" style="width: 100px; height: 100px;" loading="lazy">
+      </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ol class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="./Home.html">Home</a></li>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="./Home.html" >Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="./Wildlife.html">Wildlife</a></li>
                 <li class="nav-item"><a class="nav-link" href="./Rooms.html">Rooms</a></li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="./Tours.html" id="toursDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Tours
                     </a>
-                    <ol class="dropdown-menu" aria-labelledby="toursDropdown">
+                    <ul class="dropdown-menu" aria-labelledby="toursDropdown">
                         <!-- Repeated link for "Tours" -->
-                        <li><a class="dropdown-item" href="./Tours.html">Tours</a></li>
-                        <li><a class="dropdown-item" href="./Packages.html">Packages</a></li>
-                    </ol>
+                        <li><a class=" nav-link " href="./Tours.html">Tours</a></li>
+                        <li><a class=" nav-link " href="./Packages.html">Packages</a></li>
+                    </ul>
                 </li>
                 
                 
                 <li class="nav-item"><a class="nav-link" href="./Farm.html">Eco-Farm</a></li>
- <!-- Dropdown for Contact -->
- <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="./Contact.html" id="contactDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+<!-- Dropdown for Contact -->
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="./Contact.html" id="contactDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
         Contact
     </a>
-    <ol class="dropdown-menu" aria-labelledby="contactDropdown">
-        <li><a class="dropdown-item" href="./Contact.html">Contact Us</a></li>
-        <li><a class="dropdown-item" href="./GettingHere.html">Getting Here</a></li>
-    </ol>
-</li>                <li class="nav-item"><a class="nav-link" href="">Booking</a></li>
+    <ul class="dropdown-menu" aria-labelledby="contactDropdown">
+        <li class="nav-item"><a class=" nav-link " href="./Contact.html">Contact</a></li>
+        <li class="nav-item"><a class=" nav-link " href="./GettingHere.html">Getting Here</a></li>
+        <li class="nav-item"><a class=" nav-link " href="./FAQ.html">Frequently Asked Questions</a></li>
+    </ul>
+</li>
+    
  <!-- Dropdown for Contact -->
  <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" href="./Us.html" id="contactDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
         Us
-    </a>                <ol class="dropdown-menu" aria-labelledby="toursDropdown">
+    </a>                <ul class="dropdown-menu" aria-labelledby="toursDropdown">
                     <!-- Repeated link for "Tours" -->
-                    <li><a class="dropdown-item" href="./Us.html">Our Story</a></li>
-                    <li><a class="dropdown-item" href="./Blog.html">Blog</a></li>
-                </ol>
-                <li class="nav-item"><a class="nav-link" href="./About.html" style="color: #28a745;">About</a></li>
+                    <li><a class=" nav-link" href="./Us.html">Our Story</a></li>
+                    <li><a class=" nav-link" href="./Blog.html">Blog</a></li>
+                </ul>
+                <li class="nav-item"><a class="nav-link" href="./About.html" style="color: #1ac41f;">About</a></li>
 
-                <!-- Icon button to toggle translation element -->
-                <button class="btn btn-link" onclick="toggleTranslate()" aria-expanded="false" style="font-size: 1.5rem;">
-                    <i class="fas fa-globe"></i>
-                </button>
 
-                <!-- Translation element, initially hidden -->
-                <div id="translateContainer" style="display: none; text-align: center;">
-                    <div id="google_translate_element"></div>
-                </div>
 
-                <!-- Translation script -->
-                <script type="text/javascript">
-                    function googleTranslateElementInit() {
-                        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
-                    }
+                    <!-- Botón con ícono para alternar traducción -->
+                    <button onclick="toggleTranslate()" aria-expanded="false"
+                    style="color: #1ac41f; font-size: 20px; background-color: transparent; border: none; cursor: pointer; margin-left: 10px;">
+                        <!-- Icono de idioma (puedes cambiarlo por otro si lo prefieres) -->
+                    <i class="fas fa-language"></i>
+                    </button>
 
-                    // Function to toggle the translation element
-                    function toggleTranslate() {
-                        const translateContainer = document.getElementById('translateContainer');
-                        translateContainer.style.display = translateContainer.style.display === 'none' ? 'block' : 'none';
-                    }
-                </script>
 
-                <!-- Load Google Translate script -->
-                <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-            </ol>
+        <!-- Translation element, inicialmente oculto -->
+<div id="translateContainer" style="display: none; text-align: center;">
+    <div id="google_translate_element"></div>
+  </div>
+  
+  <!-- Translation script -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        // Solo se incluirán estos idiomas: Español, Francés, Alemán y Portugués
+        includedLanguages: 'es,fr,de,pt'
+      }, 'google_translate_element');
+    }
+  
+    // Función para mostrar/ocultar el elemento de traducción
+    function toggleTranslate() {
+      const translateContainer = document.getElementById('translateContainer');
+      translateContainer.style.display = 
+        translateContainer.style.display === 'none' ? 'block' : 'none';
+    }
+  </script>
+  
+  <!-- Carga del script de Google Translate -->
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  
+                                <!-- Book Here Button -->
+<li class="nav-item">
+    <a class="btn btn-success text-white ms-3 btn-bookhere" 
+    href="#" 
+    style="margin: 2px; align-items: center; background-color: #1ac41f; border-color: #1ac41f;">
+   Book Here
+ </a>
+ 
+
+ 
+      </li>
+            </ul>
         </div>
     </div>
 </nav>
@@ -109,8 +133,10 @@
 
 
 
+
+
 <section class="hero">
-    <img src="../img/banners/aboutbg.webp" alt="Background Image" class="hero-image">
+    <img src="../img/banners/aboutbg.webp" alt="velvety manakin in the background" class="hero-image">
     <div class="container">
         <p class="ecosdelbosque">Ecos del Bosque</p>
         <a href="#" class="btn btn-custom">Book Here</a>
@@ -118,24 +144,23 @@
 </section>
 
 
-<br>
 
 
 
-<h1 style="text-align: center; font-size: 30px; color: #0C8A20">
-    <br>
+
+<h1 style="text-align: center; font-size: 38px; margin-top: 100px; margin-bottom: 100px;">
     <b>ABOUT</b>  
 </h1>
-<br>
-<br>
-<div style="padding-left: 20px; font-size: 20px;">
+
+<div class="container" style="margin-top: 20px; margin-bottom: 20px; color: black;font-size: 18px; text-align: left;">
     <h2><b>Mission</b></h2>
     <p>Our mission is to coltivate a profound bond between our guests and the wonders of the natural world by prioritizing conservation, sustainability, and community support. We are dedicated to preserving the rich biodiversity of the Osa Peninsola, creating immersive experiences that reveal the beauty and significance of the land, and promoting responsible stewardship of the environment. Through eco-friendly lodging, sustainable farming, and guided wildlife encounters, we aim to inspire each visitor to cherish and protect the planet, fostering a lasting impact for future generations.</p>
 </p> 
-<p><h3>Vision</b></h3>
-<p>Our vision is to be a beacon of sustainable living and ecological preservation, where nature and people coexist harmoniously. Ecos del Bosque strives to set a standard for environmental protection and self-sufficiency, creating a zero-waste sanctuary that enriches both the land and those who visit. By leading in biodiversity conservation, sustainable farming, and educational outreach, we envision a future where our eco-lodge and wildlife reserve inspire global change and nurture a deep respect for Earth’s ecosystems.</p>
 
-    <p><strong>Ecos del Bosque</strong> is a wildlife reserve, a sustainable finca development farm, and an eco-lodge, all working in harmony to protect the environment.</p>
+<h3><b>Vision</b></h3>
+<p>Our vision is to be a beacon of sustainable living and ecological preservation, where nature and people coexist harmoniously. Ecos del Bosque strives to set a standard for environmental protection and self-sufficiency, creating a zero-waste sanctuary that enriches both the land and those who visit. By leading in biodiversity conservation, sustainable farming, and educational outreach, we envision a future where our lodge and wildlife reserve inspire global change and nurture a deep respect for Earth’s ecosystems.</p>
+
+    <p><strong>Ecos del Bosque</strong> is a wildlife reserve, a sustainable finca development farm, and an lodge, all working in harmony to protect the environment.</p>
 
     <p>Founded by passionate Costa Rican naturalists, we aim to lead in flora and fauna protection, ecological awareness, and the organic development of a sustainable business. We are committed to generating zero waste in the South Pacific.</p>
     <p><strong>To achieve our goals, we operate in three distinct ways:</strong></p>
@@ -177,17 +202,17 @@
     <h4 style="font-size: 40px;">Sustainable Development Objectives Agenda 2030</h4>
 </div>
 <br>
-<div style="padding-left: 20px; font-size: 20px;">
+<div class="container" style="margin-top: 20px; margin-bottom: 20px; color: black;font-size: 18px; text-align: left;">
     <p>Part of our commitment is to work along the 2030 Agenda of Sustainable Objectives. See below how work with the objectives 11,12,13,14 and 17. All in the objective to make a better place in this world! <a href="https://sdgs.un.org/goals" target="_blank"> Read More Here</a></p>
 </div>
 <br>
     
-<div class="container mt-5">
+<div class="container mt-5" >
     <div class="row">
         <!-- SDG 11 Card -->
 <div class="col-lg-4 col-md-6 col-sm-12 col-12 mb-4">
     <div class="card">
-        <img src="../img/logos/ods11.webp" class="card-img-top" alt="SDG 11 Image">
+        <img src="../img/logos/ods11.webp" class="card-img-top" alt="SDG 11 Image sustainable cities and communities" loading="lazy">
         <div class="card-header bg-primary text-white">
             <p>SDG 11: Sustainable Cities and Communities</p>
         </div>
@@ -250,7 +275,7 @@
         <!-- SDG 12 Card -->
 <div class="col-lg-4 col-md-6 mb-4">
     <div class="card">
-        <img src="../img/logos/ods12.webp" class="card-img-top" alt="SDG 12 Image">
+        <img src="../img/logos/ods12.webp" class="card-img-top" alt="SDG 12 Image responsible production and consumption"  loading="lazy">
         <div class="card-header bg-success text-white">
             <p>SDG 12: Responsible Consumption and Production</p>
         </div>
@@ -324,7 +349,7 @@
 <!-- SDG 13 Card -->
 <div class="col-lg-4 col-md-6 mb-4">
     <div class="card">
-        <img src="../img/logos/ods13.webp" class="card-img-top" alt="SDG 13 Image">
+        <img src="../img/logos/ods13.webp" class="card-img-top" alt="SDG 13 Image climate action"  loading="lazy">
         <div class="card-header bg-info text-white">
             <p>SDG 13: Climate Action</p>
         </div>
@@ -398,7 +423,7 @@
 <!-- SDG 15 Card -->
 <div class="col-lg-4 col-md-6 mb-4">
     <div class="card">
-        <img src="../img/logos/ods15.webp" class="card-img-top" alt="SDG 15 Image">
+        <img src="../img/logos/ods15.webp" class="card-img-top" alt="SDG 15 Image life on land"  loading="lazy">
         <div class="card-header bg-warning text-white">
             <p>SDG 15: Life on Land</p>
         </div>
@@ -472,7 +497,7 @@
 <!-- SDG 17 Card -->
 <div class="col-lg-4 col-md-6 mb-4">
     <div class="card">
-        <img src="../img/logos/ods17.webp" class="card-img-top" alt="SDG 17 Image">
+        <img src="../img/logos/ods17.webp" class="card-img-top" alt="SDG 17 Image partnership for the goals"  loading="lazy">
         <div class="card-header bg-dark text-white">
             <p>SDG 17: Partnerships for the Goals</p>
         </div>
@@ -547,20 +572,9 @@
 
 
 
-
-
-
-
-
-
-
-
-<br>
-<br>
-
 <h5 style="text-align: center; font-size: 40px;"><b>Behaviour Guidelines at the Reserve</b></h5>
-<br>
-    <ol style="font-size: 15px;">
+<div class="container" style="margin-top: 20px; margin-bottom: 20px; color: black;font-size: 18px; text-align: left;">
+    <ol style="font-size: 18px; ">
             <li>The extraction of any type of plant is strictly prohibited.</li>
             <li>Pets are not allowed on the property. We do not want to disturb the ecosystem of the species.</li>
             <li>Failure to comply with this role will resolt in expolsion from the property and a permanent ban on entry.</li>
@@ -582,12 +596,8 @@
             </ol>
         
     </ol>
-    
 
 
-
-<br>
-<br>
     <p style="font-size: 20px;padding-left: 20px;">General Roles for Staying</p>
     <ol>
         <li><strong>Check-in and Check-out Times:</strong> Check-in time is at 3:00 PM and check-out time is at 11:00 AM. Please respect these times to allow us to prepare the lodge for the next guests.</li>
@@ -628,6 +638,7 @@
 
 
 
+</div>
 
 
 
@@ -647,7 +658,6 @@
   
   
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3103.614074142465!2d-83.622501!3d9.082476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOcKwMDQnNTYuOSJOIDgzwrAzNycyMS4wIlc!5e1!3m2!1ses-419!2scr!4v1731192246232!5m2!1ses-419!2scr" width="100%" height="250" style="border:0;" allowfollscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 
 
@@ -669,7 +679,7 @@
 
             <!-- Contact Information -->
             <div class="col-md-4 text-md-start mb-3 mb-md-0">
-                <p>Ecos del Bosque: Private Wildlife Reserve and Eco-Lodge</p>
+                <p>Ecos del Bosque: Private Wildlife Reserve and lodge</p>
                 <p>Puntarenas Province<br>Vergel, Osa region, Costa Rica</p>
                 <p><i class="fas fa-phone-alt"></i> +506 8577-6163</p>
                 <p>

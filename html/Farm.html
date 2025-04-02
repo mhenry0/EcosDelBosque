@@ -27,18 +27,18 @@
     </head>
 <body>
 
-<!-- Navigation Bar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" id="navbar">
+ <!-- Navigation Bar -->
+ <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" id="navbar">
     <div class="container">
-        <a class="navbar-brand" href="./Home.html">
-            <img src="../img/logos/blackbg.webp" alt="Ecos del Bosque Logo"> <!-- Replace with actual logo path -->
-        </a>
+      <a class="navbar-brand" href="./Home.html">
+        <img src="../img/logos/logoecosdelbosque.png" alt="Ecos del Bosque Logo" style="width: 100px; height: 100px;" loading="lazy">
+      </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="./Home.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="./Home.html" >Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="./Wildlife.html">Wildlife</a></li>
                 <li class="nav-item"><a class="nav-link" href="./Rooms.html">Rooms</a></li>
                 <li class="nav-item dropdown">
@@ -47,68 +47,92 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="toursDropdown">
                         <!-- Repeated link for "Tours" -->
-                        <li><a class="dropdown-item" href="./Tours.html">Tours</a></li>
-                        <li><a class="dropdown-item" href="./Packages.html">Packages</a></li>
+                        <li><a class=" nav-link " href="./Tours.html">Tours</a></li>
+                        <li><a class=" nav-link " href="./Packages.html">Packages</a></li>
                     </ul>
                 </li>
                 
                 
-                <li class="nav-item"><a class="nav-link" href="./Farm.html" style="color: #28a745;">Eco-Farm</a></li>
- <!-- Dropdown for Contact -->
- <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="./Contact.html" id="contactDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <li class="nav-item"><a class="nav-link" href="./Farm.html" style="color: #1ac41f;">Eco-Farm</a></li>
+  <!-- Dropdown for Contact -->
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="./Contact.html" id="contactDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"  >
         Contact
     </a>
     <ul class="dropdown-menu" aria-labelledby="contactDropdown">
-        <li><a class="dropdown-item" href="./Contact.html">Contact Us</a></li>
-        <li><a class="dropdown-item" href="./GettingHere.html">Getting Here</a></li>
+        <li class="nav-item"><a class=" nav-link " href="./Contact.html">Contact</a></li>
+        <li class="nav-item"><a class=" nav-link " href="./GettingHere.html">Getting Here</a></li>
+        <li class="nav-item"><a class=" nav-link " href="./FAQ.html">Frequently Asked Questions</a></li>
     </ul>
-</li>                <li class="nav-item"><a class="nav-link" href="">Booking</a></li>
- <!-- Dropdown for Contact -->
- <li class="nav-item dropdown">
+  </li>
+    
+  <!-- Dropdown for Contact -->
+  <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" href="./Us.html" id="contactDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
         Us
     </a>                <ul class="dropdown-menu" aria-labelledby="toursDropdown">
                     <!-- Repeated link for "Tours" -->
-                    <li><a class="dropdown-item" href="./Us.html">Our Story</a></li>
-                    <li><a class="dropdown-item" href="./Blog.html">Blog</a></li>
+                    <li><a class=" nav-link" href="./Us.html">Our Story</a></li>
+                    <li><a class=" nav-link" href="./Blog.html" >Blog</a></li>
                 </ul>
-                <li class="nav-item"><a class="nav-link" href="./About.html">About</a></li>
-
-                <!-- Icon button to toggle translation element -->
-                <button class="btn btn-link" onclick="toggleTranslate()" aria-expanded="false" style="font-size: 1.5rem;">
-                    <i class="fas fa-globe"></i>
-                </button>
-
-                <!-- Translation element, initially hidden -->
-                <div id="translateContainer" style="display: none; text-align: center;">
-                    <div id="google_translate_element"></div>
-                </div>
-
-                <!-- Translation script -->
-                <script type="text/javascript">
-                    function googleTranslateElementInit() {
-                        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
-                    }
-
-                    // Function to toggle the translation element
-                    function toggleTranslate() {
-                        const translateContainer = document.getElementById('translateContainer');
-                        translateContainer.style.display = translateContainer.style.display === 'none' ? 'block' : 'none';
-                    }
-                </script>
-
-                <!-- Load Google Translate script -->
-                <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                <li class="nav-item"><a class="nav-link" href="./About.html" >About</a></li>
+  
+  
+  
+                    <!-- Botón con ícono para alternar traducción -->
+                    <button onclick="toggleTranslate()" aria-expanded="false"
+                    style="color: #1ac41f; font-size: 20px; background-color: transparent; border: none; cursor: pointer; margin-left: 10px;">
+                        <!-- Icono de idioma (puedes cambiarlo por otro si lo prefieres) -->
+                    <i class="fas fa-language"></i>
+                    </button>
+  
+  
+        <!-- Translation element, inicialmente oculto -->
+  <div id="translateContainer" style="display: none; text-align: center;">
+    <div id="google_translate_element"></div>
+  </div>
+  
+  <!-- Translation script -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        // Solo se incluirán estos idiomas: Español, Francés, Alemán y Portugués
+        includedLanguages: 'es,fr,de,pt'
+      }, 'google_translate_element');
+    }
+  
+    // Función para mostrar/ocultar el elemento de traducción
+    function toggleTranslate() {
+      const translateContainer = document.getElementById('translateContainer');
+      translateContainer.style.display = 
+        translateContainer.style.display === 'none' ? 'block' : 'none';
+    }
+  </script>
+  
+  <!-- Carga del script de Google Translate -->
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  
+                                <!-- Book Here Button -->
+  <li class="nav-item">
+    <a class="btn btn-success text-white ms-3 btn-bookhere" 
+    href="#" 
+    style="margin: 2px; align-items: center; background-color: #1ac41f; border-color: #1ac41f;">
+   Book Here
+  </a>
+  
+  
+  
+      </li>
             </ul>
         </div>
     </div>
-</nav>
+  </nav>
 
 
 
 <section class="hero">
-    <img src="../img/banners/farmbg.JPG" alt="Background Image" class="hero-image" loading="lazy">
+    <img src="../img/wildlife/amphibians/oophagagranulifera.webp" alt="zinnia garden; it is a garden plant" class="hero-image" loading="lazy">
     <div class="container">
         <p class="ecosdelbosque">Ecos del Bosque</p>
         <a href="#" class="btn btn-custom">Book Here</a>
@@ -120,71 +144,193 @@
 
 
 
-<h1 style="text-align: center; font-size: 30px; color: #0C8A20">
-    <br>
-    <b>ECO-FARM</b>  
+<h1 style="text-align: center; font-size: 38px; margin-top: 100px; margin-bottom: 50px;">
+    <b>FARM</b>  
 </h1>
-<br>
-<br>
+<div class="container" style="color: black; font-size: 18px; text-align: left;">
+    <p>
+      We firmly believe that it is possible to live in harmony with our planet by minimizing our
+      environmental impact.
+    </p>
+    <p>
+      To achieve this goal at our lodge, we maintain an organic farm that produces a diverse range
+      of homemade goods within a self-sustaining framework designed to minimize waste. This eco-friendly
+      approach reflects our commitment to preserving the environment while providing fresh, locally-sourced
+      produce.
+    </p>
+    <p>
+      <strong>Our Products:</strong>
+    </p>
+    <div class="row">
+      <div class="col-md-6">
+        <ul>
+          <li>Ginger</li>
+          <li>Turmeric</li>
+          <li>Cilantro</li>
+          <li>Bananas</li>
+          <li>Plantains</li>
+          <li>Coffee</li>
+          <li>Rice</li>
+          <li>Beans</li>
+          <li>Corn</li>
+          <li>Guava</li>
+          <li>Guaba</li>
+          <li>Mango</li>
+          <li>Rose Apple</li>
+          <li>Water Rose Apple</li>
+          <li>Peru Guava</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <ul>
+          <li>Lepisanthes</li>
+          <li>Avocados</li>
+          <li>Pineapple</li>
+          <li>Papaya</li>
+          <li>Rambutan</li>
+          <li>Sugar Cane</li>
+          <li>Eggs</li>
+          <li>Oregano</li>
+          <li>Sweet Pepper</li>
+          <li>Chili Pepper</li>
+          <li>Soursop</li>
+          <li>Cashew</li>
+          <li>Tree Peanut</li>
+          <li>Yam</li>
+          <li>Cocoa</li>
+          <li>Wild Berries</li>
+          <li>Mint</li>
+          <li>Lemon Verbena</li>
+        </ul>
+      </div>
+    </div>
+    <p>
+      We also collect natural rainwater to irrigate our crops, making full use of the soil’s inherent resources.
+    </p>
+    <p>
+      Learn more about our Sustainable Agricultural Practices on our daily
+      <a href="./Tours.html">Farm Tour</a>.
+    </p>
+    <p style="margin-top: 50px;">
+        <b>Crops and Animals of the Farm</b>
+    </p>
+ 
+<style>
+    /* Make images fit the card container */
+    .carta {
+        overflow: hidden; /* Ensures any overflow is hidden */
+        height: 100%; /* Ensures consistent height for the card */
+    }
+    
+    .carta-img-top {
+        object-fit: cover; /* Ensures the image covers the container without distortion */
+        width: 100%; /* Stretches the image to fit the container's width */
+        height: 300px; /* Defines a consistent height for all images */
+    }
+</style>
 
-    <div style="padding-left: 20px; font-size: 20px;">
-        We deeply believe that we can live in harmony on Earth by making the least impact on the environment.
-        <br><br>
-        To accomplish this goal at the lodge, we have an organic farm that produces a wide variety of homemade goods, all within a self-sustaining framework designed to minimize waste. This eco-friendly approach reflects our dedication to preserving the environment while providing fresh, locally-sourced produce.
-        <br><br>
-        <strong>We produce:</strong> 
-        <div class="row">
-            <div class="col-md-6">
-                <ul>
-                    <li>Ginger</li>
-                    <li>Turmeric</li>
-                    <li>Cilantro</li>
-                    <li>Bananas</li>
-                    <li>Plantains</li>
-                    <li>Coffee</li>
-                    <li>Rice</li>
-                    <li>Beans</li>
-                    <li>Corn</li>
-                    <li>Guava</li>
-                    <li>Guaba</li>
-                    <li>Mango</li>
-                    <li>Rose Apple</li>
-                    <li>Water Rose Apple</li>
-                    <li>Peru Guava</li>
-                </ul>
-            </div>
-            <div class="col-md-6">
-                <ul>
-                    <li>Lepisanthes</li>
-                    <li>Avocados</li>
-                    <li>Pineapple</li>
-                    <li>Papaya</li>
-                    <li>Rambutan</li>
-                    <li>Sugar Cane</li>
-                    <li>Eggs</li>
-                    <li>Oregano</li>
-                    <li>Sweet Pepper</li>
-                    <li>Chili Pepper</li>
-                    <li>Soursop</li>
-                    <li>Cashew</li>
-                    <li>Tree Peanut</li>
-                    <li>Yam</li>
-                    <li>Cocoa</li>
-                    <li>Wild Berries</li>
-                    <li>Mint</li>
-                    <li>Lemon Verbena</li>
-                </ul>
+<div class="container py-5">
+    <div class="row g-4">
+        <!-- Gallery Item -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="carta">
+                <img src="../img/farm/blackberry.webp" class="carta-img-top gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" alt="A plant of blackberries." loading="lazy">
             </div>
         </div>
-        
-        We also collect natural rainwater to irrigate our crops, making the most of the soil’s natural resources.
-        <br><br>
-        You can learn more about our Sustainable Agricultural Practices on our daily <a href="./Tours.html">Farm Tour</a>. 
-        <br>
-        <br>
-        <img src="../img/banners/chili.webp" alt="Chili Banner" style="max-width: 100%; max-height: 100vh; display: block; margin: auto; border-radius: 20px;">
-
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="carta">
+                <img src="../img/farm/chilipepper.webp" class="carta-img-top gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" alt="A plant of chili pepper." loading="lazy">
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="carta">
+                <img src="../img/farm/coconut.webp" class="carta-img-top gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" alt="A coconut palm." loading="lazy">
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="carta">
+                <img src="../img/farm/dragonfruit.webp" class="carta-img-top gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" alt="Dragon fruit is a very unique and special exotic fruit." loading="lazy">
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="carta">
+                <img src="../img/farm/mango.webp" class="carta-img-top gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" alt="Mango hanging from the tree." loading="lazy">
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="carta">
+                <img src="../img/farm/musacea.webp" class="carta-img-top gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" alt="The bananas are the most widespread fruits in Costa Rica." loading="lazy">
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="carta">
+                <img src="../img/farm/papaya.webp" class="carta-img-top gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" alt="Papaya, tanagers, toucans, and fiery billed aracaris love to eat papaya." loading="lazy">
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="carta">
+                <img src="../img/farm/pineapple.webp" class="carta-img-top gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" alt="pineapples growing in the farm." loading="lazy">
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="carta">
+                <img src="../img/farm/soursop.webp" class="carta-img-top gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" alt="The soursop is an exotic fruits from Costa Rica." loading="lazy">
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="carta">
+                <img src="../img/farm/geese.webp" class="carta-img-top gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" alt="A couple of geese from our farm." loading="lazy">
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="carta">
+              <img src="../img/farm/turkeys.webp" loading="lazy" class="carta-img-top gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" alt="A couple of turkeys from the farm.">
+            </div>
+          </div>
+          
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="carta">
+              <img src="../img/farm/tangerine.webp" loading="lazy" class="carta-img-top gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" alt="tangerine hanging from the tree.">
+            </div>
+          </div>
+          
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="carta">
+              <img src="../img/farm/gato.webp" loading="lazy" class="carta-img-top gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" alt="A cat from the farm.">
+            </div>
+          </div>
+          
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="carta">
+              <img src="../img/farm/perro.webp" loading="lazy" class="carta-img-top gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" alt="A dog from the farm.">
+            </div>
+          </div>
+          
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="carta">
+              <img src="../img/farm/poultry.webp" loading="lazy" class="carta-img-top gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" alt="A rooster and hens from our farm.">
+            </div>
+          </div>
+          
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="carta">
+              <img src="../img/farm/yuca.webp" loading="lazy" class="carta-img-top gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" alt="yuca or cassava. It is an exotic aliment from our lands, it has been the main source of food for hundreds of years.">
+            </div>
+          </div>
+          
+     
+     
+      
+        <!-- Add more items as needed -->
     </div>
+</div>
+
+
+
+
+
+  </div>
+  
     
 <br>
 <br>
@@ -224,15 +370,6 @@
     <i class="fab fa-whatsapp"></i>
   </a>
   
-  
-
-
-<iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3103.614074142465!2d-83.622501!3d9.082476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOcKwMDQnNTYuOSJOIDgzwrAzNycyMS4wIlc!5e1!3m2!1ses-419!2scr!4v1731192246232!5m2!1ses-419!2scr" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-
-
-
-
 
 
 <!-- Footer Section -->

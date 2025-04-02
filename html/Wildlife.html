@@ -29,83 +29,105 @@
 </head>
 <body>
 
-<!-- Navigation Bar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" id="navbar">
-    <div class="container">
-        <a class="navbar-brand" href="./Home.html">
-            <img src="../img/logos/blackbg.webp" alt="Ecos del Bosque Logo"> <!-- Replace with actual logo path -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" id="navbar">
+        <div class="container">
+          <a class="navbar-brand" href="./Home.html">
+            <img src="../img/logos/logoecosdelbosque.png" alt="Ecos del Bosque Logo" style="width: 100px; height: 100px;">
+          </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="./Home.html" >Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Wildlife.html" style="color: #1ac41f;">Wildlife</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Rooms.html">Rooms</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="./Tours.html" id="toursDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Tours
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="toursDropdown">
+                            <!-- Repeated link for "Tours" -->
+                            <li><a class=" nav-link " href="./Tours.html">Tours</a></li>
+                            <li><a class=" nav-link " href="./Packages.html">Packages</a></li>
+                        </ul>
+                    </li>
+                    
+                    
+                    <li class="nav-item"><a class="nav-link" href="./Farm.html">Eco-Farm</a></li>
+    <!-- Dropdown for Contact -->
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="./Contact.html" id="contactDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Contact
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="./Home.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="./Wildlife.html" style="color: #28a745;">Wildlife</a></li>
-                <li class="nav-item"><a class="nav-link" href="./Rooms.html">Rooms</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="./Tours.html" id="toursDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Tours
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="toursDropdown">
+        <ul class="dropdown-menu" aria-labelledby="contactDropdown">
+            <li class="nav-item"><a class=" nav-link " href="./Farm.html">Getting Here</a></li>
+            <li class="nav-item"><a class=" nav-link " href="./Contact.html">Contact</a></li>
+        </ul>
+    </li>
+        
+     <!-- Dropdown for Contact -->
+     <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="./Us.html" id="contactDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Us
+        </a>                <ul class="dropdown-menu" aria-labelledby="toursDropdown">
                         <!-- Repeated link for "Tours" -->
-                        <li><a class="dropdown-item" href="./Tours.html">Tours</a></li>
-                        <li><a class="dropdown-item" href="./Packages.html">Packages</a></li>
+                        <li><a class=" nav-link" href="./Us.html">Our Story</a></li>
+                        <li><a class=" nav-link" href="./Blog.html">Blog</a></li>
                     </ul>
-                </li>
-                
-                
-                <li class="nav-item"><a class="nav-link" href="./Farm.html">Eco-Farm</a></li>
- <!-- Dropdown for Contact -->
- <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="./Contact.html" id="contactDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-        Contact
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="contactDropdown">
-        <li><a class="dropdown-item" href="./Contact.html">Contact Us</a></li>
-        <li><a class="dropdown-item" href="./GettingHere.html">Getting Here</a></li>
-    </ul>
-</li>                <li class="nav-item"><a class="nav-link" href="">Booking</a></li>
- <!-- Dropdown for Contact -->
- <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="./Us.html" id="contactDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-        Us
-    </a>                <ul class="dropdown-menu" aria-labelledby="toursDropdown">
-                    <!-- Repeated link for "Tours" -->
-                    <li><a class="dropdown-item" href="./Us.html">Our Story</a></li>
-                    <li><a class="dropdown-item" href="./Blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./About.html">About</a></li>
+    
+    
+    
+                        <!-- Botón con ícono para alternar traducción -->
+                        <button onclick="toggleTranslate()" aria-expanded="false"
+                        style="color: #1ac41f; font-size: 20px; background-color: transparent; border: none; cursor: pointer; margin-left: 10px;">
+                            <!-- Icono de idioma (puedes cambiarlo por otro si lo prefieres) -->
+                        <i class="fas fa-language"></i>
+                        </button>
+    
+    
+            <!-- Translation element, inicialmente oculto -->
+    <div id="translateContainer" style="display: none; text-align: center;">
+        <div id="google_translate_element"></div>
+      </div>
+      
+      <!-- Translation script -->
+      <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({
+            pageLanguage: 'en',
+            // Solo se incluirán estos idiomas: Español, Francés, Alemán y Portugués
+            includedLanguages: 'es,fr,de,pt'
+          }, 'google_translate_element');
+        }
+      
+        // Función para mostrar/ocultar el elemento de traducción
+        function toggleTranslate() {
+          const translateContainer = document.getElementById('translateContainer');
+          translateContainer.style.display = 
+            translateContainer.style.display === 'none' ? 'block' : 'none';
+        }
+      </script>
+      
+      <!-- Carga del script de Google Translate -->
+      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+      
+                                    <!-- Book Here Button -->
+    <li class="nav-item">
+        <a class="btn btn-success text-white ms-3 btn-bookhere" 
+        href="#" 
+        style="margin: 2px; align-items: center; background-color: #1ac41f; border-color: #1ac41f;">
+       Book Here
+     </a>
+     
+    
+     
+          </li>
                 </ul>
-                <li class="nav-item"><a class="nav-link" href="./About.html">About</a></li>
-
-                <!-- Icon button to toggle translation element -->
-                <button class="btn btn-link" onclick="toggleTranslate()" aria-expanded="false" style="font-size: 1.5rem;">
-                    <i class="fas fa-globe"></i>
-                </button>
-
-                <!-- Translation element, initially hidden -->
-                <div id="translateContainer" style="display: none; text-align: center;">
-                    <div id="google_translate_element"></div>
-                </div>
-
-                <!-- Translation script -->
-                <script type="text/javascript">
-                    function googleTranslateElementInit() {
-                        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
-                    }
-
-                    // Function to toggle the translation element
-                    function toggleTranslate() {
-                        const translateContainer = document.getElementById('translateContainer');
-                        translateContainer.style.display = translateContainer.style.display === 'none' ? 'block' : 'none';
-                    }
-                </script>
-
-                <!-- Load Google Translate script -->
-                <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-            </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
 
 
@@ -113,7 +135,7 @@
 
 
 <section class="hero">
-    <img src="../img/banners/wildlifebg.webp" loading="lazy" alt="Background Image" class="hero-image" >
+    <img src="../img/wildlife/amphibians/dartfrog.webp" loading="lazy" alt="Background Image" class="hero-image" >
     <div class="container">
         <p class="ecosdelbosque">Ecos del Bosque</p>
         <a href="#" class="btn btn-custom">Book Here</a>
@@ -121,21 +143,17 @@
 </section>
 
 
-<br>
 
 
 
-<h1 style="text-align: center; font-size: 30px; color: #0C8A20">
-    <br>
+<h1 style="text-align: center; font-size: 38px; margin-top: 100px; margin-bottom: 100px;">
     <b>BIODIVERSITY</b>  
 </h1>
 
-<br>
-<br>
-<h2 style="color: #0C8A20; font-size: 30px; font-weight: 600; padding-left: 20px;"> Presentation</h2> 
-<p style="padding-left: 20px; font-size: 20px;">
-    Osa Peninsula serves as a vital bridge between North and South America, where a remarkable array of flora and fauna coexist. Actually, 5% of worlwide biodiversity exists in Costa Rica, and the Osa Peninsula is one of the best placer to witness it. It has a touch of both Americas, this region is the very frontier in the Americas, and renowned for its extraordinary biodiversity. 
-        The Osa Peninsula, located in the southern Pacific region of Costa Rica, is a remarkable testament to the planet’s natural diversity. 
+
+    <div class="container" style="margin-top: 20px; margin-bottom: 20px; color: black;font-size: 18px; text-align: left;">
+    Osa serves as a vital bridge between North and South America, where a remarkable array of flora and fauna coexist. Actually, 5% of worlwide biodiversity exists in Costa Rica, and the Osa region is one of the best placer to witness it. It has a touch of both Americas, this region is the very frontier in the Americas, and renowned for its extraordinary biodiversity. 
+        The Osa region, located in the southern Pacific region of Costa Rica, is a remarkable testament to the planet’s natural diversity. 
         <br>
         <br>
      
@@ -143,16 +161,14 @@
         This region serves as a critical migratory corridor and conservation hub, connecting ecosystems and supporting the health of global biodiversity.
         <br>
         <br>
-        Exploring the Osa Peninsula offers a rare opportunity to immerse yourself in nature’s grandeur and witness unspoiled landscapes teeming with life. 
+        Exploring the Osa region offers a rare opportunity to immerse yourself in nature’s grandeur and witness unspoiled landscapes teeming with life. 
         From its towering canopy to its vibrant forest understory, the Osa is a treasure trove of ecological wonders waiting to be discovered.
         <br>
         <br>
     <b>DISCLAIMER: 
       The next pictures were taken at the reserve by our team. However, we can never guarantee that you will see them during the stay. We do not sell tours to find specific species.</b>
-</p>
-<br>
-<br>
-<p style="text-align: center; font-size: 30px; color: #0C8A20">
+    </div>
+<p style="text-align: center; font-size: 30px;">
     <br>
     <b>Amphibians</b>
     <div class="container custom-container">
@@ -164,7 +180,7 @@
                 <!-- Front Side -->
                 <div class="card-front" style="backface-visibility: hidden; position: relative;">
                   <img 
-                    src="../img/wildlife/amphibians/dendrobatesauratus.webp" 
+                    src="../img/wildlife/amphibians/dartfrog.webp" 
                     class="card-img-top" 
                     loading="lazy" 
                     alt="Dendrobates Auratus - Bright green and black poison dart frog" 
@@ -201,6 +217,69 @@
             </div>
           </div>
       
+            <!-- Card 1 -->
+            <div class="col">
+                <div class="card-container" style="perspective: 1000px;">
+                  <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                    <!-- Front Side -->
+                    <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                      <img 
+                        src="../img/wildlife/amphibians/rosenbergsfrog.webp" 
+                        class="card-img-top" 
+                        loading="lazy" 
+                        alt="Dendrobates Auratus - Bright green and black poison dart frog" 
+                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                      <div class="hover-message">Click over me</div>
+                    </div>
+                    <!-- Back Side -->
+                    <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                      <p>Scientific Name: <i>Dendrobates Auratus.</i><br>Habitat: Rainforests, and tropical zones. It has preference for rivers, creeks, and ponds.<br>Status: Least Concern.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+               <!-- Card 1 -->
+            <div class="col">
+                <div class="card-container" style="perspective: 1000px;">
+                  <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                    <!-- Front Side -->
+                    <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                      <img 
+                        src="../img/wildlife/amphibians/jumpingleaffrog.webp" 
+                        class="card-img-top" 
+                        loading="lazy" 
+                        alt="Dendrobates Auratus - Bright green and black poison dart frog" 
+                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                      <div class="hover-message">Click over me</div>
+                    </div>
+                    <!-- Back Side -->
+                    <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                      <p>Scientific Name: <i>Dendrobates Auratus.</i><br>Habitat: Rainforests, and tropical zones. It has preference for rivers, creeks, and ponds.<br>Status: Least Concern.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+               <!-- Card 1 -->
+            <div class="col">
+                <div class="card-container" style="perspective: 1000px;">
+                  <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                    <!-- Front Side -->
+                    <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                      <img 
+                        src="../img/wildlife/amphibians/marinetoad.webp" 
+                        class="card-img-top" 
+                        loading="lazy" 
+                        alt="Dendrobates Auratus - Bright green and black poison dart frog" 
+                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                      <div class="hover-message">Click over me</div>
+                    </div>
+                    <!-- Back Side -->
+                    <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                      <p>Scientific Name: <i>Dendrobates Auratus.</i><br>Habitat: Rainforests, and tropical zones. It has preference for rivers, creeks, and ponds.<br>Status: Least Concern.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
           <!-- Card 3 -->
           <div class="col">
             <div class="card-container" style="perspective: 1000px;">
@@ -256,18 +335,93 @@
 
 
 
-<p style="text-align: center; font-size: 30px; color: #0C8A20">
+<p style="text-align: center; font-size: 30px; ">
     <br>
     <b>Birds</b>  
     <div class="container custom-container">
       <div class="row">
+        <div class="col">
+            <div class="card-container" style="perspective: 1000px;">
+                <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                    <!-- Front Side -->
+                    <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                        <img src="../img/wildlife/birds/fierybilledaracari.webp" class="card-img-top" loading="lazy" alt="Toucan - Ramphastos ambiguus" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                        <div class="hover-message">Click over me</div>
+                    </div>
+                    <!-- Back Side -->
+                    <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                        <p>Scientific Name: <i>Ramphastos ambiguus</i><br>Common Name: Black-mandibled Toucan<br>Habitat: On Caribbean and Pacific Slopes, common in lowlands and decreasingly common up into middle elevations; to 3,900 (1,200,). Inhabits forests and semi open areas. It is very curious and it does not fear humans.<br>Status: Least Concern</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card-container" style="perspective: 1000px;">
+                <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                    <!-- Front Side -->
+                    <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                        <img src="../img/wildlife/birds/velvetymanakin.webp" class="card-img-top" loading="lazy" alt="Toucan - Ramphastos ambiguus" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                        <div class="hover-message">Click over me</div>
+                    </div>
+                    <!-- Back Side -->
+                    <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                        <p>Scientific Name: <i>Ramphastos ambiguus</i><br>Common Name: Black-mandibled Toucan<br>Habitat: On Caribbean and Pacific Slopes, common in lowlands and decreasingly common up into middle elevations; to 3,900 (1,200,). Inhabits forests and semi open areas. It is very curious and it does not fear humans.<br>Status: Least Concern</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card-container" style="perspective: 1000px;">
+                <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                    <!-- Front Side -->
+                    <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                        <img src="../img/wildlife/birds/tigerheron.webp" class="card-img-top" loading="lazy" alt="Toucan - Ramphastos ambiguus" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                        <div class="hover-message">Click over me</div>
+                    </div>
+                    <!-- Back Side -->
+                    <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                        <p>Scientific Name: <i>Ramphastos ambiguus</i><br>Common Name: Black-mandibled Toucan<br>Habitat: On Caribbean and Pacific Slopes, common in lowlands and decreasingly common up into middle elevations; to 3,900 (1,200,). Inhabits forests and semi open areas. It is very curious and it does not fear humans.<br>Status: Least Concern</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card-container" style="perspective: 1000px;">
+                <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                    <!-- Front Side -->
+                    <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                        <img src="../img/wildlife/birds/whiteneckedpuffbird.webp" class="card-img-top" loading="lazy" alt="Toucan - Ramphastos ambiguus" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                        <div class="hover-message">Click over me</div>
+                    </div>
+                    <!-- Back Side -->
+                    <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                        <p>Scientific Name: <i>Ramphastos ambiguus</i><br>Common Name: Black-mandibled Toucan<br>Habitat: On Caribbean and Pacific Slopes, common in lowlands and decreasingly common up into middle elevations; to 3,900 (1,200,). Inhabits forests and semi open areas. It is very curious and it does not fear humans.<br>Status: Least Concern</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card-container" style="perspective: 1000px;">
+                <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                    <!-- Front Side -->
+                    <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                        <img src="../img/wildlife/birds/scarletmacaw.webp" class="card-img-top" loading="lazy" alt="Toucan - Ramphastos ambiguus" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                        <div class="hover-message">Click over me</div>
+                    </div>
+                    <!-- Back Side -->
+                    <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                        <p>Scientific Name: <i>Ramphastos ambiguus</i><br>Common Name: Black-mandibled Toucan<br>Habitat: On Caribbean and Pacific Slopes, common in lowlands and decreasingly common up into middle elevations; to 3,900 (1,200,). Inhabits forests and semi open areas. It is very curious and it does not fear humans.<br>Status: Least Concern</p>
+                    </div>
+                </div>
+            </div>
+        </div>
           <!-- Card 1 -->
           <div class="col">
             <div class="card-container" style="perspective: 1000px;">
                 <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                     <!-- Front Side -->
                     <div class="card-front" style="backface-visibility: hidden; position: relative;">
-                        <img src="../img/wildlife/birds/tucan.webp" class="card-img-top" loading="lazy" alt="Toucan - Ramphastos ambiguus" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                        <img src="../img/wildlife/birds/blackmandibledtoucan.webp" class="card-img-top" loading="lazy" alt="Toucan - Ramphastos ambiguus" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
                         <div class="hover-message">Click over me</div>
                     </div>
                     <!-- Back Side -->
@@ -299,6 +453,26 @@
               </div>
           </div>
   
+            <!-- Card 2 -->
+            <div class="col">
+                <div class="card-container" style="perspective: 1000px;">
+                    <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                        <!-- Front Side -->
+                        <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                            <img src="../img/wildlife/birds/cacique.webp" class="card-img-top" loading="lazy" alt="Euphonia" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                            <div class="hover-message">Click over me</div>
+                        </div>
+                        <!-- Back Side -->
+                        <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                            <p>Scientific Name: <i>Euphonia luteicapilla</i>
+                              <br>
+                              Common Name: Yellow-crowned Euphonia.
+  
+                            <br>Habitat: Rainforests, forest edges, and gardens.<br>Status: Least Concern.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
           <!-- Card 3 -->
           <div class="col">
               <div class="card-container" style="perspective: 1000px;">
@@ -346,7 +520,90 @@
                     <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                         <!-- Front Side -->
                         <div class="card-front" style="backface-visibility: hidden; position: relative;">
-                            <img src="../img/wildlife/birds/hawk.webp"  class="card-img-top" loading="lazy" alt="Road Side Hawk" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                            <img src="../img/wildlife/birds/roadsidehawk.webp"  class="card-img-top" loading="lazy" alt="Road Side Hawk" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                            <div class="hover-message">Click over me</div>
+                        </div>
+                        <!-- Back Side -->
+                        <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                            <p>Scientific Name: <i>Rupornis magnirostris
+                            </i>
+                              <br>
+                              Common Name: Roadside Hawk.
+    
+                            <br>Habitat: Rainforests, forests edges, road edges, and open areas.<br>Status: Least Concern.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card-container" style="perspective: 1000px;">
+                    <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                        <!-- Front Side -->
+                        <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                            <img src="../img/wildlife/birds/broadwingedhawk.webp"  class="card-img-top" loading="lazy" alt="Road Side Hawk" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                            <div class="hover-message">Click over me</div>
+                        </div>
+                        <!-- Back Side -->
+                        <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                            <p>Scientific Name: <i>Rupornis magnirostris
+                            </i>
+                              <br>
+                              Common Name: Roadside Hawk.
+    
+                            <br>Habitat: Rainforests, forests edges, road edges, and open areas.<br>Status: Least Concern.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                 <!-- Card 5 -->
+                 <div class="col">
+                    <div class="card-container" style="perspective: 1000px;">
+                        <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                            <!-- Front Side -->
+                            <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                                <img src="../img/wildlife/birds/graycappedflycatcher.webp"  class="card-img-top" loading="lazy" alt="Road Side Hawk" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                                <div class="hover-message">Click over me</div>
+                            </div>
+                            <!-- Back Side -->
+                            <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                                <p>Scientific Name: <i>Rupornis magnirostris
+                                </i>
+                                  <br>
+                                  Common Name: Roadside Hawk.
+        
+                                <br>Habitat: Rainforests, forests edges, road edges, and open areas.<br>Status: Least Concern.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="col">
+                    <div class="card-container" style="perspective: 1000px;">
+                        <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                            <!-- Front Side -->
+                            <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                                <img src="../img/wildlife/birds/laughingfalcon.webp"  class="card-img-top" loading="lazy" alt="Road Side Hawk" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                                <div class="hover-message">Click over me</div>
+                            </div>
+                            <!-- Back Side -->
+                            <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                                <p>Scientific Name: <i>Rupornis magnirostris
+                                </i>
+                                  <br>
+                                  Common Name: Roadside Hawk.
+        
+                                <br>Habitat: Rainforests, forests edges, road edges, and open areas.<br>Status: Least Concern.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <!-- Card 5 -->
+            <div class="col">
+                <div class="card-container" style="perspective: 1000px;">
+                    <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                        <!-- Front Side -->
+                        <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                            <img src="../img/wildlife/birds/turkeyvulture.webp"  class="card-img-top" loading="lazy" alt="Road Side Hawk" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
                             <div class="hover-message">Click over me</div>
                         </div>
                         <!-- Back Side -->
@@ -447,26 +704,67 @@
                 </div>
             </div>
         </div>
-          <!-- Card 10 -->
-          <div class="col">
+           <!-- Card 9 -->
+           <div class="col">
             <div class="card-container" style="perspective: 1000px;">
                 <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                     <!-- Front Side -->
                     <div class="card-front" style="backface-visibility: hidden; position: relative;">
-                        <img src="../img/wildlife/birds/trogonmasena.webp"  class="card-img-top" loading="lazy" alt="Slaty Tailed Trogon" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                        <img src="../img/wildlife/birds/ruddygrounddove.webp"  class="card-img-top" loading="lazy" alt="Spectacled Owl" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
                         <div class="hover-message">Click over me</div>
                     </div>
                     <!-- Back Side -->
                     <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
-                        <p>Scientific Name: <i>Trogon Massena.
+                        <p>Scientific Name: <i>Pulsatrix perspicillata.
                         </i>
                           <br>
-                          Common Name: Slaty-tayled Trogon.
-                        <br>Habitat: Mature wet forests, second growth, and forest edges.<br>Status: Least Concern.</p>
+                          Common Name: Spectacled Owl.
+                        <br>Habitat: Forests, second growth, and forest edges.<br>Status: Least Concern.</p>
                     </div>
                 </div>
             </div>
         </div>
+         
+             <!-- Card 10 -->
+             <div class="col">
+                <div class="card-container" style="perspective: 1000px;">
+                    <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                        <!-- Front Side -->
+                        <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                            <img src="../img/wildlife/birds/slatytailedtrogon.webp"  class="card-img-top" loading="lazy" alt="Slaty Tailed Trogon" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                            <div class="hover-message">Click over me</div>
+                        </div>
+                        <!-- Back Side -->
+                        <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                            <p>Scientific Name: <i>Trogon Massena.
+                            </i>
+                              <br>
+                              Common Name: Slaty-tayled Trogon.
+                            <br>Habitat: Mature wet forests, second growth, and forest edges.<br>Status: Least Concern.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 10 -->
+            <div class="col">
+                <div class="card-container" style="perspective: 1000px;">
+                    <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                        <!-- Front Side -->
+                        <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                            <img src="../img/wildlife/birds/garteredtrogon.webp"  class="card-img-top" loading="lazy" alt="Slaty Tailed Trogon" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                            <div class="hover-message">Click over me</div>
+                        </div>
+                        <!-- Back Side -->
+                        <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                            <p>Scientific Name: <i>Trogon Massena.
+                            </i>
+                              <br>
+                              Common Name: Slaty-tayled Trogon.
+                            <br>Habitat: Mature wet forests, second growth, and forest edges.<br>Status: Least Concern.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
          <!-- Card 11 -->
          <div class="col">
             <div class="card-container" style="perspective: 1000px;">
@@ -493,7 +791,7 @@
                 <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                     <!-- Front Side -->
                     <div class="card-front" style="backface-visibility: hidden; position: relative;">
-                        <img src="../img/wildlife/birds/woodpecker2.webp"  class="card-img-top" loading="lazy" alt="Red-crowned prosthermelas" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                        <img src="../img/wildlife/birds/redcrownedwoodpecker.webp"  class="card-img-top" loading="lazy" alt="Red-crowned prosthermelas" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
                         <div class="hover-message">Click over me</div>
                     </div>
                     <!-- Back Side -->
@@ -507,6 +805,46 @@
                 </div>
             </div>
         </div>
+            <!-- Card 11 -->
+            <div class="col">
+                <div class="card-container" style="perspective: 1000px;">
+                    <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                        <!-- Front Side -->
+                        <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                            <img src="../img/wildlife/birds/redloredparrot.webp"  class="card-img-top" loading="lazy" alt="Golden-naped Woodpecker" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                            <div class="hover-message">Click over me</div>
+                        </div>
+                        <!-- Back Side -->
+                        <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                            <p>Scientific Name: <i>Melanerpes chrysauchen.
+                            </i>
+                              <br>
+                              Common Name: Golden-naped Woodpecker.
+                            <br>Habitat: Middle level of forests, and forest edges. Uncommon in wet forests. Endemic to Costa Rica and western Panama<br>Status: Least Concern.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+               <!-- Card 11 -->
+               <div class="col">
+                <div class="card-container" style="perspective: 1000px;">
+                    <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                        <!-- Front Side -->
+                        <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                            <img src="../img/wildlife/birds/riversidewren.webp"  class="card-img-top" loading="lazy" alt="Golden-naped Woodpecker" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                            <div class="hover-message">Click over me</div>
+                        </div>
+                        <!-- Back Side -->
+                        <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                            <p>Scientific Name: <i>Melanerpes chrysauchen.
+                            </i>
+                              <br>
+                              Common Name: Golden-naped Woodpecker.
+                            <br>Habitat: Middle level of forests, and forest edges. Uncommon in wet forests. Endemic to Costa Rica and western Panama<br>Status: Least Concern.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
            <!-- Card 13 -->
            <div class="col">
             <div class="card-container" style="perspective: 1000px;">
@@ -534,6 +872,26 @@
                     <!-- Front Side -->
                     <div class="card-front" style="backface-visibility: hidden; position: relative;">
                         <img src="../img/wildlife/birds/cherrietanager.webp"  class="card-img-top" loading="lazy" alt="Cherri's Tanager" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                        <div class="hover-message">Click over me</div>
+                    </div>
+                    <!-- Back Side -->
+                    <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                        <p>Scientific Name: <i>Ramphocelus costaricensis.
+                        </i>
+                          <br>
+                          Common Name: Cherri's Tanager.
+                        <br>Habitat: It lives in disturbed habitats with thickets and shrubs; endemic to Costa Rica and Panama. It is found only on the Pacific side.<br>Status: Least Concern.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+          <!-- Card 14 -->
+          <div class="col">
+            <div class="card-container" style="perspective: 1000px;">
+                <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                    <!-- Front Side -->
+                    <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                        <img src="../img/wildlife/birds/goldenhoodedtanager.webp"  class="card-img-top" loading="lazy" alt="Cherri's Tanager" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
                         <div class="hover-message">Click over me</div>
                     </div>
                     <!-- Back Side -->
@@ -608,7 +966,7 @@
   </div>
 </p>
 
-<p style="text-align: center; font-size: 30px; color: #0C8A20">
+<p style="text-align: center; font-size: 30px;">
     <br>
     <b>Fungi</b>  
     <div class="container custom-container">
@@ -641,6 +999,26 @@
                         <!-- Front Side -->
                         <div class="card-front" style="backface-visibility: hidden; position: relative;">
                             <img src="../img/wildlife/fungi/coprinellus.webp" class="card-img-top" loading="lazy" alt="coprinellus" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                            <div class="hover-message">Click over me</div>
+                        </div>
+                        <!-- Back Side -->
+                        <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                            <p>Scientific Name: <i>Coprinellus disseminatus.
+                            </i>
+                              <br>
+                              Common Name: Coprinellus
+                            <br>Caracteristics: The stem is fragile, and white, they grow on rotten trunks.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col">
+                <div class="card-container" style="perspective: 1000px;">
+                    <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                        <!-- Front Side -->
+                        <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                            <img src="../img/wildlife/fungi/hexagoniapapyraceaeberk.webp" class="card-img-top" loading="lazy" alt="coprinellus" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
                             <div class="hover-message">Click over me</div>
                         </div>
                         <!-- Back Side -->
@@ -774,12 +1152,269 @@
                 </div>
             </div>
         </div>
+        <div class="col">
+            <div class="card-container" style="perspective: 1000px;">
+                <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                    <!-- Front Side -->
+                    <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                        <img src="../img/wildlife/fungi/Oudemansiella canarii.webp"  class="card-img-top" loading="lazy" alt="Oudemansiella canarii" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                        <div class="hover-message">Click over me</div>
+                    </div>
+                    <!-- Back Side -->
+                    <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                        <p>Scientific Name: <i>Oudemansiella canarii</i><br>
+                        Common Name: None<br>
+                        Characteristics: Oudemansiella canarii is a fungus with a distinctive umbrella-shaped cap and a slimy surface. It plays an essential ecological role as a decomposer of organic matter, particularly in humid forest environments.<br>
+                        Habitat: Found in tropical and subtropical forests, often on decaying wood, tree stumps, or fallen logs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+       
+        <div class="col">
+            <div class="card-container" style="perspective: 1000px;">
+                <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                    <!-- Front Side -->
+                    <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                        <img src="../img/wildlife/fungi/Hygrophoraceae miniata.webp" class="card-img-top" loading="lazy" alt="Hygrophoraceae miniata" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                        <div class="hover-message">Click over me</div>
+                    </div>
+                    <!-- Back Side -->
+                    <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                        <p>Scientific Name: <i>Hygrophoraceae miniata</i><br>
+                        Common Name: None<br>
+                        Characteristics: The fruiting bodies of this family are characterized by being hygrophanous (wet appearance) and having a gelatinous, viscid surface, and the context is very fragile and the texture is waxy.
+
+                        The family Hygrophoraceae is very poorly represented in tropical areas, it is considered to be from temperate areas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
             
           </div>
         </div>
     </div>
 </p>
-<p style="text-align: center; font-size: 30px; color: #0C8A20">
+
+
+<p style="text-align: center; font-size: 30px;">
+    <br>
+    <b>Arachnids</b>
+    <div class="container custom-container">
+        <div class="row">
+          <!-- Card 1 -->
+              <!-- Card 2 -->
+              <div class="col">
+                <div class="card-container" style="perspective: 1000px;">
+                    <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                        <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                            <img src="../img/wildlife/arachnids/cynorta.webp" class="card-img-top" loading="lazy" alt="callipogon" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                            <div class="hover-message">Click over me</div>
+                        </div>
+                        <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                            <p>Scientific Name: <i>Callipogon lemoinei</i>
+                            <br>
+                            Common Name: Lemoine's Longhorn Beetle
+                            <br>
+                            Characteristics: This large beetle is known for its elongated body and strikingly long antennae, which can surpass its body length. It plays a vital ecological role in decomposing dead wood and recycling nutrients in the ecosystem. 
+                            </p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+              <!-- Card 9 -->
+              <div class="col">
+                <div class="card-container" style="perspective: 1000px;">
+                    <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                        <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                            <img src="../img/wildlife/arachnids/phrynusmaesi.webp" class="card-img-top" loading="lazy" alt="Tailless whip scorpion" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                            <div class="hover-message">Click over me</div>
+                        </div>
+                        <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                            <p>Scientific Name: <i>Phrynus maesi</i>
+                            <br>
+                            Common Name: Tailless Whip Scorpion.
+                            <br>
+                            Characteristics: The Tailless Whip Scorpion is an arachnid found in tropical regions of Central America. Despite its name, it is not a true scorpion, as it lacks the venomous tail. Instead, this species uses its long, whip-like appendages to sense its environment and capture prey.
+                            </p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+              <!-- Card 2 -->
+              <div class="col">
+                <div class="card-container" style="perspective: 1000px;">
+                    <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                        <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                            <img src="../img/wildlife/arachnids/harvesteropilion.webp" class="card-img-top" loading="lazy" alt="callipogon" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                            <div class="hover-message">Click over me</div>
+                        </div>
+                        <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                            <p>Scientific Name: <i>Callipogon lemoinei</i>
+                            <br>
+                            Common Name: Lemoine's Longhorn Beetle
+                            <br>
+                            Characteristics: This large beetle is known for its elongated body and strikingly long antennae, which can surpass its body length. It plays a vital ecological role in decomposing dead wood and recycling nutrients in the ecosystem. 
+                            </p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+              <!-- Card 3 -->
+              <div class="col">
+                <div class="card-container" style="perspective: 1000px;">
+                    <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                        <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                            <img src="../img/wildlife/arachnids/clavipes.webp" class="card-img-top" loading="lazy" alt="Golden Silk Orb-Weaver" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                            <div class="hover-message">Click over me</div>
+                        </div>
+                        <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                            <p>Scientific Name: <i>Trichonephila clavipes</i>
+                            <br>
+                            Common Name: Golden Silk Orb-Weaver.
+                            <br>
+                            Characteristics: It is identifyed by its golden-colored silk. Females are significantly larger than males and exhibit striking coloration, often with yellow, black, and orange patterns.
+                            </p>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+                   <!-- Card 10 -->
+       <div class="col">
+        <div class="card-container" style="perspective: 1000px;">
+            <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                    <img src="../img/wildlife/arachnids/psalmopoeus reduncus.webp" class="card-img-top" loading="lazy" alt="candy cane katydid" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                    <div class="hover-message">Click over me</div>
+                </div>
+                <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                    <p>Scientific Name: <i>Psalmopoeus cambridgei</i>
+                        <br>
+                        Common Name: Trinidad Chevron Tarantula.
+                        <br>
+                        Characteristics: It is s a strikingly beautiful species of tarantula, known for its chevron-like pattern on the abdomen.
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+            <div class="col">
+                <div class="card-container" style="perspective: 1000px;">
+                    <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                        <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                            <img src="../img/wildlife/arachnids/bromeliaspider.webp" class="card-img-top" loading="lazy" alt="Araña Bromelia de Muslos Rojos" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                            <div class="hover-message">Click over me</div>
+                        </div>
+                        <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                            <p>Scientific Name: <i>Cupiennius coccineus.</i>
+                            <br>
+                            Common Name: Red-Thighed Bromeliad Spider.
+                            <br>
+                            Characteristics: It frequents the lower parts of the forest, rich in heliconias and broad-leaved plants. Here it finds its favorite habitat, since these plants serve as a platform for hunting.
+                            </p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card-container" style="perspective: 1000px;">
+                    <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                        <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                            <img src="../img/wildlife/arachnids/fishingspider.webp" class="card-img-top" loading="lazy" alt="Trechalea connexa" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                            <div class="hover-message">Click over me</div>
+                        </div>
+                        <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                            <p>Scientific Name: <i>Trechalea connexa.</i>
+                            <br>
+                            Common Name: Brindle Fishing Spider.
+                            <br>
+                            Characteristics: They are typically found near lakes, ponds, and slow-moving streams. As the name suggests it captures prays from sources of water.
+                            </p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card-container" style="perspective: 1000px;">
+                    <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                        <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                            <img src="../img/wildlife/arachnids/wanderingspider.webp" class="card-img-top" loading="lazy" alt="common wandering spider" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                            <div class="hover-message">Click over me</div>
+                        </div>
+                        <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                            <p>Scientific Name: <i>Ctenidae Family.
+                            </i>
+                            <br>
+                            Common Name: Wandering Spider.
+                            <br>
+                            Characteristics: It lives in disturbed and pristine areas. Very widespread.
+                            </p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card-container" style="perspective: 1000px;">
+                    <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                        <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                            <img src="../img/wildlife/arachnids/eriophoraravilla.webp" class="card-img-top" loading="lazy" alt="callipogon" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                            <div class="hover-message">Click over me</div>
+                        </div>
+                        <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                            <p>Scientific Name: <i>Ctenus ornatus.
+                            </i>
+                            <br>
+                            Common Name: Wandering Spider.
+                            <br>
+                            Characteristics: It lives in vegetation-rich environments where it skillfully camouflages itself, blending seamlessly into the foliage to evade predators as it navigates its complex life cycle.
+                            </p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card-container" style="perspective: 1000px;">
+                    <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                        <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                            <img src="../img/wildlife/arachnids/cnetus.webp" class="card-img-top" loading="lazy" alt="callipogon" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                            <div class="hover-message">Click over me</div>
+                        </div>
+                        <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                            <p>Scientific Name: <i>Ctenus ornatus.
+                            </i>
+                            <br>
+                            Common Name: Wandering Spider.
+                            <br>
+                            Characteristics: It lives in vegetation-rich environments where it skillfully camouflages itself, blending seamlessly into the foliage to evade predators as it navigates its complex life cycle.
+                            </p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      
+  
+  
+      
+   
+      
+</p>
+<p style="text-align: center; font-size: 30px;">
     <br>
     <b>Insects</b>  
     <div class="container custom-container">
@@ -798,6 +1433,46 @@
                         Common Name: Flag Assassin Bug
                         <br>
                         Characteristics: Known for its vibrant patterns and predatory behavior, this insect belongs to the Reduviidae family. It preys on other insects and uses itproboscis to inject saliva that digests the prey externally.
+                        </p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+          <!-- Card 2 -->
+          <div class="col">
+            <div class="card-container" style="perspective: 1000px;">
+                <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                    <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                        <img src="../img/wildlife/insects/centralamericanscorpion.webp" class="card-img-top" loading="lazy" alt="callipogon" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                        <div class="hover-message">Click over me</div>
+                    </div>
+                    <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                        <p>Scientific Name: <i>Callipogon lemoinei</i>
+                        <br>
+                        Common Name: Lemoine's Longhorn Beetle
+                        <br>
+                        Characteristics: This large beetle is known for its elongated body and strikingly long antennae, which can surpass its body length. It plays a vital ecological role in decomposing dead wood and recycling nutrients in the ecosystem. 
+                        </p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+          <!-- Card 2 -->
+          <div class="col">
+            <div class="card-container" style="perspective: 1000px;">
+                <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                    <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                        <img src="../img/wildlife/insects/cicada.webp" class="card-img-top" loading="lazy" alt="callipogon" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                        <div class="hover-message">Click over me</div>
+                    </div>
+                    <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                        <p>Scientific Name: <i>Callipogon lemoinei</i>
+                        <br>
+                        Common Name: Lemoine's Longhorn Beetle
+                        <br>
+                        Characteristics: This large beetle is known for its elongated body and strikingly long antennae, which can surpass its body length. It plays a vital ecological role in decomposing dead wood and recycling nutrients in the ecosystem. 
                         </p>
                     </div>
                     
@@ -825,27 +1500,28 @@
                 </div>
             </div>
 
-            <!-- Card 3 -->
-            <div class="col">
-                <div class="card-container" style="perspective: 1000px;">
-                    <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
-                        <div class="card-front" style="backface-visibility: hidden; position: relative;">
-                            <img src="../img/wildlife/insects/clavipes.webp" class="card-img-top" loading="lazy" alt="Golden Silk Orb-Weaver" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
-                            <div class="hover-message">Click over me</div>
+          
+                     <!-- Card 2 -->
+                     <div class="col">
+                        <div class="card-container" style="perspective: 1000px;">
+                            <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                                <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                                    <img src="../img/wildlife/insects/orthemisferruginea.webp" class="card-img-top" loading="lazy" alt="callipogon" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                                    <div class="hover-message">Click over me</div>
+                                </div>
+                                <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                                    <p>Scientific Name: <i>Callipogon lemoinei</i>
+                                    <br>
+                                    Common Name: Lemoine's Longhorn Beetle
+                                    <br>
+                                    Characteristics: This large beetle is known for its elongated body and strikingly long antennae, which can surpass its body length. It plays a vital ecological role in decomposing dead wood and recycling nutrients in the ecosystem. 
+                                    </p>
+                                </div>
+                                
+                            </div>
                         </div>
-                        <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
-                            <p>Scientific Name: <i>Trichonephila clavipes</i>
-                            <br>
-                            Common Name: Golden Silk Orb-Weaver.
-                            <br>
-                            Characteristics: It is identifyed by its golden-colored silk. Females are significantly larger than males and exhibit striking coloration, often with yellow, black, and orange patterns.
-                            </p>
-                        </div>
-                        
-                        
                     </div>
-                </div>
-            </div>
+          
 
             <!-- Card 4 -->
             <div class="col">
@@ -951,47 +1627,8 @@
                 </div>
             </div>
 
-            <!-- Card 9 -->
-            <div class="col">
-                <div class="card-container" style="perspective: 1000px;">
-                    <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
-                        <div class="card-front" style="backface-visibility: hidden; position: relative;">
-                            <img src="../img/wildlife/insects/phrynusmaesi.webp" class="card-img-top" loading="lazy" alt="Tailless whip scorpion" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
-                            <div class="hover-message">Click over me</div>
-                        </div>
-                        <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
-                            <p>Scientific Name: <i>Phrynus maesi</i>
-                            <br>
-                            Common Name: Tailless Whip Scorpion.
-                            <br>
-                            Characteristics: The Tailless Whip Scorpion is an arachnid found in tropical regions of Central America. Despite its name, it is not a true scorpion, as it lacks the venomous tail. Instead, this species uses its long, whip-like appendages to sense its environment and capture prey.
-                            </p>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 10 -->
-            <div class="col">
-                <div class="card-container" style="perspective: 1000px;">
-                    <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
-                        <div class="card-front" style="backface-visibility: hidden; position: relative;">
-                            <img src="../img/wildlife/insects/spider.webp" class="card-img-top" loading="lazy" alt="candy cane katydid" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
-                            <div class="hover-message">Click over me</div>
-                        </div>
-                        <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
-                            <p>Scientific Name: <i>Psalmopoeus cambridgei</i>
-                                <br>
-                                Common Name: Trinidad Chevron Tarantula.
-                                <br>
-                                Characteristics: It is s a strikingly beautiful species of tarantula, known for its chevron-like pattern on the abdomen.
-                            </p>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
+          
+       
                <!-- Card 11 -->
                <div class="col">
                 <div class="card-container" style="perspective: 1000px;">
@@ -1031,105 +1668,69 @@
         </div>
     </div>
 </div>
+<div class="col">
+    <div class="card-container" style="perspective: 1000px;">
+        <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+            <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                <img src="../img/wildlife/insects/Diestrammena asynamora.webp" class="card-img-top" loading="lazy" alt="Earthworm" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                <div class="hover-message">Click over me</div>
+            </div>
+            <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                <p>
+                    Scientific Name: <i>Amynthas gracilis</i>
+                    <br>
+                    Common Name: Common Earthworm.
+                    <br>
+                    Characteristics: A vital decomposer in Costa Rican soils, the common earthworm enriches soil fertility by breaking down organic matter, aerating the soil, and enhancing plant growth. It thrives in moist, nutrient-rich environments.
+                </p>                            
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Card 12 -->
+<div class="col">
+    <div class="card-container" style="perspective: 1000px;">
+        <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+            <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                <img src="../img/wildlife/insects/caterpillar.webp" class="card-img-top" loading="lazy" alt="Earthworm" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                <div class="hover-message">Click over me</div>
+            </div>
+            <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                <p>
+                    Scientific Name: <i>Amynthas gracilis</i>
+                    <br>
+                    Common Name: Common Earthworm.
+                    <br>
+                    Characteristics: A vital decomposer in Costa Rican soils, the common earthworm enriches soil fertility by breaking down organic matter, aerating the soil, and enhancing plant growth. It thrives in moist, nutrient-rich environments.
+                </p>                            
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Card 12 -->
+<div class="col">
+    <div class="card-container" style="perspective: 1000px;">
+        <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+            <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                <img src="../img/wildlife/insects/termite.webp" class="card-img-top" loading="lazy" alt="Earthworm" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                <div class="hover-message">Click over me</div>
+            </div>
+            <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                <p>
+                    Scientific Name: <i>Amynthas gracilis</i>
+                    <br>
+                    Common Name: Common Earthworm.
+                    <br>
+                    Characteristics: A vital decomposer in Costa Rican soils, the common earthworm enriches soil fertility by breaking down organic matter, aerating the soil, and enhancing plant growth. It thrives in moist, nutrient-rich environments.
+                </p>                            
+            </div>
+        </div>
+    </div>
+</div>
 
-                <!-- Card 12 -->
-                <div class="col">
-                    <div class="card-container" style="perspective: 1000px;">
-                        <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
-                            <div class="card-front" style="backface-visibility: hidden; position: relative;">
-                                <img src="../img/wildlife/insects/eriophoraravilla.webp" class="card-img-top" loading="lazy" alt="Monkey" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
-                                <div class="hover-message">Click over me</div>
-                            </div>
-                            <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
-                                <p>Scientific Name: <i>Eriophora ravilla</i>
-                                    <br>
-                                    Common Name: Tropical Orb-Weaving Spider.
-                                    <br>
-                                    Characteristics: It is an orb-weaving spider species that inhabits tropical forests. This species is not commonly encountered due to its preference for dense forest habitats.
-                                </p>                            
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card-container" style="perspective: 1000px;">
-                        <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
-                            <div class="card-front" style="backface-visibility: hidden; position: relative;">
-                                <img src="../img/wildlife/insects/bromeliaspider.webp" class="card-img-top" loading="lazy" alt="Araña Bromelia de Muslos Rojos" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
-                                <div class="hover-message">Click over me</div>
-                            </div>
-                            <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
-                                <p>Scientific Name: <i>Cupiennius coccineus.</i>
-                                <br>
-                                Common Name: Red-Thighed Bromeliad Spider.
-                                <br>
-                                Characteristics: It frequents the lower parts of the forest, rich in heliconias and broad-leaved plants. Here it finds its favorite habitat, since these plants serve as a platform for hunting.
-                                </p>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card-container" style="perspective: 1000px;">
-                        <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
-                            <div class="card-front" style="backface-visibility: hidden; position: relative;">
-                                <img src="../img/wildlife/insects/fishingspider.webp" class="card-img-top" loading="lazy" alt="Trechalea connexa" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
-                                <div class="hover-message">Click over me</div>
-                            </div>
-                            <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
-                                <p>Scientific Name: <i>Trechalea connexa.</i>
-                                <br>
-                                Common Name: Brindle Fishing Spider.
-                                <br>
-                                Characteristics: They are typically found near lakes, ponds, and slow-moving streams. As the name suggests it captures prays from sources of water.
-                                </p>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card-container" style="perspective: 1000px;">
-                        <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
-                            <div class="card-front" style="backface-visibility: hidden; position: relative;">
-                                <img src="../img/wildlife/insects/wanderingspider.webp" class="card-img-top" loading="lazy" alt="common wandering spider" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
-                                <div class="hover-message">Click over me</div>
-                            </div>
-                            <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
-                                <p>Scientific Name: <i>Ctenidae Family.
-                                </i>
-                                <br>
-                                Common Name: Wandering Spider.
-                                <br>
-                                Characteristics: It lives in disturbed and pristine areas. Very widespread.
-                                </p>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card-container" style="perspective: 1000px;">
-                        <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
-                            <div class="card-front" style="backface-visibility: hidden; position: relative;">
-                                <img src="../img/wildlife/insects/cnetus.webp" class="card-img-top" loading="lazy" alt="callipogon" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
-                                <div class="hover-message">Click over me</div>
-                            </div>
-                            <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
-                                <p>Scientific Name: <i>Ctenus ornatus.
-                                </i>
-                                <br>
-                                Common Name: Wandering Spider.
-                                <br>
-                                Characteristics: It lives in vegetation-rich environments where it skillfully camouflages itself, blending seamlessly into the foliage to evade predators as it navigates its complex life cycle.
-                                </p>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-           
+        
+        
+             
                 <div class="col">
                     <div class="card-container" style="perspective: 1000px;">
                         <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
@@ -1157,9 +1758,11 @@
       </div>
   </div>
 </p>
-<p style="text-align: center; font-size: 30px; color: #0C8A20">
+
+
+<p style="text-align: center; font-size: 30px;"><b>Mammals</b>  
+</p>
     <br>
-    <b>Mammals</b>  
     <div class="container custom-container">
       <div class="row">
           <!-- Card 1 -->
@@ -1182,25 +1785,25 @@
               </div>
           </div>
   
-          <!-- Card 2 -->
-          <div class="col">
-              <div class="card-container" style="perspective: 1000px;">
-                  <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
-                      <!-- Front Side -->
-                      <div class="card-front" style="backface-visibility: hidden; position: relative;">
-                          <img src="../img/wildlife/mammals/capuchin.webp" class="card-img-top" loading="lazy" alt="whiteface monkey" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
-                          <div class="hover-message">Click over me</div>
+            <!-- Card 2 -->
+            <div class="col">
+                <div class="card-container" style="perspective: 1000px;">
+                    <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                        <!-- Front Side -->
+                        <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                            <img src="../img/wildlife/mammals/howlermonkey.webp" class="card-img-top" loading="lazy" alt="whiteface monkey" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                            <div class="hover-message">Click over me</div>
+                        </div>
+                        <!-- Back Side -->
+                        <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                          <p>Scientific Name: <i>Cebus capucinus</i>
+                              Common Name: White-Throated Capuchin Monkey.
+                              <br>Habitat: In evergeen, seasonal dry forests, second growth, and mangroves. They are very fond of bananas, plantains, cacao, and rambutan.<br>Status: Vulnerable.</p>
+                          </p>                          
                       </div>
-                      <!-- Back Side -->
-                      <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
-                        <p>Scientific Name: <i>Cebus capucinus</i>
-                            Common Name: White-Throated Capuchin Monkey.
-                            <br>Habitat: In evergeen, seasonal dry forests, second growth, and mangroves. They are very fond of bananas, plantains, cacao, and rambutan.<br>Status: Vulnerable.</p>
-                        </p>                          
                     </div>
-                  </div>
-              </div>
-          </div>
+                </div>
+            </div>
   
           <!-- Card 3 -->
           <div class="col">
@@ -1260,6 +1863,25 @@
                 </div>
             </div>
         </div>
+            <!-- Card 4 -->
+            <div class="col">
+                <div class="card-container" style="perspective: 1000px;">
+                    <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                        <!-- Front Side -->
+                        <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                            <img src="../img/wildlife/mammals/whitefacemonkey.webp" class="card-img-top" loading="lazy" alt="tayra" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                            <div class="hover-message">Click over me</div>
+                        </div>
+                        <!-- Back Side -->
+                        <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                            <p>Scientific Name: <i>Eira barbara.</i>
+                                Common Name: Tayra.
+                                <br>Habitat: In pristine and disturbed habitats, in or near forests. <br>Status: Least Concern.
+                            </p>                                  
+                        </div>
+                    </div>
+                </div>
+            </div>
         <!-- Card 4 -->
         <div class="col">
             <div class="card-container" style="perspective: 1000px;">
@@ -1315,14 +1937,216 @@
                 </div>
             </div>
         </div>
+        
+          <!-- Card 2 -->
+          <div class="col">
+            <div class="card-container" style="perspective: 1000px;">
+                <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                    <!-- Front Side -->
+                    <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                        <img src="../img/wildlife/mammals/mexican mouse opossum.webp" class="card-img-top" loading="lazy" alt="Marmosa mexicana" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                        <div class="hover-message">Click over me</div>
+                    </div>
+                    <!-- Back Side -->
+                    <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                      <p>Scientific Name: <i> Marmosa mexicana</i>
+                          Common Name: Mexican marmosa.
+                          <br>Habitat: It inhabits forested and disturbed habitats to about 1,600 meters. Mouse opossums are nocturnal and solitary. They are specially arboreal. The feed mainly on insects and fruits. But they also may eat lizards, birds, and mice.
+
+                          During the day they can be found resting in abandoned bird nests, or leaf nests which they build.<br>Status: Least Concern.</p>
+                      </p>                          
+                  </div>
+                </div>
+            </div>
+        </div>
       </div>
   </div>
 </p>
-<p style="text-align: center; font-size: 30px; color: #0C8A20">
+<p style="text-align: center; font-size: 30px; ">
     <br>
     <b>Plants and Trees</b>  
     <div class="container custom-container">
       <div class="row">
+          <!-- Card 1 -->
+          <div class="col">
+            <div class="card-container" style="perspective: 1000px;">
+                <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                    <!-- Front Side -->
+                    <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                        <img src="../img/wildlife/flora/hbihai.webp" class="card-img-top" loading="lazy" alt="Cerillo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                        <div class="hover-message">Click over me</div>
+                    </div>
+                    <!-- Back Side -->
+                    <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                      <p>Scientific Name: <i>Symphonia globullifera</i>
+                          <br>Common Name: Boarwood,
+                          <br>Habitat: Widespread and ocurring on both slopes in wet environments, sea level to 1800 m.</p>
+                  </div>
+                </div>
+            </div>
+        </div>
+           <!-- Card 1 -->
+           <div class="col">
+            <div class="card-container" style="perspective: 1000px;">
+                <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                    <!-- Front Side -->
+                    <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                        <img src="../img/wildlife/flora/htrichocarpa.webp" class="card-img-top" loading="lazy" alt="Cerillo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                        <div class="hover-message">Click over me</div>
+                    </div>
+                    <!-- Back Side -->
+                    <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                      <p>Scientific Name: <i>Symphonia globullifera</i>
+                          <br>Common Name: Boarwood,
+                          <br>Habitat: Widespread and ocurring on both slopes in wet environments, sea level to 1800 m.</p>
+                  </div>
+                </div>
+            </div>
+        </div>
+          <!-- Card 1 -->
+          <div class="col">
+            <div class="card-container" style="perspective: 1000px;">
+                <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                    <!-- Front Side -->
+                    <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                        <img src="../img/wildlife/flora/hchartacea.webp" class="card-img-top" loading="lazy" alt="Cerillo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                        <div class="hover-message">Click over me</div>
+                    </div>
+                    <!-- Back Side -->
+                    <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                      <p>Scientific Name: <i>Symphonia globullifera</i>
+                          <br>Common Name: Boarwood,
+                          <br>Habitat: Widespread and ocurring on both slopes in wet environments, sea level to 1800 m.</p>
+                  </div>
+                </div>
+            </div>
+        </div>
+          <!-- Card 1 -->
+          <div class="col">
+            <div class="card-container" style="perspective: 1000px;">
+                <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                    <!-- Front Side -->
+                    <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                        <img src="../img/wildlife/flora/himbricata.webp" class="card-img-top" loading="lazy" alt="Cerillo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                        <div class="hover-message">Click over me</div>
+                    </div>
+                    <!-- Back Side -->
+                    <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                      <p>Scientific Name: <i>Symphonia globullifera</i>
+                          <br>Common Name: Boarwood,
+                          <br>Habitat: Widespread and ocurring on both slopes in wet environments, sea level to 1800 m.</p>
+                  </div>
+                </div>
+            </div>
+        </div>
+          <!-- Card 1 -->
+          <div class="col">
+            <div class="card-container" style="perspective: 1000px;">
+                <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                    <!-- Front Side -->
+                    <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                        <img src="../img/wildlife/flora/hirrasa.webp" class="card-img-top" loading="lazy" alt="Cerillo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                        <div class="hover-message">Click over me</div>
+                    </div>
+                    <!-- Back Side -->
+                    <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                      <p>Scientific Name: <i>Symphonia globullifera</i>
+                          <br>Common Name: Boarwood,
+                          <br>Habitat: Widespread and ocurring on both slopes in wet environments, sea level to 1800 m.</p>
+                  </div>
+                </div>
+            </div>
+        </div>
+          <!-- Card 1 -->
+          <div class="col">
+            <div class="card-container" style="perspective: 1000px;">
+                <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                    <!-- Front Side -->
+                    <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                        <img src="../img/wildlife/flora/hlatisphata.webp" class="card-img-top" loading="lazy" alt="Cerillo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                        <div class="hover-message">Click over me</div>
+                    </div>
+                    <!-- Back Side -->
+                    <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                      <p>Scientific Name: <i>Symphonia globullifera</i>
+                          <br>Common Name: Boarwood,
+                          <br>Habitat: Widespread and ocurring on both slopes in wet environments, sea level to 1800 m.</p>
+                  </div>
+                </div>
+            </div>
+        </div>
+          <!-- Card 1 -->
+          <div class="col">
+            <div class="card-container" style="perspective: 1000px;">
+                <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                    <!-- Front Side -->
+                    <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                        <img src="../img/wildlife/flora/hlonga.webp" class="card-img-top" loading="lazy" alt="Cerillo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                        <div class="hover-message">Click over me</div>
+                    </div>
+                    <!-- Back Side -->
+                    <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                      <p>Scientific Name: <i>Symphonia globullifera</i>
+                          <br>Common Name: Boarwood,
+                          <br>Habitat: Widespread and ocurring on both slopes in wet environments, sea level to 1800 m.</p>
+                  </div>
+                </div>
+            </div>
+        </div>
+          <!-- Card 1 -->
+          <div class="col">
+            <div class="card-container" style="perspective: 1000px;">
+                <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                    <!-- Front Side -->
+                    <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                        <img src="../img/wildlife/flora/hlongiflora.webp" class="card-img-top" loading="lazy" alt="Cerillo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                        <div class="hover-message">Click over me</div>
+                    </div>
+                    <!-- Back Side -->
+                    <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                      <p>Scientific Name: <i>Symphonia globullifera</i>
+                          <br>Common Name: Boarwood,
+                          <br>Habitat: Widespread and ocurring on both slopes in wet environments, sea level to 1800 m.</p>
+                  </div>
+                </div>
+            </div>
+        </div>
+          <!-- Card 1 -->
+          <div class="col">
+            <div class="card-container" style="perspective: 1000px;">
+                <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                    <!-- Front Side -->
+                    <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                        <img src="../img/wildlife/flora/hpsittacorum.webp" class="card-img-top" loading="lazy" alt="Cerillo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                        <div class="hover-message">Click over me</div>
+                    </div>
+                    <!-- Back Side -->
+                    <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                      <p>Scientific Name: <i>Symphonia globullifera</i>
+                          <br>Common Name: Boarwood,
+                          <br>Habitat: Widespread and ocurring on both slopes in wet environments, sea level to 1800 m.</p>
+                  </div>
+                </div>
+            </div>
+        </div>
+          <!-- Card 1 -->
+          <div class="col">
+            <div class="card-container" style="perspective: 1000px;">
+                <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                    <!-- Front Side -->
+                    <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                        <img src="../img/wildlife/flora/hrostrata.webp" class="card-img-top" loading="lazy" alt="Cerillo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                        <div class="hover-message">Click over me</div>
+                    </div>
+                    <!-- Back Side -->
+                    <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                      <p>Scientific Name: <i>Symphonia globullifera</i>
+                          <br>Common Name: Boarwood,
+                          <br>Habitat: Widespread and ocurring on both slopes in wet environments, sea level to 1800 m.</p>
+                  </div>
+                </div>
+            </div>
+        </div>
           <!-- Card 1 -->
           <div class="col">
               <div class="card-container" style="perspective: 1000px;">
@@ -1342,6 +2166,25 @@
               </div>
           </div>
   
+          <div class="col">
+            <div class="card-container" style="perspective: 1000px;">
+                <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                    <!-- Front Side -->
+                    <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                        <img src="../img/wildlife/fungi/Couroupita guianensis.webp" class="card-img-top" loading="lazy" alt="Couroupita guianensis" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                        <div class="hover-message">Click over me</div>
+                    </div>
+                    <!-- Back Side -->
+                    <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                        <p>Scientific Name: <i>Couroupita guianensis</i><br>
+                        Common Name: Cannonball Tree<br>
+                        Characteristics: The Couroupita guianensis, or Cannonball Tree, is known for its large, round fruit resembling a cannonball. Its flowers are striking, aromatic, and bloom directly from the trunk. The tree is highly valued for its medicinal properties and ornamental appeal.<br>
+                        Habitat: Native to the tropical regions of South America, especially in the Amazon Basin, it grows in humid, lowland forests.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
           <!-- Card 2 -->
           <div class="col">
               <div class="card-container" style="perspective: 1000px;">
@@ -1452,6 +2295,23 @@
                     </div>
                 </div>
             </div>
+            <div class="col">
+                <div class="card-container" style="perspective: 1000px;">
+                    <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                        <!-- Front Side -->
+                        <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                            <img src="../img/wildlife/flora/Conostegia schlimii.webp" class="card-img-top" loading="lazy" alt="miconia" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                            <div class="hover-message">Click over me</div>
+                        </div>
+                        <!-- Back Side -->
+                        <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                            <p>Scientific Name: <i>Miconia subcrustulata</i>
+                                <br>Common Name: Miconia.
+                                <br>Habitat: From 0 - 1.200 msnm. Very good ornamental for gardens. They are considered invasive shrubs (weeds), though. However, migrant and resident birds feed from its ripe fruits.  </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
                    <!-- Card 4 -->
           <div class="col">
             <div class="card-container" style="perspective: 1000px;">
@@ -1490,6 +2350,278 @@
                     </div>
                 </div>
             </div>
+                       <!-- Card 4 -->
+                       <div class="col">
+                        <div class="card-container" style="perspective: 1000px;">
+                            <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                                <!-- Front Side -->
+                                <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                                    <img src="../img/wildlife/flora/kapok.webp" class="card-img-top" loading="lazy" alt="isertia" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                                    <div class="hover-message">Click over me</div>
+                                </div>
+                                <!-- Back Side -->
+                                <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                                    <p>Scientific Name: <i>Isertia haenkeana
+                                    </i>
+                                        <br>Common Name: Isertia.
+                                        <br>Habitat: Tropical rainforest. It serves as a food for hummingbirds. It is a relative of the coffee. However, it is an invaside weed and it can become uncotrollable.  </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                     <!-- Card 4 -->
+                     <div class="col">
+                        <div class="card-container" style="perspective: 1000px;">
+                            <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                                <!-- Front Side -->
+                                <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                                    <img src="../img/wildlife/flora/walkingpalm.webp" class="card-img-top" loading="lazy" alt="isertia" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                                    <div class="hover-message">Click over me</div>
+                                </div>
+                                <!-- Back Side -->
+                                <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                                    <p>Scientific Name: <i>Isertia haenkeana
+                                    </i>
+                                        <br>Common Name: Isertia.
+                                        <br>Habitat: Tropical rainforest. It serves as a food for hummingbirds. It is a relative of the coffee. However, it is an invaside weed and it can become uncotrollable.  </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                               <!-- Card 4 -->
+                               <div class="col">
+                                <div class="card-container" style="perspective: 1000px;">
+                                    <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                                        <!-- Front Side -->
+                                        <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                                            <img src="../img/wildlife/flora/mimosasensitiva.webp" class="card-img-top" loading="lazy" alt="isertia" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                                            <div class="hover-message">Click over me</div>
+                                        </div>
+                                        <!-- Back Side -->
+                                        <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                                            <p>Scientific Name: <i>Isertia haenkeana
+                                            </i>
+                                                <br>Common Name: Isertia.
+                                                <br>Habitat: Tropical rainforest. It serves as a food for hummingbirds. It is a relative of the coffee. However, it is an invaside weed and it can become uncotrollable.  </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                     <!-- Card 4 -->
+                     <div class="col">
+                        <div class="card-container" style="perspective: 1000px;">
+                            <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                                <!-- Front Side -->
+                                <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                                    <img src="../img/wildlife/flora/licuala.webp" class="card-img-top" loading="lazy" alt="isertia" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                                    <div class="hover-message">Click over me</div>
+                                </div>
+                                <!-- Back Side -->
+                                <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                                    <p>Scientific Name: <i>Isertia haenkeana
+                                    </i>
+                                        <br>Common Name: Isertia.
+                                        <br>Habitat: Tropical rainforest. It serves as a food for hummingbirds. It is a relative of the coffee. However, it is an invaside weed and it can become uncotrollable.  </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Card 4 -->
+                     <div class="col">
+                        <div class="card-container" style="perspective: 1000px;">
+                            <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                                <!-- Front Side -->
+                                <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                                    <img src="../img/wildlife/flora/Monstera pinnatipartita.webp" class="card-img-top" loading="lazy" alt="isertia" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                                    <div class="hover-message">Click over me</div>
+                                </div>
+                                <!-- Back Side -->
+                                <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                                    <p>Scientific Name: <i>Isertia haenkeana
+                                    </i>
+                                        <br>Common Name: Isertia.
+                                        <br>Habitat: Tropical rainforest. It serves as a food for hummingbirds. It is a relative of the coffee. However, it is an invaside weed and it can become uncotrollable.  </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Card 4 -->
+                     <div class="col">
+                        <div class="card-container" style="perspective: 1000px;">
+                            <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                                <!-- Front Side -->
+                                <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                                    <img src="../img/wildlife/flora/Aspidosperma myristicifolium.webp" class="card-img-top" loading="lazy" alt="isertia" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                                    <div class="hover-message">Click over me</div>
+                                </div>
+                                <!-- Back Side -->
+                                <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                                    <p>Scientific Name: <i>Isertia haenkeana
+                                    </i>
+                                        <br>Common Name: Isertia.
+                                        <br>Habitat: Tropical rainforest. It serves as a food for hummingbirds. It is a relative of the coffee. However, it is an invaside weed and it can become uncotrollable.  </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Card 4 -->
+                     <div class="col">
+                        <div class="card-container" style="perspective: 1000px;">
+                            <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                                <!-- Front Side -->
+                                <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                                    <img src="../img/wildlife/flora/Bursera simaruba.webp" class="card-img-top" loading="lazy" alt="isertia" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                                    <div class="hover-message">Click over me</div>
+                                </div>
+                                <!-- Back Side -->
+                                <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                                    <p>Scientific Name: <i>Isertia haenkeana
+                                    </i>
+                                        <br>Common Name: Isertia.
+                                        <br>Habitat: Tropical rainforest. It serves as a food for hummingbirds. It is a relative of the coffee. However, it is an invaside weed and it can become uncotrollable.  </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Card 4 -->
+                     <div class="col">
+                        <div class="card-container" style="perspective: 1000px;">
+                            <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                                <!-- Front Side -->
+                                <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                                    <img src="../img/wildlife/flora/ficus.webp" class="card-img-top" loading="lazy" alt="isertia" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                                    <div class="hover-message">Click over me</div>
+                                </div>
+                                <!-- Back Side -->
+                                <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                                    <p>Scientific Name: <i>Isertia haenkeana
+                                    </i>
+                                        <br>Common Name: Isertia.
+                                        <br>Habitat: Tropical rainforest. It serves as a food for hummingbirds. It is a relative of the coffee. However, it is an invaside weed and it can become uncotrollable.  </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Card 4 -->
+                     <div class="col">
+                        <div class="card-container" style="perspective: 1000px;">
+                            <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                                <!-- Front Side -->
+                                <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                                    <img src="../img/wildlife/flora/posoquerialatifolia.webp" class="card-img-top" loading="lazy" alt="isertia" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                                    <div class="hover-message">Click over me</div>
+                                </div>
+                                <!-- Back Side -->
+                                <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                                    <p>Scientific Name: <i>Isertia haenkeana
+                                    </i>
+                                        <br>Common Name: Isertia.
+                                        <br>Habitat: Tropical rainforest. It serves as a food for hummingbirds. It is a relative of the coffee. However, it is an invaside weed and it can become uncotrollable.  </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                     <!-- Card 4 -->
+                     <div class="col">
+                        <div class="card-container" style="perspective: 1000px;">
+                            <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                                <!-- Front Side -->
+                                <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                                    <img src="../img/wildlife/flora/acacia.webp" class="card-img-top" loading="lazy" alt="isertia" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                                    <div class="hover-message">Click over me</div>
+                                </div>
+                                <!-- Back Side -->
+                                <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                                    <p>Scientific Name: <i>Isertia haenkeana
+                                    </i>
+                                        <br>Common Name: Isertia.
+                                        <br>Habitat: Tropical rainforest. It serves as a food for hummingbirds. It is a relative of the coffee. However, it is an invaside weed and it can become uncotrollable.  </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Card 4 -->
+                     <div class="col">
+                        <div class="card-container" style="perspective: 1000px;">
+                            <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                                <!-- Front Side -->
+                                <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                                    <img src="../img/wildlife/flora/Astrocaryum alatum.webp" class="card-img-top" loading="lazy" alt="isertia" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                                    <div class="hover-message">Click over me</div>
+                                </div>
+                                <!-- Back Side -->
+                                <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                                    <p>Scientific Name: <i>Isertia haenkeana
+                                    </i>
+                                        <br>Common Name: Isertia.
+                                        <br>Habitat: Tropical rainforest. It serves as a food for hummingbirds. It is a relative of the coffee. However, it is an invaside weed and it can become uncotrollable.  </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                         <!-- Card 4 -->
+                         <div class="col">
+                            <div class="card-container" style="perspective: 1000px;">
+                                <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                                    <!-- Front Side -->
+                                    <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                                        <img src="../img/wildlife/flora/Neomarica northiana.webp" class="card-img-top" loading="lazy" alt="isertia" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                                        <div class="hover-message">Click over me</div>
+                                    </div>
+                                    <!-- Back Side -->
+                                    <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                                        <p>Scientific Name: <i>Isertia haenkeana
+                                        </i>
+                                            <br>Common Name: Isertia.
+                                            <br>Habitat: Tropical rainforest. It serves as a food for hummingbirds. It is a relative of the coffee. However, it is an invaside weed and it can become uncotrollable.  </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                             <!-- Card 4 -->
+                     <div class="col">
+                        <div class="card-container" style="perspective: 1000px;">
+                            <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                                <!-- Front Side -->
+                                <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                                    <img src="../img/wildlife/flora/monkeycomb.webp" class="card-img-top" loading="lazy" alt="isertia" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                                    <div class="hover-message">Click over me</div>
+                                </div>
+                                <!-- Back Side -->
+                                <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                                    <p>Scientific Name: <i>Isertia haenkeana
+                                    </i>
+                                        <br>Common Name: Isertia.
+                                        <br>Habitat: Tropical rainforest. It serves as a food for hummingbirds. It is a relative of the coffee. However, it is an invaside weed and it can become uncotrollable.  </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col">
+                        <div class="card-container" style="perspective: 1000px;">
+                            <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                                <!-- Front Side -->
+                                <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                                    <img src="../img/wildlife/flora/garlictree.webp" class="card-img-top" loading="lazy" alt="isertia" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                                    <div class="hover-message">Click over me</div>
+                                </div>
+                                <!-- Back Side -->
+                                <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                                    <p>Scientific Name: <i>Isertia haenkeana
+                                    </i>
+                                        <br>Common Name: Isertia.
+                                        <br>Habitat: Tropical rainforest. It serves as a food for hummingbirds. It is a relative of the coffee. However, it is an invaside weed and it can become uncotrollable.  </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    
                    <!-- Card 4 -->
           <div class="col">
             <div class="card-container" style="perspective: 1000px;">
@@ -1504,7 +2636,7 @@
                         <p>Scientific Name: <i>Passiflora vitifolia
                         </i>
                             <br>Common Name: Passiflora.
-                            <br>Habitat: Tropical rainforest, wet or moist forest understoty or edge, common on Osa Peninsula. It lives on the treetops of the high trees. It canopies down and the flowers are near the ground. </p>
+                            <br>Habitat: Tropical rainforest, wet or moist forest understoty or edge, common on Osa region. It lives on the treetops of the high trees. It canopies down and the flowers are near the ground. </p>
                     </div>
                 </div>
             </div>
@@ -1523,7 +2655,7 @@
                             <p>Scientific Name: <i> Xanthosoma undipes
                             </i>
                                 <br>Common Name: Elephant Ear.
-                                <br>Habitat: Tropical rainforest. Normally, it is found above 1000 msnm, however, it has been occasionally seen at loweer wet sites as La Selva (Sarapiqui), and the Osa Peninsula. </p>
+                                <br>Habitat: Tropical rainforest. Normally, it is found above 1000 msnm, however, it has been occasionally seen at loweer wet sites as La Selva (Sarapiqui), and the Osa region. </p>
                         </div>
                     </div>
                 </div>
@@ -1542,7 +2674,7 @@
                         <p>Scientific Name: <i> Asterogyne martiana
                         </i>
                             <br>Common Name: Rooster Tail.
-                            <br>Habitat: Tropical rainforest. 0 - 1000 msnm, specially notable in the northeast and Osa Peninsula. In the past, people would use its leaves to build roofs for their open air houses, or ranchos. However, it led to cause a massive destruction of the environment.</p>
+                            <br>Habitat: Tropical rainforest. 0 - 1000 msnm, specially notable in the northeast and Osa region. In the past, people would use its leaves to build roofs for their open air houses, or ranchos. However, it led to cause a massive destruction of the environment.</p>
                     </div>
                 </div>
             </div>
@@ -1568,7 +2700,7 @@
       </div>
   </div>
 </p>
-<p style="text-align: center; font-size: 30px; color: #0C8A20">
+<p style="text-align: center; font-size: 30px;">
     <br>
     <b>Reptiles</b>  
     <div class="reptilesmedia">
@@ -1594,7 +2726,26 @@
                   </div>
               </div>
           </div>
-  
+       <!-- Card 10 -->
+       <div class="col">
+        <div class="card-container" style="perspective: 1000px;">
+            <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                    <img src="../img/wildlife/reptiles/commonbasilisk.webp" class="card-img-top" loading="lazy" alt="candy cane katydid" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                    <div class="hover-message">Click over me</div>
+                </div>
+                <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                    <p>Scientific Name: <i>Psalmopoeus cambridgei</i>
+                        <br>
+                        Common Name: Trinidad Chevron Tarantula.
+                        <br>
+                        Characteristics: It is s a strikingly beautiful species of tarantula, known for its chevron-like pattern on the abdomen.
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
           <!-- Card 2 -->
           <div class="col">
               <div class="card-container" style="perspective: 1000px;">
@@ -1688,7 +2839,6 @@
 
 
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3103.614074142465!2d-83.622501!3d9.082476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOcKwMDQnNTYuOSJOIDgzwrAzNycyMS4wIlc!5e1!3m2!1ses-419!2scr!4v1731192246232!5m2!1ses-419!2scr" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 
 

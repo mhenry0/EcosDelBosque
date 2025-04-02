@@ -30,86 +30,111 @@
 
 <!-- Navigation Bar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" id="navbar">
-    <div class="container">
-        <a class="navbar-brand" href="./Home.html">
-            <img src="../img/logos/blackbg.webp" alt="Ecos del Bosque Logo"> <!-- Replace with actual logo path -->
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="./Home.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="./Wildlife.html">Wildlife</a></li>
-                <li class="nav-item"><a class="nav-link" href="./Rooms.html">Rooms</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="./Tours.html" id="toursDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #28a745;">
-                        Tours
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="toursDropdown">
-                        <!-- Repeated link for "Tours" -->
-                        <li><a class="dropdown-item" href="./Tours.html">Tours</a></li>
-                        <li><a class="dropdown-item" href="./Packages.html">Packages</a></li>
-                    </ul>
-                </li>
-                
-                
-                <li class="nav-item"><a class="nav-link" href="./Farm.html">Eco-Farm</a></li>
- <!-- Dropdown for Contact -->
- <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="./Contact.html" id="contactDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"  >
-        Contact
+  <div class="container">
+    <a class="navbar-brand" href="./Home.html">
+      <img src="../img/logos/logoecosdelbosque.png" alt="Ecos del Bosque Logo" style="width: 100px; height: 100px;" loading="lazy">
     </a>
-    <ul class="dropdown-menu" aria-labelledby="contactDropdown">
-        <li><a class="dropdown-item" href="./Contact.html">Contact Us</a></li>
-        <li><a class="dropdown-item" href="./GettingHere.html">Getting Here</a></li>
-    </ul>
-</li>                <li class="nav-item"><a class="nav-link" href="">Booking</a></li>
- <!-- Dropdown for Contact -->
- <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="./Us.html" id="contactDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
-        Us
-    </a>                <ul class="dropdown-menu" aria-labelledby="toursDropdown">
-                    <!-- Repeated link for "Tours" -->
-                    <li><a class="dropdown-item" href="./Us.html">Our Story</a></li>
-                    <li><a class="dropdown-item" href="./Blog.html">Blog</a></li>
-                </ul>
-                <li class="nav-item"><a class="nav-link" href="./About.html">About</a></li>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link" href="./Home.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="./Wildlife.html">Wildlife</a></li>
+              <li class="nav-item"><a class="nav-link" href="./Rooms.html">Rooms</a></li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="./Tours.html" id="toursDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"  style="color: #1ac41f;">
+                      Tours
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="toursDropdown">
+                      <!-- Repeated link for "Tours" -->
+                      <li><a class=" nav-link " href="./Tours.html">Tours</a></li>
+                      <li><a class=" nav-link " href="./Packages.html">Packages</a></li>
+                  </ul>
+              </li>
+              
+              
+              <li class="nav-item"><a class="nav-link" href="./Farm.html" >Eco-Farm</a></li>
+<!-- Dropdown for Contact -->
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="./Contact.html" id="contactDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"  >
+      Contact
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="contactDropdown">
+      <li class="nav-item"><a class=" nav-link " href="./Contact.html">Contact</a></li>
+      <li class="nav-item"><a class=" nav-link " href="./GettingHere.html">Getting Here</a></li>
+      <li class="nav-item"><a class=" nav-link " href="./FAQ.html">Frequently Asked Questions</a></li>
+  </ul>
+</li>
+  
+<!-- Dropdown for Contact -->
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="./Us.html" id="contactDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+      Us
+  </a>                <ul class="dropdown-menu" aria-labelledby="toursDropdown">
+                  <!-- Repeated link for "Tours" -->
+                  <li><a class=" nav-link" href="./Us.html">Our Story</a></li>
+                  <li><a class=" nav-link" href="./Blog.html" >Blog</a></li>
+              </ul>
+              <li class="nav-item"><a class="nav-link" href="./About.html" >About</a></li>
 
-                <!-- Icon button to toggle translation element -->
-                <button class="btn btn-link" onclick="toggleTranslate()" aria-expanded="false" style="font-size: 1.5rem;">
-                    <i class="fas fa-globe"></i>
-                </button>
 
-                <!-- Translation element, initially hidden -->
-                <div id="translateContainer" style="display: none; text-align: center;">
-                    <div id="google_translate_element"></div>
-                </div>
 
-                <!-- Translation script -->
-                <script type="text/javascript">
-                    function googleTranslateElementInit() {
-                        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
-                    }
+                  <!-- Botón con ícono para alternar traducción -->
+                  <button onclick="toggleTranslate()" aria-expanded="false"
+                  style="color: #1ac41f; font-size: 20px; background-color: transparent; border: none; cursor: pointer; margin-left: 10px;">
+                      <!-- Icono de idioma (puedes cambiarlo por otro si lo prefieres) -->
+                  <i class="fas fa-language"></i>
+                  </button>
 
-                    // Function to toggle the translation element
-                    function toggleTranslate() {
-                        const translateContainer = document.getElementById('translateContainer');
-                        translateContainer.style.display = translateContainer.style.display === 'none' ? 'block' : 'none';
-                    }
-                </script>
 
-                <!-- Load Google Translate script -->
-                <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-            </ul>
-        </div>
-    </div>
+      <!-- Translation element, inicialmente oculto -->
+<div id="translateContainer" style="display: none; text-align: center;">
+  <div id="google_translate_element"></div>
+</div>
+
+<!-- Translation script -->
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      // Solo se incluirán estos idiomas: Español, Francés, Alemán y Portugués
+      includedLanguages: 'es,fr,de,pt'
+    }, 'google_translate_element');
+  }
+
+  // Función para mostrar/ocultar el elemento de traducción
+  function toggleTranslate() {
+    const translateContainer = document.getElementById('translateContainer');
+    translateContainer.style.display = 
+      translateContainer.style.display === 'none' ? 'block' : 'none';
+  }
+</script>
+
+<!-- Carga del script de Google Translate -->
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+                              <!-- Book Here Button -->
+<li class="nav-item">
+  <a class="btn btn-success text-white ms-3 btn-bookhere" 
+  href="#" 
+  style="margin: 2px; align-items: center; background-color: #1ac41f; border-color: #1ac41f;">
+ Book Here
+</a>
+
+
+
+    </li>
+          </ul>
+      </div>
+  </div>
 </nav>
 
 
 
+
 <section class="hero">
-    <img src="../img/banners/toursbg.JPG" alt="Background Image" class="hero-image">
+    <img src="../img/wildlife/birds/grayheadedtanager.webp" alt="gray headed tanager couple as the background image" class="hero-image">
     <div class="container">
         <p class="ecosdelbosque">Ecos del Bosque</p>
         <a href="#" class="btn btn-custom">Book Here</a>
@@ -121,16 +146,16 @@
 
 
 
-<h1 style="text-align: center; font-size: 30px; color: #0C8A20">
-    <br>
+<h1 style="text-align: center; font-size: 38px; margin-top: 100px; margin-bottom: 100px;">
     <b>TOURS</b>  
 </h1>
-<br>
-<br>
-<p style="font-size: 20px; padding-left: 20px;">We have at your disposal a list of tours available in the area. The ones which have a schedule are offered within the property. The rest are privately managed. 
+
+<div class="container" style="margin-top: 50px; margin-bottom: 50px; color: black; font-size: 18px; text-align: justify; ">
+
+    We have at your disposal a list of tours available in the area. The ones which have a schedule are offered within the property. The rest are privately managed. 
     Let us know if you are interested in doing some of them and we will be in contact with you right away!</p>
-    <br>
-    <br>
+ 
+</div>
 
 
 
@@ -167,1031 +192,663 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-    <div class="container custom-container">
-        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 g-4 d-flex justify-content-center align-items-center">
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="../img/tours/naturalhistory.webp" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <!-- Keyword Bubbles -->
-                        <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px;">
-                            <span style="background-color: #4CAF50; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Wildlife</span>
-                            <span style="background-color: #4CAF50; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Guided Tour</span>
-                            <span style="background-color: #4CAF50; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Nature Walk</span>
-                            <span style="background-color: #4CAF50; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Family Friendly</span>
-                            <span style="background-color: #4CAF50; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Educational</span>
-                        </div>
-            
-                        <!-- Accordion for Information -->
-                        <div class="accordion" id="accordionExample1">
-                            <div class="accordion-item">
-                                <p class="accordion-header" id="headingOne1">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne1" aria-expanded="false" aria-controls="collapseOne1">
-                                        Natural History Hike: Discover the Stories of the Wild
-                                    </button>
-                                </p>
-                                <div id="collapseOne1" class="accordion-collapse collapse" aria-labelledby="headingOne1" data-bs-parent="#accordionExample1">
-                                    <div class="accordion-body">
-                                        Take a gentle walk into the heart of nature, where every path has a story to tell. Our Natural History Hike is a relaxed journey through the primary forest, led by guides who are passionate about the natural world.
-                                        <br><br>
-                                        Along the way, you’ll uncover the hidden lives of plants, birds, and animals, and learn how they all connect in a beautiful balance.
-                                        <br><br>
-                                        <b>Duration:</b> 1.30 to 2 hours.<br>
-                                        <b>Time:</b> Everyday, from 6 AM until 4 PM. Includes snacks.
-                                        <br><br>
-                                        <i>When you book the package 3 days / 2 nights the tour is private.</i>
-                                        <br><br>
-                                        <b>Price: $45</b>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="../img/tours/twilight.webp" class="card-img-top" alt="Twilight Nightwalk">
-                    <div class="card-body">
-                        <!-- Keyword Bubbles -->
-                        <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px;">
-                            <span style="background-color: #3a773c; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Wildlife</span>
-                            <span style="background-color: #3a773c; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Guided Tour</span>
-                            <span style="background-color: #3a773c; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Nature Walk</span>
-                            <span style="background-color: #3a773c; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Family Friendly</span>
-                            <span style="background-color: #3a773c; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Educational</span>
-                        </div>
-            
-                        <!-- Accordion for Information -->
-                        <div class="accordion" id="accordionTwilight">
-                            <div class="accordion-item">
-                                <p class="accordion-header" id="headingTwilight">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwilight" aria-expanded="false" aria-controls="collapseTwilight">
-                                        Twilight Nightwalk: Discover the Magic of the Night
-                                    </button>
-                                </p>
-                                <div id="collapseTwilight" class="accordion-collapse collapse" aria-labelledby="headingTwilight" data-bs-parent="#accordionTwilight">
-                                    <div class="accordion-body">
-                                        <br><br>
-                                        Embark on a mesmerizing journey as dusk settles and the wildlife of the forest awakens. This unique twilight walk is a chance to experience the wilderness in a whole new light—under the stars, with expert guides revealing the secrets of nocturnal creatures.
-                                        <br><br>
-                                        As the sun dips below the horizon, you’ll wander along moonlit trails, listening to the sounds of the night, from chirping insects to the distant calls of owls. Keep your eyes peeled for creatures that are most active after dark, such as bats, night birds, and other elusive wildlife.
-                                        <br><br>
-                                        This family-friendly, educational walk is perfect for nature enthusiasts of all ages. It’s a unique opportunity to see the world from a different perspective, learn about nocturnal ecosystems, and connect with the natural world in a serene and tranquil environment.
-                                        <br><br>
-                                        <b>Duration:</b> 2.5 hours.<br>
-                                        <b>Time:</b> 6:30 PM. Available year-round.<br>
-                                        <br><br>
-                                        <b>NOTE:</b><br>
-                                        <i>Bring a flashlight and wear sturdy shoes.</i>
-                                        <br><br>
-                                        <b>Price: $50</b>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="../img/tours/nightwalk.webp" class="card-img-top" alt="Night Walk: Experience Nature Under the Stars">
-                    <div class="card-body">
-                        <!-- Keyword Bubbles -->
-                        <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px;">
-                            <span style="background-color: #eb6913; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Night Walk</span>
-                            <span style="background-color: #eb6913; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Wildlife</span>
-                            <span style="background-color: #eb6913; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Guided Tour</span>
-                            <span style="background-color: #eb6913; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Adventure</span>
-                            <span style="background-color: #eb6913; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Nature</span>
-                        </div>
-            
-                        <!-- Accordion for Information -->
-                        <div class="accordion" id="accordionNightWalk">
-                            <div class="accordion-item">
-                                <p class="accordion-header" id="headingNightWalk">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNightWalk" aria-expanded="false" aria-controls="collapseNightWalk">
-                                        Night Walk: Experience Nature Under the Stars
-                                    </button>
-                                </p>
-                                <div id="collapseNightWalk" class="accordion-collapse collapse" aria-labelledby="headingNightWalk" data-bs-parent="#accordionNightWalk">
-                                    <div class="accordion-body">
-                                        <br><br>
-                                        Venture into the wild as the sun sets on an unforgettable **Night Walk**. This guided adventure takes you through the forest when the creatures of the night come alive. 
-                                        <br><br>
-                                        Discover the sounds, sights, and smells of the nocturnal world, from the rustle of hidden animals to the twinkling stars above. With our knowledgeable guides, you’ll learn about the mysterious behaviors of the night’s wildlife.
-                                        <br><br>
-                                        Whether you’re a seasoned adventurer or new to night hikes, this tour offers a unique opportunity to explore nature in a whole new light. It’s a magical experience for those seeking to connect with the natural world in its quietest and most enchanting hours.
-                                        <br><br>
-                                        <b>Duration:</b> 2 to 2.5 hours.<br>
-                                        <b>Time:</b> Every evening, from 7 PM until 9:30 PM.<br>
-                                        <br><br>
-                                        <b>NOTE:</b><br>
-                                        <i>When you book the 3 days / 2 nights package, the tour is private.</i>
-                                        <br><br>
-                                        <b>Price: $45</b>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-                        
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="../img/tours/hiddenwaterfall.webp" class="card-img-top" alt="Hidden Waterfall">
-                    <div class="card-body">
-                        <!-- Keyword Bubbles -->
-                        <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px;">
-                            <span style="background-color: #2196F3; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Waterfall</span>
-                            <span style="background-color: #2196F3; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Jungle Adventure</span>
-                            <span style="background-color: #2196F3; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Guided Tour</span>
-                            <span style="background-color: #2196F3; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Nature</span>
-                            <span style="background-color: #2196F3; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Lunch Included</span>
-                        </div>
-            
-                        <!-- Accordion for Information -->
-                        <div class="accordion" id="accordionExampleWaterfall">
-                            <div class="accordion-item">
-                                <p class="accordion-header" id="headingWaterfall">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWaterfall" aria-expanded="false" aria-controls="collapseWaterfall">
-                                        Hidden Waterfall Visit: Explore a Secret Paradise
-                                    </button>
-                                </p>
-                                <div id="collapseWaterfall" class="accordion-collapse collapse" aria-labelledby="headingWaterfall" data-bs-parent="#accordionExampleWaterfall">
-                                    <div class="accordion-body">
-                                        Join us on an exclusive journey to uncover a hidden waterfall nestled deep in the jungle. This unique adventure will take you off the beaten path, revealing one of nature’s most stunning secrets. 
-                                        <br><br>
-                                        You’ll trek through lush, untamed jungle landscapes, where every step brings you closer to the refreshing sound of cascading water. Upon reaching the waterfall, you'll have time to relax, take photos, and fully immerse yourself in the serenity of the hidden paradise. 
-                                        <br><br>
-                                        Along the way, enjoy coffee, fresh juice, and light snacks to keep your energy up. A delicious lunch will also be provided at the waterfall site, giving you the perfect opportunity to savor nature’s beauty while refueling for the journey back. 
-                                        <br><br>
-                                        <b>Duration:</b> 6 hours.<br>
-                                        <b>Time:</b> 8:30 AM. Available only during winter months: May to August.<br>
-                                        <br>
-                                        <b>NOTE:</b><br>
-                                        <i>Snacks and Lunch are included.</i>
-                                        <br><br>
-                                        <b>Price: $60</b>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="../img/tours/farmnmedicine.webp" class="card-img-top" alt="Natural Medicine Tour">
-                    <div class="card-body">
-                        <!-- Keyword Bubbles -->
-                        <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px;">
-                            <span style="background-color: #8BC34A; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Natural Medicine</span>
-                            <span style="background-color: #8BC34A; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Herbal Remedies</span>
-                            <span style="background-color: #8BC34A; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Traditional Healing</span>
-                            <span style="background-color: #8BC34A; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Guided Tour</span>
-                            <span style="background-color: #8BC34A; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Nature</span>
-                        </div>
-            
-                        <!-- Accordion for Information -->
-                        <div class="accordion" id="accordionExampleMedicine">
-                            <div class="accordion-item">
-                                <p class="accordion-header" id="headingMedicine">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMedicine" aria-expanded="false" aria-controls="collapseMedicine">
-                                        Natural Medicine Tour: Discover the Healing Powers of Nature
-                                    </button>
-                                </p>
-                                <div id="collapseMedicine" class="accordion-collapse collapse" aria-labelledby="headingMedicine" data-bs-parent="#accordionExampleMedicine">
-                                    <div class="accordion-body">
-                                        Join us for a fascinating tour where you’ll learn about natural medicine and traditional healing practices. 
-                                        <br><br>
-                                        Our expert guide will introduce you to a variety of local plants known for their medicinal properties, explaining how they have been used for centuries to treat various ailments. From herbal remedies to natural detoxifying treatments, you’ll explore the powerful healing abilities of nature. 
-                                        <br><br>
-                                        The tour will take you through lush areas rich in medicinal plants, and you’ll have the chance to identify and learn about the species that have shaped the local culture’s health practices.
-                                        <br><br>
-                                        <b>Duration:</b> 2 hours.<br>
-                                        <b>Time:</b> Every day at 10 AM and 3 PM.<br>
-                                        <br>
-                                        <b>NOTE:</b><br>
-                                        <i>Herbal teas and samples included in the tour.</i>
-                                        <br><br>
-                                        <b>Price: $35</b>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="../img/tours/combo.webp" class="card-img-top" alt="Natural History Hike + Farm and Medicinal Plants">
-                    <div class="card-body">
-                        <!-- Keyword Bubbles -->
-                        <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px;">
-                            <span style="background-color: #4ac3a9; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Biodiversity</span>
-                            <span style="background-color: #4ac3a9; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Ecological Conservation</span>
-                            <span style="background-color: #4ac3a9; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Medicinal Plants</span>
-                            <span style="background-color: #4ac3a9; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Farm-to-Table</span>
-                            <span style="background-color: #4ac3a9; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Sustainable Agriculture</span>
-                        </div>
-            
-                        <!-- Accordion for Information -->
-                        <div class="accordion" id="accordionExampleCombo">
-                            <div class="accordion-item">
-                                <p class="accordion-header" id="headingCombo">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCombo" aria-expanded="false" aria-controls="collapseCombo">
-                                        Natural History Hike + Farm and Medicinal Plants: A Journey of Connection
-                                    </button>
-                                </p>
-                                <div id="collapseCombo" class="accordion-collapse collapse" aria-labelledby="headingCombo" data-bs-parent="#accordionExampleCombo">
-                                    <div class="accordion-body">
-                                        Immerse yourself in the natural and cultural wonders of the Osa Peninsula with our unique combo tour. Begin your adventure with a guided natural history hike through lush forests, learning about the region's rich biodiversity and ecological conservation efforts.
-                                        <br><br>
-                                        After the hike, step into our sustainable farm to discover the fascinating world of medicinal plants and farm-to-table practices. Learn how local traditions and innovative methods create a harmonious connection between nature, health, and sustainability.
-                                        <br><br>
-                                        This two-part tour offers an unforgettable opportunity to engage with nature, explore sustainable agriculture, and appreciate the healing power of plants. Perfect for families, nature enthusiasts, and curious minds alike!
-                                        <br><br>
-                                        <b>Duration:</b> 5 hours.<br>
-                                        <b>Time:</b> Daily at 8 AM.<br>
-                                        <br>
-                                        <b>NOTE:</b><br>
-                                        <i>Combo tours can be tailored to your group’s preferences.</i>
-                                        <br><br>
-                                        <b>Price: $100</b>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-
-
-
-
-
-
-
-
-
-
-
-
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="../img/tours/farm.webp" class="card-img-top" alt="Sustainable Farming Tour">
-                    <div class="card-body">
-                        <!-- Keyword Bubbles -->
-                        <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px;">
-                            <span style="background-color: #4CAF50; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Sustainability</span>
-                            <span style="background-color: #4CAF50; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Agriculture</span>
-                            <span style="background-color: #4CAF50; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Zero-Waste</span>
-                            <span style="background-color: #4CAF50; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Guided Tour</span>
-                            <span style="background-color: #4CAF50; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Eco-Friendly</span>
-                        </div>
-            
-                        <!-- Accordion for Details -->
-                        <div class="accordion" id="accordionSustainableFarming">
-                            <div class="accordion-item">
-                                <p class="accordion-header" id="headingFarming">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFarming" aria-expanded="false" aria-controls="collapseFarming">
-                                        Sustainable Farming: A Tour of Our Eco-Friendly Practices
-                                    </button>
-                                </p>
-                                <div id="collapseFarming" class="accordion-collapse collapse" aria-labelledby="headingFarming" data-bs-parent="#accordionSustainableFarming">
-                                    <div class="accordion-body">
-                                        Join us on this enlightening tour to learn how our self-sustainable production of goods contributes to a zero-waste approach. Discover how we embrace local agricultural techniques that preserve nature while providing a sustainable future. 
-                                        <br><br>
-                                        You'll explore our farm, learn about our exotic plants, and witness firsthand how we are working to balance ecology with production. Our knowledgeable guides will walk you through the best development models,ing you how small changes can make a big difference in promoting sustainability.
-                                        <br><br>
-                                        It’s an excellent opportunity for anyone interested in eco-friendly living or wanting to explore innovative ways to preserve the planet while cultivating the land. 
-                                        <br><br>
-                                        <b>Duration:</b> 1 hour.<br>
-                                        <b>Time:</b> Everyday, at 4 PM.<br>
-                                        <br>
-                                        <b>NOTE:</b><br>
-                                        <i>When you book the package 3 days / 2 nights, the tour is private.</i>
-                                        <br><br>
-                                        <b>Price: $30</b>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Osa Peninsula Historical Tour">
-                    <div class="card-body">
-                        <!-- Keyword Bubbles -->
-                        <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px;">
-                            <span style="background-color: #FF5722; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Archaeology</span>
-                            <span style="background-color: #FF5722; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Historical Sites</span>
-                            <span style="background-color: #FF5722; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Indigenous Cultures</span>
-                            <span style="background-color: #FF5722; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Guided Tour</span>
-                            <span style="background-color: #FF5722; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Osa Peninsula</span>
-                        </div>
-            
-                        <!-- Accordion -->
-                        <div class="accordion" id="tourAccordion">
-                            <div class="accordion-item">
-                                <p class="accordion-header" id="headingOne">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        Osa Peninsula Historical Tour: Uncover the Secrets of Ancient Civilizations
-                                    </button>
-                                </p>
-                                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#tourAccordion">
-                                    <div class="accordion-body">
-                                        Embark on a fascinating guided tour through the Osa Peninsula’s historical sites, uncovering the secrets of ancient civilizations that once thrived here.
-                                        <br><br>
-                                        Our expert guide will lead you through key archaeological sites where you’ll discover artifacts and learn about the indigenous cultures that shaped the region. Explore ancient ruins and hidden treasures while gaining insight into the rich cultural heritage of the area.
-                                        <br><br>
-                                        This immersive experience will take you on a journey through time, offering a deeper understanding of the ancient people who lived here and their incredible contributions to history.
-                                        <br><br>
-                                        <b>Duration:</b> 3 hours.<br>
-                                        <b>Time:</b> Daily at 9 AM.<br>
-                                        <br>
-                                        <b>NOTE:</b> <i>Private tours available for groups of 4 or more.</i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            
-
-
-
-
-
-
-
-
-
-
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Fishing Tour">
-                    <div class="card-body">
-                        <!-- Keyword Bubbles -->
-                        <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px;">
-                            <span style="background-color: #4CAF50; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Fishing</span>
-                            <span style="background-color: #4CAF50; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Ocean Adventure</span>
-                            <span style="background-color: #4CAF50; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Catch & Release</span>
-                            <span style="background-color: #4CAF50; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Family Friendly</span>
-                            <span style="background-color: #4CAF50; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Osa Peninsula</span>
-                        </div>
-            
-                        <!-- Accordion Button -->
-                        <div class="accordion" id="accordionFishingTour">
-                            <div class="accordion-item">
-                                <p class="accordion-header" id="headingFishingTour">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFishingTour" aria-expanded="true" aria-controls="collapseFishingTour">
-                                        Osa Peninsula Fishing Tour: Reel in the Adventure
-                                    </button>
-                                </p>
-                                <div id="collapseFishingTour" class="accordion-collapse collapse" aria-labelledby="headingFishingTour" data-bs-parent="#accordionFishingTour">
-                                    <div class="accordion-body">
-                                        Experience the thrill of deep-sea fishing in the pristine waters of the Osa Peninsula. This guided fishing tour offers the perfect opportunity for anglers of all skill levels to enjoy a day out on the ocean.
-                                        <br><br>
-                                        Our professional crew will take you to the best fishing spots, where you’ll have the chance to catch a variety of fish, including snapper, tuna, and mahi-mahi. Learn tips and tricks from experienced guides while soaking in breathtaking views of the coastline.
-                                        <br><br>
-                                        Whether you’re an avid fisherman or just looking for a unique adventure, this tour promises an unforgettable experience. Equipment, snacks, and beverages are provided for your convenience.
-                                        <br><br>
-                                        <b>Duration:</b> 4 hours.<br>
-                                        <b>Time:</b> Daily at 7 AM.<br>
-                                        <br>
-                                        <b>NOTE:</b> <i>Private charters available upon request.</i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Snorkeling and Diving at Isla del Caño">
-                    <div class="card-body">
-                        <!-- Keyword Bubbles -->
-                        <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px;">
-                            <span style="background-color: #15cfe7; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Snorkeling</span>
-                            <span style="background-color: #15cfe7; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Diving</span>
-                            <span style="background-color: #15cfe7; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Isla del Caño</span>
-                            <span style="background-color: #15cfe7; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Marine Life</span>
-                            <span style="background-color: #15cfe7; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Guided Tour</span>
-                        </div>
-            
-                        <!-- Accordion Button -->
-                        <div class="accordion" id="accordionSnorkelingDivingIslaDelCano">
-                            <div class="accordion-item">
-                                <p class="accordion-header" id="headingSnorkelingDivingIslaDelCano">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSnorkelingDivingIslaDelCano" aria-expanded="true" aria-controls="collapseSnorkelingDivingIslaDelCano">
-                                        Snorkeling and Diving at Isla del Caño
-                                    </button>
-                                </p>
-                                <div id="collapseSnorkelingDivingIslaDelCano" class="accordion-collapse collapse" aria-labelledby="headingSnorkelingDivingIslaDelCano" data-bs-parent="#accordionSnorkelingDivingIslaDelCano">
-                                    <div class="accordion-body">
-                                        Immerse yourself in the crystal-clear waters of Isla del Caño, one of Costa Rica's premier snorkeling and diving destinations.
-                                        <br><br>
-                                        Explore the vibrant marine ecosystems surrounding this stunning island. Whether you're snorkeling along the shallow reefs or diving deeper to discover exotic underwater species, Isla del Caño is teeming with biodiversity waiting to be discovered.
-                                        <br><br>
-                                        Led by our expert guides, you'll visit the best snorkeling and diving spots, encountering colorful fish, sea turtles, rays, and even sharks in their natural habitat.
-                                        <br><br>
-                                        <b>Duration:</b> 4 hours.<br>
-                                        <b>Time:</b> Daily at 8:00 AM.<br>
-                                        <br><br>
-                                        <b>NOTE:</b> <i>All necessary equipment (mask, snorkel, fins, diving gear) is included.</i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-
-
-
-
-
-
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Surf Lessons">
-                    <div class="card-body">
-                        <!-- Keyword Bubbles -->
-                        <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px;">
-                            <span style="background-color: #0099ff; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Surfing</span>
-                            <span style="background-color: #0099ff; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Lessons</span>
-                            <span style="background-color: #0099ff; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Beach</span>
-                            <span style="background-color: #0099ff; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Beginner</span>
-                            <span style="background-color: #0099ff; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Ocean</span>
-                        </div>
-            
-                        <!-- Accordion Button -->
-                        <div class="accordion" id="accordionSurfLessons">
-                            <div class="accordion-item">
-                                <p class="accordion-header" id="headingSurfLessons">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSurfLessons" aria-expanded="true" aria-controls="collapseSurfLessons">
-                                        Surf Lessons: Ride the Waves
-                                    </button>
-                                </p>
-                                <div id="collapseSurfLessons" class="accordion-collapse collapse" aria-labelledby="headingSurfLessons" data-bs-parent="#accordionSurfLessons">
-                                    <div class="accordion-body">
-                                        Ready to ride the waves? Join our expert instructors for your first surf lesson on one of Costa Rica’s most stunning beaches. Whether you're a beginner or looking to refine your surfing skills, our lessons are tailored to suit your needs.
-                                        <br><br>
-                                        Learn the basics of surfing, from paddling techniques to catching your first wave, all in a safe and friendly environment. Our experienced instructors will be with you every step of the way, ensuring you're comfortable on the water.
-                                        <br><br>
-                                        After your lesson, you'll have the confidence to ride the waves on your own, with the guidance of professionals who know the best surf spots.
-                                        <br><br>
-                                        <b>Duration:</b> 2 hours.<br>
-                                        <b>Time:</b> Available daily at 9:00 AM, 12:00 PM, and 3:00 PM.<br>
-                                        <br><br>
-                                        <b>NOTE:</b> <i>All necessary equipment (surfboard, rash guard) is provided.</i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="../img/tours/nauyaca.webp" class="card-img-top" alt="Waterfalls">
-                    <div class="card-body">
-                        <!-- Keyword Bubbles -->
-                        <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px;">
-                            <span style="background-color: #005acf; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Waterfalls</span>
-                            <span style="background-color: #005acf; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Nature</span>
-                            <span style="background-color: #005acf; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Hiking</span>
-                            <span style="background-color: #005acf; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Adventure</span>
-                            <span style="background-color: #005acf; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Guided Tour</span>
-                        </div>
-            
-                        <!-- Accordion Button -->
-                        <div class="accordion" id="accordionNauyacaWaterfalls">
-                            <div class="accordion-item">
-                                <p class="accordion-header" id="headingNauyacaWaterfalls">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNauyacaWaterfalls" aria-expanded="true" aria-controls="collapseNauyacaWaterfalls">
-                                        Nauyaca Waterfalls: Explore Paradise
-                                    </button>
-                                </p>
-                                <div id="collapseNauyacaWaterfalls" class="accordion-collapse collapse" aria-labelledby="headingNauyacaWaterfalls" data-bs-parent="#accordionNauyacaWaterfalls">
-                                    <div class="accordion-body">
-                                        Join us on an unforgettable journey to the breathtaking Nauyaca Waterfalls, located in the heart of Costa Rica’s lush jungle. This tour takes you on a scenic hike through vibrant landscapes to one of the most stunning waterfalls in the region.
-                                        <br><br>
-                                        As you trek through the forest, you’ll pass through diverse ecosystems, with the sounds of the waterfall growing louder as you approach. Once you reach the falls, you’ll be rewarded with the sight of water cascading down from towering cliffs, forming natural pools perfect for a refreshing swim.
-                                        <br><br>
-                                        Along the way, enjoy the guidance of our expert tour guides, who will share their knowledge of local flora and fauna. Don’t forget to bring your camera, as this hidden paradise is a photographer’s dream.
-                                        <br><br>
-                                        <b>Duration:</b> 4 to 5 hours.<br>
-                                        <b>Time:</b> Daily, 8:00 AM and 1:00 PM.<br>
-                                        <br><br>
-                                        <b>NOTE:</b> <i>Swimming is optional, so bring your swimwear.</i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Corcovado National Park">
-                    <div class="card-body">
-                        <!-- Keyword Bubbles -->
-                        <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px;">
-                            <span style="background-color: #4CAF50; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Nature</span>
-                            <span style="background-color: #4CAF50; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Wildlife</span>
-                            <span style="background-color: #4CAF50; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Guided Tour</span>
-                            <span style="background-color: #4CAF50; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Rainforest</span>
-                            <span style="background-color: #4CAF50; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Adventure</span>
-                        </div>
-            
-                        <!-- Accordion Button -->
-                        <div class="accordion" id="accordionCorcovadoPark">
-                            <div class="accordion-item">
-                                <p class="accordion-header" id="headingCorcovadoPark">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCorcovadoPark" aria-expanded="true" aria-controls="collapseCorcovadoPark">
-                                        Corcovado National Park: Explore the Heart of the Osa Peninsula
-                                    </button>
-                                </p>
-                                <div id="collapseCorcovadoPark" class="accordion-collapse collapse" aria-labelledby="headingCorcovadoPark" data-bs-parent="#accordionCorcovadoPark">
-                                    <div class="accordion-body">
-                                        Journey into the wild heart of Costa Rica at Corcovado National Park, one of the most biodiverse places on Earth. This adventure takes you deep into the rainforest, where you’ll experience nature like never before.
-                                        <br><br>
-                                        Accompanied by an expert guide, you’ll explore the park’s dense jungle, spotting a variety of wildlife, including monkeys, sloths, jaguars, and exotic birds. Your guide will share insights about the park’s ecology and conservation efforts, making the experience both educational and thrilling.
-                                        <br><br>
-                                        Whether you’re a nature lover, an avid birdwatcher, or simply seeking an unforgettable adventure, Corcovado offers an unparalleled chance to immerse yourself in pristine wilderness.
-                                        <br><br>
-                                        <b>Duration:</b> Full Day (approximately 8 hours).<br>
-                                        <b>Time:</b> 7:00 AM, daily.<br>
-                                        <br><br>
-                                        <b>NOTE:</b> <i>Bring comfortable hiking shoes, sunscreen, and a camera.</i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-
-
-
-
-
-
-
-
-
-
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Whales and Dolphins Ocean Safari">
-                    <div class="card-body">
-                        <!-- Keyword Bubbles -->
-                        <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px;">
-                            <span style="background-color: #00BCD4; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Whale Watching</span>
-                            <span style="background-color: #00BCD4; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Dolphin Watching</span>
-                            <span style="background-color: #00BCD4; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Guided Tour</span>
-                            <span style="background-color: #00BCD4; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Ocean Adventure</span>
-                            <span style="background-color: #00BCD4; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Nature</span>
-                        </div>
-            
-                        <!-- Accordion Button -->
-                        <div class="accordion" id="accordionWhaleDolphinSafari">
-                            <div class="accordion-item">
-                                <p class="accordion-header" id="headingWhaleDolphinSafari">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWhaleDolphinSafari" aria-expanded="true" aria-controls="collapseWhaleDolphinSafari">
-                                        Whales and Dolphins: Ocean Safari
-                                    </button>
-                                </p>
-                                <div id="collapseWhaleDolphinSafari" class="accordion-collapse collapse" aria-labelledby="headingWhaleDolphinSafari" data-bs-parent="#accordionWhaleDolphinSafari">
-                                    <div class="accordion-body">
-                                        Set sail on an exhilarating ocean safari to witness the magnificent whales and playful dolphins that grace the waters off Costa Rica’s coast. Our experienced guides will take you to the best spots to encounter these awe-inspiring marine creatures in their natural habitat.
-                                        <br><br>
-                                        During this unforgettable adventure, you’ll have the chance to see humpback whales, spinner dolphins, and many other species that make their home in the warm Pacific waters. Keep your camera ready as you observe these incredible animals leaping and swimming in the open ocean.
-                                        <br><br>
-                                        This guided tour offers expert insights into the behaviors and migration patterns of these marine mammals, as well as their importance to the ecosystem.
-                                        <br><br>
-                                        <b>Duration:</b> 3 to 4 hours.<br>
-                                        <b>Time:</b> 8:00 AM & 1:00 PM, daily.<br>
-                                        <br><br>
-                                        <b>NOTE:</b> <i>Wear comfortable clothing, bring sunscreen, and don't forget your camera!</i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Sierpe Mangroves">
-                    <div class="card-body">
-                        <!-- Keyword Bubbles -->
-                        <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px;">
-                            <span style="background-color: #388E3C; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Mangrove Tour</span>
-                            <span style="background-color: #388E3C; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Wildlife</span>
-                            <span style="background-color: #388E3C; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Guided Tour</span>
-                            <span style="background-color: #388E3C; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Nature</span>
-                            <span style="background-color: #388E3C; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Boat Ride</span>
-                        </div>
-            
-                        <!-- Accordion Button -->
-                        <div class="accordion" id="accordionMangroveTour">
-                            <div class="accordion-item">
-                                <p class="accordion-header" id="headingMangroveTour">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMangroveTour" aria-expanded="true" aria-controls="collapseMangroveTour">
-                                        Sierpe Mangroves: Explore the Heart of Costa Rica’s Wetlands
-                                    </button>
-                                </p>
-                                <div id="collapseMangroveTour" class="accordion-collapse collapse" aria-labelledby="headingMangroveTour" data-bs-parent="#accordionMangroveTour">
-                                    <div class="accordion-body">
-                                        Immerse yourself in the vibrant ecosystem of the Sierpe Mangroves, one of the most biodiverse regions in Costa Rica. On this guided boat tour, you'll navigate through winding waterways surrounded by lush mangrove forests. 
-                                        <br><br>
-                                        Our expert guides will share fascinating insights into the delicate balance of this ecosystem, where you’ll encounter various species of birds, reptiles, and perhaps even monkeys and crocodiles. The mangroves are also home to a variety of marine life, which makes this tour a true nature lover's paradise.
-                                        <br><br>
-                                        Enjoy the serene beauty of the wetlands, as you drift through these tranquil waters and witness the wildlife up close.
-                                        <br><br>
-                                        <b>Duration:</b> 2 hours.<br>
-                                        <b>Time:</b> Daily, at 8:00 AM and 2:00 PM.<br>
-                                        <br><br>
-                                        <b>NOTE:</b> <i>Don’t forget your camera and binoculars for birdwatching!</i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
+<div class="container" style="margin-top: 20px; margin-bottom: 20px; color: black; font-size: 18px; text-align: left;">
+    <div class="container" style="margin-top: 20px; margin-bottom: 20px; color: black; font-size: 18px; text-align: left;">
+      <div class="row">
+        <!-- Text Content (Left) -->
+        <div class="col-md-8 order-md-1 order-2">
+          <h2 style="font-size: 24px; font-weight: bold;">
+            Natural History Hike: Discover the Stories of the Wild
+          </h2>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px;">
+            <span style="background-color: #25d02a; color: white; padding: 4px 8px;
+                         border-radius: 15px; font-size: 0.8rem;">
+              Wildlife
+            </span>
+            <span style="background-color: #25d02a; color: white; padding: 4px 8px;
+                         border-radius: 15px; font-size: 0.8rem;">
+              Guided Tour
+            </span>
+            <span style="background-color: #25d02a; color: white; padding: 4px 8px;
+                         border-radius: 15px; font-size: 0.8rem;">
+              Nature Walk
+            </span>
+            <span style="background-color: #25d02a; color: white; padding: 4px 8px;
+                         border-radius: 15px; font-size: 0.8rem;">
+              Family Friendly
+            </span>
+            <span style="background-color: #25d02a; color: white; padding: 4px 8px;
+                         border-radius: 15px; font-size: 0.8rem;">
+              Educational
+            </span>
+          </div>
+          <p style="margin-bottom: 20px;">
+            Take a gentle walk into the heart of nature, where every path has a story to tell.
+            Our Natural History Hike is a relaxed journey through the primary forest, led by
+            guides who are passionate about the natural world.
+          </p>
+          <p style="margin-bottom: 20px;">
+            Along the way, you’ll uncover the hidden lives of plants, birds, and animals, and
+            learn how they all connect in a beautiful balance.
+          </p>
+          <p><b>Duration:</b> 2.5 hours.</p>
+          <p><b>Time:</b> Everyday, it starts at 7.30 AM. Includes fruits (banana, pineapple, watermelon) and orange juice. Seasonal fruits are included when they are available rambutan, mango, malay apple, berries, and grapes.  </p>
+          <p>
+            <i>
+              When you book the package 3 days / 2 nights, the tour is private.
+            </i>
+          </p>
+                <!-- What to Wear Section -->
+                <p style="margin-bottom: 20px;">
+                    <b>What to Wear:</b> We recommend comfortable hiking shoes, lightweight clothing,
+                    a hat, sunglasses, and sunscreen. Consider bringing a raincoat when you visit from May to November.
+                  </p>
+          <p><b>Price: $45</b></p>
+    
+          <a href="https://wa.me/50663576163" class="btn-hover-effect">Book</a>
+        </div>
+        
+        <!-- Image Content (Right) -->
+        <div class="col-md-4 order-md-2 order-1">
+          <img src="../img/wildlife/birds/redcrownedwoodpecker.webp" 
+               alt="red crowned woodpecker looking for ants on a tree" class="img-fluid"
+               style="border-radius: 10px; margin-top: 20px; width: 100%; height: 400px;" loading="lazy">
         </div>
       </div>
+    </div>
+  </div>
+  
+<div class="container" 
+style="margin-top: 20px; margin-bottom: 20px; color: black; font-size: 18px; text-align: left;">
+<div class="row">
+<!-- Text Content (Left) -->
+<div class="col-md-8 order-md-1 order-2">
+ <h2 style="font-size: 24px; font-weight: bold;">
+   Twilight Nightwalk: Discover the Magic of the Night
+ </h2>
+ <!-- Keyword Bubbles -->
+ <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px;">
+   <span style="background-color: #4ac3a9; color: white; padding: 4px 8px; 
+                border-radius: 15px; font-size: 0.8rem;">
+     Wildlife
+   </span>
+   <span style="background-color: #4ac3a9; color: white; padding: 4px 8px; 
+                border-radius: 15px; font-size: 0.8rem;">
+     Guided Tour
+   </span>
+   <span style="background-color: #4ac3a9; color: white; padding: 4px 8px; 
+                border-radius: 15px; font-size: 0.8rem;">
+     Nature Walk
+   </span>
+   <span style="background-color: #4ac3a9; color: white; padding: 4px 8px; 
+                border-radius: 15px; font-size: 0.8rem;">
+     Family Friendly
+   </span>
+   <span style="background-color: #4ac3a9; color: white; padding: 4px 8px; 
+                border-radius: 15px; font-size: 0.8rem;">
+     Educational
+   </span>
+ </div>
+ <p style="margin-bottom: 20px;">
+   Embark on a mesmerizing journey as dusk settles and the wildlife of the forest 
+   awakens. This unique twilight walk is a chance to experience the wilderness 
+   in a whole new light—under the stars, with expert guides revealing the secrets 
+   of nocturnal creatures.
+ </p>
+ <p style="margin-bottom: 20px;">
+   As the sun dips below the horizon, you’ll wander along moonlit trails, listening 
+   to the sounds of the night, from chirping insects to the distant calls of owls. 
+   Keep your eyes peeled for creatures that are most active after dark, such as bats, 
+   night birds, and other elusive wildlife.
+ </p>
+ <p style="margin-bottom: 20px;">
+   This family-friendly, educational walk is perfect for nature enthusiasts of all 
+   ages. It’s a unique opportunity to see the world from a different perspective, 
+   learn about nocturnal ecosystems, and connect with the natural world in a serene 
+   and tranquil environment.
+ </p>
+ <p><b>Duration:</b> 3.5 hours.</p>
+ <p><b>Time:</b> It starts at 4.30 PM and it ends at 8:00 PM. Available during summer, December to April. It includes homemade popcorns, hot drinks, and biscuits. We provide you with a flashlight.</p>
+ <p>
+   <b>NOTE:</b><br>
+   <i>Wear sturdy shoes. As for now, May 2025, we do not offer boots.</i>
+ </p>
+   <!-- What to Wear Section -->
+   <p style="margin-bottom: 20px;">
+    <b>What to Wear:</b> We recommend comfortable hiking shoes, and lightweight clothing.   </p>
+ <p><b>Price: $65</b></p>
+ <a href="https://wa.me/50663576163" class="btn-hover-effect">Book</a>
+</div>
+
+<!-- Image Content (Right) -->
+<div class="col-md-4 order-md-2 order-1">
+ <img src="../img/tours/twilight.webp" alt="hummingbird sleeping" class="img-fluid"
+      style="border-radius: 10px; margin-top: 20px; width: 100%; height: 400px;" loading="lazy">
+</div>
+</div>
+</div>
+
+
+<div class="container" 
+     style="margin-top: 20px; margin-bottom: 20px; color: black; font-size: 18px; text-align: left;">
+  <div class="row">
+    <!-- Text Content (Left) -->
+    <div class="col-md-8 order-md-1 order-2">
+      <h2 style="font-size: 24px; font-weight: bold;">
+        Nightwalk: See the night come alive
+      </h2>
+      
+      <!-- Keyword Bubbles -->
+      <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px;">
+        <span style="background-color: #eb6913; color: white; padding: 4px 8px;
+                     border-radius: 15px; font-size: 0.8rem;">
+          Night Walk
+        </span>
+        <span style="background-color: #eb6913; color: white; padding: 4px 8px;
+                     border-radius: 15px; font-size: 0.8rem;">
+          Wildlife
+        </span>
+        <span style="background-color: #eb6913; color: white; padding: 4px 8px;
+                     border-radius: 15px; font-size: 0.8rem;">
+          Guided Tour
+        </span>
+        <span style="background-color: #eb6913; color: white; padding: 4px 8px;
+                     border-radius: 15px; font-size: 0.8rem;">
+          Adventure
+        </span>
+        <span style="background-color: #eb6913; color: white; padding: 4px 8px;
+                     border-radius: 15px; font-size: 0.8rem;">
+          Nature
+        </span>
+      </div>
+      
+      <p style="margin-bottom: 20px;">
+        Venture into the wild as the sun sets on an unforgettable Night Walk.
+        This guided adventure takes you through the forest when the creatures
+        of the night come alive.
+      </p>
+      <p style="margin-bottom: 20px;">
+        Discover the sounds, sights, and smells of the nocturnal world, from the
+        rustle of hidden animals to the twinkling stars above. With our
+        knowledgeable guides, you’ll learn about the mysterious behaviors of
+        the night’s wildlife.
+      </p>
+      <p style="margin-bottom: 20px;">
+        Whether you’re a seasoned adventurer or new to night hikes, this tour
+        offers a unique opportunity to explore nature in a whole new light.
+        It’s a magical experience for those seeking to connect with the natural
+        world in its quietest and most enchanting hours.
+      </p>
+      <p><b>Duration:</b> 2 hours.</p>
+      <p><b>Time:</b> 7 to 9 PM. It includes a hot drink and biscuits. And a flashlight.</p>
+      <p>
+        <b>NOTE:</b><br>
+        <i>Wear sturdy shoes. As for now, May 2025, we do not offer boots.</i>
+      </p>      <p>
+        <i>
+          When you book the package 3 days / 2 nights, the tour is private.
+        </i>
+      </p>         <!-- What to Wear Section -->
+   <p style="margin-bottom: 20px;">
+    <b>What to Wear:</b> We recommend comfortable hiking shoes, and lightweight clothing.   </p>
+ <p>
+    <b>Price: $45</b></p>
+      <a href="https://wa.me/50663576163" class="btn-hover-effect">Book</a>
+    </div>
+    
+    <!-- Image Content (Right) -->
+    <div class="col-md-4 order-md-2 order-1">
+      <img src="../img/tours/nightwalk.webp" class="img-fluid" 
+           alt="big tarantula spoted on a nightwalk"
+           style="border-radius: 10px; margin-top: 20px; width: 100%; height: 400px;" loading="lazy">
+    </div>
+  </div>
+</div>
+
+<div class="container" 
+style="margin-top: 20px; margin-bottom: 20px; color: black; font-size: 18px; text-align: left;">
+<div class="row">
+<!-- Text Content (Left) -->
+<div class="col-md-8 order-md-1 order-2">
+ <h2 style="font-size: 24px; font-weight: bold;">
+   Hidden Waterfall Visit: Explore a Secret Paradise
+ </h2>
+ 
+ <!-- Keyword Bubbles -->
+ <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px;">
+   <span style="background-color: #2196F3; color: white; padding: 4px 8px; 
+                border-radius: 15px; font-size: 0.8rem;">
+     Waterfall
+   </span>
+   <span style="background-color: #2196F3; color: white; padding: 4px 8px; 
+                border-radius: 15px; font-size: 0.8rem;">
+     Jungle Adventure
+   </span>
+   <span style="background-color: #2196F3; color: white; padding: 4px 8px; 
+                border-radius: 15px; font-size: 0.8rem;">
+     Guided Tour
+   </span>
+   <span style="background-color: #2196F3; color: white; padding: 4px 8px; 
+                border-radius: 15px; font-size: 0.8rem;">
+     Nature
+   </span>
+   <span style="background-color: #2196F3; color: white; padding: 4px 8px; 
+                border-radius: 15px; font-size: 0.8rem;">
+     Lunch Included
+   </span>
+ </div>
+ 
+ <p style="margin-bottom: 20px;">
+   Join us on an exclusive journey to uncover a hidden waterfall nestled deep in 
+   the jungle. This unique adventure will take you off the beaten path, revealing 
+   one of nature’s most stunning secrets.
+ </p>
+ <p style="margin-bottom: 20px;">
+   You’ll trek through lush, untamed jungle landscapes, where every step brings 
+   you closer to the refreshing sound of cascading water. Upon reaching the 
+   waterfall, you'll have time to relax, take photos, and fully immerse yourself 
+   in the serenity of the hidden paradise.
+ </p>
+ <p style="margin-bottom: 20px;">
+   Along the way, enjoy coffee, fresh juice, and light snacks to keep your energy up. 
+   A delicious lunch will also be provided at the waterfall site, giving you the perfect 
+   opportunity to savor nature’s beauty while refueling for the journey back.
+ </p>
+ 
+ <p><b>Duration:</b> 2 hours.</p>
+ <p><b>Time:</b> It starts at 10 AM. Available only during winter months: May to August. It includes lunch.</p>
+
+  <p style="margin-bottom: 20px;">
+    <b>What to Wear:</b> We recommend comfortable hiking shoes, and lightweight clothing. Sunscreen, cap/hat, swiming suit.  </p>
+
+    <p><b>Price: $40</b></p>
+ <a href="https://wa.me/50663576163" class="btn-hover-effect">Book</a>
+</div>
+
+<!-- Image Content (Right) -->
+<div class="col-md-4 order-md-2 order-1">
+ <img src="../img/tours/hiddenwaterfall.webp" alt="Hidden Waterfall in the tropical jungle" 
+      class="img-fluid" 
+      style="border-radius: 10px; margin-top: 20px; width: 100%; height: 200px;" loading="lazy">
+</div>
+</div>
+</div>
+
+    
+    
+    <div class="container" style="margin-top: 20px; margin-bottom: 20px; color: black; font-size: 18px; text-align: left;">
+        <div class="row">
+            <!-- Text Content (Left) -->
+            <div class="col-md-8 order-md-1 order-2">
+                <h2 style="font-size: 24px; font-weight: bold;">Natural Medicine Tour: Discover the Healing Powers of Nature</h2>
+                
+                <!-- Keyword Bubbles -->
+                <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px;">
+                    <span style="background-color: #8BC34A; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Natural Medicine</span>
+                    <span style="background-color: #8BC34A; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Herbal Remedies</span>
+                    <span style="background-color: #8BC34A; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Traditional Healing</span>
+                    <span style="background-color: #8BC34A; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Guided Tour</span>
+                    <span style="background-color: #8BC34A; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Nature</span>
+                </div>
+                <p style="margin-bottom: 20px;">Join us for a fascinating tour where you’ll learn about natural medicine and traditional healing practices. Our expert guide will introduce you to a variety of local plants known for their medicinal properties, explaining how they have been used for centuries to treat various ailments.</p>
+                <p style="margin-bottom: 20px;">From herbal remedies to natural detoxifying treatments, you’ll explore the powerful healing abilities of nature. The tour will take you through lush areas rich in medicinal plants, and you’ll have the chance to identify and learn about the species that have shaped the local culture’s health practices.</p>
+                
+                <p style="margin-bottom: 20px;"><b>Duration:</b> 1 hour.</p>
+                <p style="margin-bottom: 20px;"><b>Time:</b> Every day at 5 PM.</p>
+                <p><b>NOTE:</b><br><i>Herbal teas and samples included in the tour.</i></p>
+                <p><b>Price: $20</b></p>
+                <a href="https://wa.me/50663576163" class="btn-hover-effect">Book</a>
+            </div>
+    
+            <!-- Image Content (Right) -->
+            <div class="col-md-4 order-md-2 order-1">
+                <img src="../img/tours/farmnmedicine.webp" alt="Natural Medicine Tour" class="img-fluid" style="border-radius: 10px;">
+            </div>
+        </div>
+    </div>
+    
+    <div class="container" style="margin-top: 20px; margin-bottom: 20px; color: black; font-size: 18px; text-align: left;">
+        <div class="row">
+            <!-- Text Content (Left) -->
+            <div class="col-md-8 order-md-1 order-2">
+                <h2 style="font-size: 24px; font-weight: bold;">Natural History Hike + Farm and Medicinal Plants: A Journey of Connection</h2>
+                
+                <!-- Keyword Bubbles -->
+                <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px;">
+                    <span style="background-color: #f07e05; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Biodiversity</span>
+                    <span style="background-color: #f07e05; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Ecological Conservation</span>
+                    <span style="background-color: #f07e05; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Medicinal Plants</span>
+                    <span style="background-color: #f07e05; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Farm-to-Table</span>
+                    <span style="background-color: #f07e05; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Sustainable Agriculture</span>
+                </div>
+                <p style="margin-bottom: 20px;">Immerse yourself in the natural and cultural wonders of the Osa Peninsula with our unique combo tour. Begin your adventure with a guided natural history hike through lush forests, learning about the region's rich biodiversity and ecological conservation efforts.</p>
+                <p style="margin-bottom: 20px;">After the hike, step into our sustainable farm to discover the fascinating world of medicinal plants and farm-to-table practices. Learn how local traditions and innovative methods create a harmonious connection between nature, health, and sustainability.</p>
+                <p style="margin-bottom: 20px;">This two-part tour offers an unforgettable opportunity to engage with nature, explore sustainable agriculture, and appreciate the healing power of plants. Perfect for families, nature enthusiasts, and curious minds alike!</p>
+                <p><b>Duration:</b> 3 hours.</p>
+                <p><b>Time:</b> Everyday, 6.30 AM. Includes fruits (banana, pineapple, watermelon) and orange juice. Seasonal fruits are included when they are available rambutan, mango, malay apple, berries, and grapes.  </p>
+
+                <p><b>NOTE:</b><br><i>Combo tours can be tailored to your group’s preferences.</i></p>
+                      <!-- What to Wear Section -->
+          <p style="margin-bottom: 20px;">
+            <b>What to Wear:</b> We recommend comfortable hiking shoes, lightweight clothing,
+            a hat, sunglasses, and sunscreen. Consider bringing a raincoat when you visit from May to November.
+          </p>
+                <p><b>Price: $55</b></p>
+                <a href="https://wa.me/50663576163" class="btn-hover-effect">Book</a>
+            </div>
+    
+            <!-- Image Content (Right) -->
+            <div class="col-md-4 order-md-2 order-1">
+                <img src="../img/tours/combo.webp" class="card-img-top" alt="Natural History Hike + Farm and Medicinal Plants" class="img-fluid" style="border-radius: 10px; margin-top: 20px; width: 100%; height: 400px;">
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="container" style="margin-top: 20px; margin-bottom: 20px; color: black; font-size: 18px; text-align: left;">
+        <div class="row">
+            <!-- Text Content (Left) -->
+            <div class="col-md-8 order-md-1 order-2">
+                <h2 style="font-size: 24px; font-weight: bold;">Sustainable Farming: A Tour of Our Eco-Friendly Practices</h2>
+                
+                <!-- Keyword Bubbles -->
+                <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px;">
+                    <span style="background-color: #4CAF50; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Sustainability</span>
+                    <span style="background-color: #4CAF50; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Agriculture</span>
+                    <span style="background-color: #4CAF50; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Zero-Waste</span>
+                    <span style="background-color: #4CAF50; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Guided Tour</span>
+                    <span style="background-color: #4CAF50; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Eco-Friendly</span>
+                </div>
+                <p style="margin-bottom: 20px;">Join us on this enlightening tour to learn how our self-sustainable production of goods contributes to a zero-waste approach. Discover how we embrace local agricultural techniques that preserve nature while providing a sustainable future.</p>
+                <p style="margin-bottom: 20px;">You'll explore our farm, learn about our exotic plants, and witness firsthand how we are working to balance ecology with production. Our knowledgeable guides will walk you through the best development models, showing you how small changes can make a big difference in promoting sustainability.</p>
+                <p style="margin-bottom: 20px;">It’s an excellent opportunity for anyone interested in eco-friendly living or wanting to explore innovative ways to preserve the planet while cultivating the land.</p>
+                <p><b>Duration:</b> 1 hour.</p>
+                <p><b>Time:</b> Every day at 4 PM.</p>
+                <p><b>NOTE:</b><br><i>When you book the package 3 days / 2 nights, the tour is private.</i></p>
+                <p><b>Price: $10</b></p>
+                <a href="https://wa.me/50663576163" class="btn-hover-effect">Book</a>
+            </div>
+    
+            <!-- Image Content (Right) -->
+            <div class="col-md-4 order-md-2 order-1">
+                <img src="../img/tours/farm.webp" class="img-fluid" alt="Sustainable Farming Tour"            style="border-radius: 10px; margin-top: 20px; width: 100%; height: 360px;">
+
+            </div>
+        </div>
+    </div>
+    
+
+        
+</div>
+
+
+
+
+
+<div class="container" style="margin-top: 20px; margin-bottom: 20px; color: black; font-size: 18px; text-align: left;">
+<p style="font-size: 30px; margin-top: 50px; margin-bottom: 50px;"><b>Other Tours</b></p>
+
+
+             
+<div class="container" style="margin-top: 20px; margin-bottom: 20px; color: black; font-size: 18px; text-align: left;">
+    <div class="row">
+        <!-- Text Content (Left) -->
+        <div class="col-md-8 order-md-1 order-2">
+            <h2 style="font-size: 24px; font-weight: bold;">Osa Peninsula Fishing Tour: Reel in the Adventure</h2>
+            
+            <!-- Keyword Bubbles -->
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px;">
+                <span style="background-color: #4CAF50; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Fishing</span>
+                <span style="background-color: #4CAF50; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Ocean Adventure</span>
+                <span style="background-color: #4CAF50; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Catch & Release</span>
+                <span style="background-color: #4CAF50; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Family Friendly</span>
+                <span style="background-color: #4CAF50; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Osa Peninsula</span>
+            </div>
+
+            <p style="margin-bottom: 20px;">Experience the thrill of deep-sea fishing in the pristine waters of the Osa Peninsula. This guided fishing tour offers the perfect opportunity for anglers of all skill levels to enjoy a day out on the ocean.</p>
+            <p style="margin-bottom: 20px;">Our professional crew will take you to the best fishing spots, where you’ll have the chance to catch a variety of fish, including snapper, tuna, and mahi-mahi. Learn tips and tricks from experienced guides while soaking in breathtaking views of the coastline.</p>
+            <p style="margin-bottom: 20px;">Whether you’re an avid fisherman or just looking for a unique adventure, this tour promises an unforgettable experience. Equipment, snacks, and beverages are provided for your convenience.</p>
+            <p><b>Duration:</b> 4 hours.</p>
+            <p><b>Time:</b> Daily at 7 AM.</p>
+            <p><b>NOTE:</b><br><i>Private charters available upon request.</i></p>
+
+            <a href="https://wa.me/50663576163" class="btn-hover-effect">Book</a>
+        </div>
+
+        <!-- Image Content (Right) -->
+        <div class="col-md-4 order-md-2 order-1">
+            <img src="https://via.placeholder.com/150" class="img-fluid" alt="Fishing Tour" style="border-radius: 10px;">
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container" style="margin-top: 20px; margin-bottom: 20px; color: black; font-size: 18px; text-align: left;">
+    <div class="row">
+        <!-- Text Content (Left) -->
+        <div class="col-md-8 order-md-1 order-2">
+            <h2 style="font-size: 24px; font-weight: bold;">Snorkeling and Diving at Isla del Caño</h2>
+
+            <!-- Keyword Bubbles -->
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px;">
+                <span style="background-color: #15cfe7; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Snorkeling</span>
+                <span style="background-color: #15cfe7; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Diving</span>
+                <span style="background-color: #15cfe7; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Isla del Caño</span>
+                <span style="background-color: #15cfe7; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Marine Life</span>
+                <span style="background-color: #15cfe7; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Guided Tour</span>
+            </div>
+
+            <p style="margin-bottom: 20px;">Immerse yourself in the crystal-clear waters of Isla del Caño, one of Costa Rica's premier snorkeling and diving destinations. Explore the vibrant marine ecosystems surrounding this stunning island. Whether you're snorkeling along the shallow reefs or diving deeper to discover exotic underwater species, Isla del Caño is teeming with biodiversity waiting to be discovered.</p>
+
+            <p style="margin-bottom: 20px;">Led by our expert guides, you'll visit the best snorkeling and diving spots, encountering colorful fish, sea turtles, rays, and even sharks in their natural habitat.</p>
+
+            <p><b>Duration:</b> 4 hours.</p>
+            <p><b>Time:</b> Daily at 8:00 AM.</p>
+
+            <p><b>NOTE:</b><br><i>All necessary equipment (mask, snorkel, fins, diving gear) is included.</i></p>
+
+            <a href="https://wa.me/50663576163" class="btn-hover-effect">Book</a>
+        </div>
+
+        <!-- Image Content (Right) -->
+        <div class="col-md-4 order-md-2 order-1">
+            <img src="https://via.placeholder.com/150" class="img-fluid" alt="Snorkeling and Diving at Isla del Caño" style="border-radius: 10px;">
+        </div>
+    </div>
+</div>
+
+<div class="container" style="margin-top: 20px; margin-bottom: 20px; color: black; font-size: 18px; text-align: left;">
+    <div class="row">
+        <!-- Text Content (Left) -->
+        <div class="col-md-8 order-md-1 order-2">
+            <h2 style="font-size: 24px; font-weight: bold;">Surf Lessons: Ride the Waves</h2>
+
+            <!-- Keyword Bubbles -->
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px;">
+                <span style="background-color: #0099ff; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Surfing</span>
+                <span style="background-color: #0099ff; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Lessons</span>
+                <span style="background-color: #0099ff; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Beach</span>
+                <span style="background-color: #0099ff; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Beginner</span>
+                <span style="background-color: #0099ff; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Ocean</span>
+            </div>
+
+            <p style="margin-bottom: 20px;">Ready to ride the waves? Join our expert instructors for your first surf lesson on one of Costa Rica’s most stunning beaches. Whether you're a beginner or looking to refine your surfing skills, our lessons are tailored to suit your needs.</p>
+
+            <p style="margin-bottom: 20px;">Learn the basics of surfing, from paddling techniques to catching your first wave, all in a safe and friendly environment. Our experienced instructors will be with you every step of the way, ensuring you're comfortable on the water.</p>
+
+            <p style="margin-bottom: 20px;">After your lesson, you'll have the confidence to ride the waves on your own, with the guidance of professionals who know the best surf spots.</p>
+
+            <p><b>Duration:</b> 2 hours.</p>
+            <p><b>Time:</b> Available daily at 9:00 AM, 12:00 PM, and 3:00 PM.</p>
+
+            <p><b>NOTE:</b><br><i>All necessary equipment (surfboard, rash guard) is provided.</i></p>
+
+            <a href="https://wa.me/50663576163" class="btn-hover-effect">Book</a>
+        </div>
+
+        <!-- Image Content (Right) -->
+        <div class="col-md-4 order-md-2 order-1">
+            <img src="https://via.placeholder.com/150" class="img-fluid" alt="Surf Lessons" style="border-radius: 10px;">
+        </div>
+    </div>
+</div>
+
+
+<div class="container" style="margin-top: 20px; margin-bottom: 20px; color: black; font-size: 18px; text-align: left;">
+    <div class="row">
+        <!-- Text Content (Left) -->
+        <div class="col-md-8 order-md-1 order-2">
+            <h2 style="font-size: 24px; font-weight: bold;">Nauyaca Waterfalls: Explore Paradise</h2>
+
+            <!-- Keyword Bubbles -->
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px;">
+                <span style="background-color: #005acf; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Waterfalls</span>
+                <span style="background-color: #005acf; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Nature</span>
+                <span style="background-color: #005acf; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Hiking</span>
+                <span style="background-color: #005acf; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Adventure</span>
+                <span style="background-color: #005acf; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Guided Tour</span>
+            </div>
+
+            <p style="margin-bottom: 20px;">Join us on an unforgettable journey to the breathtaking Nauyaca Waterfalls, located in the heart of Costa Rica’s lush jungle. This tour takes you on a scenic hike through vibrant landscapes to one of the most stunning waterfalls in the region.</p>
+
+            <p style="margin-bottom: 20px;">As you trek through the forest, you’ll pass through diverse ecosystems, with the sounds of the waterfall growing louder as you approach. Once you reach the falls, you’ll be rewarded with the sight of water cascading down from towering cliffs, forming natural pools perfect for a refreshing swim.</p>
+
+            <p style="margin-bottom: 20px;">Along the way, enjoy the guidance of our expert tour guides, who will share their knowledge of local flora and fauna. Don’t forget to bring your camera, as this hidden paradise is a photographer’s dream.</p>
+
+            <p><b>Duration:</b> 4 to 5 hours.</p>
+            <p><b>Time:</b> Daily, 8:00 AM and 1:00 PM.</p>
+
+            <p><b>NOTE:</b><br><i>Swimming is optional, so bring your swimwear.</i></p>
+
+            <a href="https://wa.me/50663576163" class="btn-hover-effect">Book</a>
+        </div>
+
+        <!-- Image Content (Right) -->
+        <div class="col-md-4 order-md-2 order-1">
+            <img src="../img/tours/nauyaca.webp" class="img-fluid" alt="nauyaca waterfalls. The waterfalls are over 80 meters high." style="border-radius: 10px;" loading="lazy">
+        </div>
+    </div>
+</div>
+
+
+<div class="container" style="margin-top: 20px; margin-bottom: 20px; color: black; font-size: 18px; text-align: left;">
+    <div class="row">
+        <!-- Text Content (Left) -->
+        <div class="col-md-8 order-md-1 order-2">
+            <h2 style="font-size: 24px; font-weight: bold;">Corcovado National Park: Explore the Heart of the Osa Peninsula</h2>
+
+            <!-- Keyword Bubbles -->
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px;">
+                <span style="background-color: #4CAF50; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Nature</span>
+                <span style="background-color: #4CAF50; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Wildlife</span>
+                <span style="background-color: #4CAF50; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Guided Tour</span>
+                <span style="background-color: #4CAF50; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Rainforest</span>
+                <span style="background-color: #4CAF50; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Adventure</span>
+            </div>
+
+            <p style="margin-bottom: 20px;">Journey into the wild heart of Costa Rica at Corcovado National Park, one of the most biodiverse places on Earth. This adventure takes you deep into the rainforest, where you’ll experience nature like never before.</p>
+
+            <p style="margin-bottom: 20px;">Accompanied by an expert guide, you’ll explore the park’s dense jungle, spotting a variety of wildlife, including monkeys, sloths, jaguars, and exotic birds. Your guide will share insights about the park’s ecology and conservation efforts, making the experience both educational and thrilling.</p>
+
+            <p style="margin-bottom: 20px;">Whether you’re a nature lover, an avid birdwatcher, or simply seeking an unforgettable adventure, Corcovado offers an unparalleled chance to immerse yourself in pristine wilderness.</p>
+
+            <p><b>Duration:</b> Full Day (approximately 8 hours).</p>
+            <p><b>Time:</b> 7:00 AM, daily.</p>
+
+            <p><b>NOTE:</b><br><i>Bring comfortable hiking shoes, sunscreen, and a camera.</i></p>
+
+            <a href="https://wa.me/50663576163" class="btn-hover-effect">Book</a>
+        </div>
+
+        <!-- Image Content (Right) -->
+        <div class="col-md-4 order-md-2 order-1">
+            <img src="https://via.placeholder.com/150" class="img-fluid" alt="Corcovado National Park" style="border-radius: 10px;">
+        </div>
+    </div>
+</div>
+
+<div class="container" style="margin-top: 20px; margin-bottom: 20px; color: black; font-size: 18px; text-align: left;">
+    <div class="row">
+        <!-- Text Content (Left) -->
+        <div class="col-md-8 order-md-1 order-2">
+            <h2 style="font-size: 24px; font-weight: bold;">Whales and Dolphins: Ocean Safari</h2>
+
+            <!-- Keyword Bubbles -->
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px;">
+                <span style="background-color: #00BCD4; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Whale Watching</span>
+                <span style="background-color: #00BCD4; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Dolphin Watching</span>
+                <span style="background-color: #00BCD4; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Guided Tour</span>
+                <span style="background-color: #00BCD4; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Ocean Adventure</span>
+                <span style="background-color: #00BCD4; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Nature</span>
+            </div>
+
+            <p style="margin-bottom: 20px;">Set sail on an exhilarating ocean safari to witness the magnificent whales and playful dolphins that grace the waters off Costa Rica’s coast. Our experienced guides will take you to the best spots to encounter these awe-inspiring marine creatures in their natural habitat.</p>
+
+            <p style="margin-bottom: 20px;">During this unforgettable adventure, you’ll have the chance to see humpback whales, spinner dolphins, and many other species that make their home in the warm Pacific waters. Keep your camera ready as you observe these incredible animals leaping and swimming in the open ocean.</p>
+
+            <p style="margin-bottom: 20px;">This guided tour offers expert insights into the behaviors and migration patterns of these marine mammals, as well as their importance to the ecosystem.</p>
+
+            <p><b>Duration:</b> 3 to 4 hours.</p>
+            <p><b>Time:</b> 8:00 AM & 1:00 PM, daily.</p>
+
+            <p><b>NOTE:</b><br><i>Wear comfortable clothing, bring sunscreen, and don't forget your camera!</i></p>
+
+            <a href="https://wa.me/50663576163" class="btn-hover-effect">Book</a>
+        </div>
+
+        <!-- Image Content (Right) -->
+        <div class="col-md-4 order-md-2 order-1">
+            <img src="https://via.placeholder.com/150" class="img-fluid" alt="Whales and Dolphins Ocean Safari" style="border-radius: 10px;">
+        </div>
+    </div>
+</div>
+
+<div class="container" style="margin-top: 20px; margin-bottom: 20px; color: black; font-size: 18px; text-align: left;">
+    <div class="row">
+        <!-- Text Content (Left) -->
+        <div class="col-md-8 order-md-1 order-2">
+            <h2 style="font-size: 24px; font-weight: bold;">Sierpe Mangroves: Explore the Heart of Costa Rica’s Wetlands</h2>
+
+            <!-- Keyword Bubbles -->
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px;">
+                <span style="background-color: #388E3C; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Mangrove Tour</span>
+                <span style="background-color: #388E3C; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Wildlife</span>
+                <span style="background-color: #388E3C; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Guided Tour</span>
+                <span style="background-color: #388E3C; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Nature</span>
+                <span style="background-color: #388E3C; color: white; padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">Boat Ride</span>
+            </div>
+
+            <p style="margin-bottom: 20px;">Immerse yourself in the vibrant ecosystem of the Sierpe Mangroves, one of the most biodiverse regions in Costa Rica. On this guided boat tour, you'll navigate through winding waterways surrounded by lush mangrove forests.</p>
+
+            <p style="margin-bottom: 20px;">Our expert guides will share fascinating insights into the delicate balance of this ecosystem, where you’ll encounter various species of birds, reptiles, and perhaps even monkeys and crocodiles. The mangroves are also home to a variety of marine life, which makes this tour a true nature lover's paradise.</p>
+
+            <p style="margin-bottom: 20px;">Enjoy the serene beauty of the wetlands, as you drift through these tranquil waters and witness the wildlife up close.</p>
+
+            <p><b>Duration:</b> 2 hours.</p>
+            <p><b>Time:</b> Daily, at 8:00 AM and 2:00 PM.</p>
+
+            <p><b>NOTE:</b><br><i>Don’t forget your camera and binoculars for birdwatching!</i></p>
+
+            <a href="https://wa.me/50663576163" class="btn-hover-effect">Book</a>
+        </div>
+
+        <!-- Image Content (Right) -->
+        <div class="col-md-4 order-md-2 order-1">
+            <img src="https://via.placeholder.com/150" class="img-fluid" alt="Sierpe Mangroves" style="border-radius: 10px;">
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+
+
+
+
 
       
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <br>
-      <br>
-      <br>                                       
-
-
-
 
 
 
@@ -1228,7 +885,6 @@
   
   
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3103.614074142465!2d-83.622501!3d9.082476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOcKwMDQnNTYuOSJOIDgzwrAzNycyMS4wIlc!5e1!3m2!1ses-419!2scr!4v1731192246232!5m2!1ses-419!2scr" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 
 
