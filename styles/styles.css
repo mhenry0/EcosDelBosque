@@ -157,7 +157,9 @@ body {
     height: 100%;
     object-fit: cover; /* Ensures the image covers the section without distortion */
     z-index: -1; /* Places the image behind the content */
+    
 }
+
 
 
 .container-hero {
@@ -177,22 +179,38 @@ body {
 }
 
 /* Estilo para los botones personalizados */
-.btn-custom {
-    background-color: #1ac41f; /* Color verde */
-    color: white;
-    padding: 12px 30px;
-    border-radius: 30px;
-    font-size: 20px;
+
+
+
+
+
+
+ /* Button Styling */
+ .btn-custom {
+    display: inline-block;
     text-align: center;
     display: inline-block;
-    margin-right: 15px; /* Agrega separación entre los botones */
+    padding: 9px 24px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #1ac41f;
+    border: 2px solid #1ac41f;
+    border-radius: 30px;
+    text-decoration: none;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  margin-right: 15px; /* Agrega separación entre los botones */
     transition: background-color 0.3s ease;
 }
 
 .btn-custom:hover {
-    background-color: #3a9a2b; /* Cambio de color en hover */
-    text-decoration: none;
+    background-color: #ffffff;
+    color: #1ac41f;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
+
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
@@ -847,29 +865,6 @@ body {
 
 
 
-
-
- /* Button Styling */
- .btn-custom {
-    display: inline-block;
-    padding: 9px 24px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #ffffff;
-    background-color: #1ac41f;
-    border: 2px solid #1ac41f;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-}
-
-.btn-custom:hover {
-    background-color: #ffffff;
-    color: #1ac41f;
-    transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
 
 
 
