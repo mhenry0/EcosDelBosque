@@ -842,10 +842,67 @@ body {
 
 
 
+.filter-controls {
+  background-color: #ffffff;      /* Amarillo claro */
+  border: 2px solid #000000;      /* Borde amarillo */
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* make checkboxes always green when checked */
+.filter-controls .form-check-input[type="checkbox"]:checked {
+background-color: #3A9A2B !important;
+border-color:     #3A9A2B !important;
+}
 
 
 
 
+
+.filter-controls .form-check-input {
+  width: 1.75rem;
+  height: 1.75rem;
+  margin-right: 0.5rem;
+  /* color del check y el fondo cuando está seleccionado */
+  accent-color: #1ac41f;          
+  border: 2px solid #1ac41f;      
+}
+.filter-controls .form-check-label {
+  font-size: 1.1rem;
+  margin-right: 1.5rem;
+  color: #1ac41f;                 /* Texto en rojo */
+}
+.filter-controls {
+display: flex;         /* ya tienes d-flex en el HTML, pero reitero */
+align-items: center;
+gap: 1rem;             /* separación general entre elementos */
+}
+
+.filter-controls button#select-all {
+background-color: #1ac41f;  /* Verde */
+color: white;
+border: none;
+min-width: 6rem;
+margin-right: 0.5rem;       /* separación extra a la derecha */
+}
+
+.filter-controls button#clear-all {
+background-color: #E0A800;  /* Ámbar */
+color: white;
+border: none;
+min-width: 6rem;
+margin-left: 0.5rem;        /* separación extra a la izquierda */
+}
+
+.filter-controls button#select-all:hover {
+background-color: #218838;
+}
+
+.filter-controls button#clear-all:hover {
+background-color: #ea0a0a;
+}
 
 
 

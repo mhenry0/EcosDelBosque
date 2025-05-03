@@ -40,9 +40,9 @@
     <!-- CSS Files -->
     <link rel="stylesheet" href="../styles/styles.css">
     <link rel="stylesheet" href="../styles/media_queries.css">
-  
-    <!-- JavaScript -->
-    <script src="../script/script.js" defer></script>
+
+        <!-- JavaScript -->
+        <script src="./script/script.js" defer></script>
   
     <!-- Accessibility -->
     <meta name="theme-color" content="#3a9a2b">
@@ -198,195 +198,321 @@
         <br>
     <b>DISCLAIMER: 
       The next pictures were taken at the reserve by our team. However, we can never guarantee that you will see them during the stay. We do not sell tours to find specific species.</b>
-    </div>
-<p style="text-align: center; font-size: 30px;">
-    <br>
-    <b>Amphibians</b>
-    <div class="container custom-container">
-        <div class="row">
-          <!-- Card 1 -->
-          <div class="col">
-            <div class="card-container" style="perspective: 1000px;">
-              <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
-                <!-- Front Side -->
-                <div class="card-front" style="backface-visibility: hidden; position: relative;">
-                  <img 
-                    src="../img/wildlife/amphibians/dartfrog.webp" 
-                    class="card-img-top" 
-                    loading="lazy" 
-                    alt="Dendrobates Auratus - Bright green and black poison dart frog" 
-                    style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
-                  <div class="hover-message">Click on me</div>
-                </div>
-                <!-- Back Side -->
-                <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
-                  <p>Scientific Name: <i>Dendrobates Auratus.</i><br>Name: Green and Black Poison Frog.<br>Habitat: Rainforests, and tropical zones. It has preference for rivers, creeks, and ponds.<br>Status: Least Concern.</p>
-                </div>
-              </div>
-            </div>
+     
+      <br>
+      <br>
+      <!-- Controles de selección de categoría -->
+      <div class="filter-controls mb-4 d-flex align-items-center">
+        <fieldset class="me-4">
+          <legend class="form-label"><strong>Filter by category:</strong></legend>
+      
+          <div class="form-check form-check-inline">
+            <input class="form-check-input category-filter" type="checkbox" id="filter-amphibians" value="amphibians">
+            <label class="form-check-label" for="filter-amphibians">Amphibians</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input category-filter" type="checkbox" id="filter-birds" value="birds">
+            <label class="form-check-label" for="filter-birds">Birds</label>
           </div>
       
-          <!-- Card 2 -->
-          <div class="col">
-            <div class="card-container" style="perspective: 1000px;">
-              <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
-                <!-- Front Side -->
-                <div class="card-front" style="backface-visibility: hidden; position: relative;">
-                  <img 
-                    src="../img/wildlife/amphibians/oophagagranulifera.webp" 
-                    class="card-img-top" 
-                    loading="lazy" 
-                    alt="Oophaga Granulifera - Red and black endangered poison frog" 
-                    style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
-                  <div class="hover-message">Click on me</div>
-                </div>
-                <!-- Back Side -->
-                <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
-                  <p>Scientific Name: <i>Oophaga Granulifera.</i><br>Name: Granular Poison Frog.<br>Habitat: Rainforests, and tropical zones. It has preference for rivers, creeks, and ponds.<br>Status: Endangered. It is endemic to Costa Rica, and only found on the Pacific Slope.</p>
-                </div>
-              </div>
-            </div>
+     
+      
+          <div class="form-check form-check-inline">
+            <input class="form-check-input category-filter" type="checkbox" id="filter-fungi" value="fungi">
+            <label class="form-check-label" for="filter-fungi">Fungi</label>
           </div>
-          <div class="col">
-            <div class="card-container" style="perspective: 1000px;">
-              <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
-                <!-- Front Side -->
-                <div class="card-front" style="backface-visibility: hidden; position: relative;">
-                  <img 
-                    src="./img/wildlife/amphibians/emeraldglassfrog.webp" 
-                    class="card-img-top" 
-                    loading="lazy" 
-                    alt="Emerald Glass Frog - Green amphibian in rainforest habitat" 
-                    style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
-                  <div class="hover-message">Click on me</div>
-                </div>
-                <!-- Back Side -->
-                <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
-                  <p>Scientific Name: <i>Espadarana prosoblepon.</i><br>Name: Emerald Glass Frog.<br>Description: In many individuals, the dorsal skin has small black spots. The nostrils are on raised ridges.
+          <div class="form-check form-check-inline">
+            <input class="form-check-input category-filter" type="checkbox" id="filter-arachnids" value="arachnids">
+            <label class="form-check-label" for="filter-arachnids">Arachnids</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input category-filter" type="checkbox" id="filter-insects" value="insects">
+            <label class="form-check-label" for="filter-insects">Insects</label>
+          </div>
 
-                    Distribution: Honduras, Costa Rica, Panama, Colombia, Ecuador.
-                    
-                    Habitat: Tropical rainforests up to 1,900 meters above sea level.<br>Status: Least Concern.</p>
-                </div>
-              </div>
-            </div>
+
+          <div class="form-check form-check-inline">
+            <input class="form-check-input category-filter" type="checkbox" id="filter-mammals" value="mammals">
+            <label class="form-check-label" for="filter-mammals">Mammals</label>
           </div>
+
+
+          <div class="form-check form-check-inline">
+            <input class="form-check-input category-filter" type="checkbox" id="filter-flora" value="flora">
+            <label class="form-check-label" for="filter-flora">Flora</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input category-filter" type="checkbox" id="filter-reptiles" value="reptiles">
+            <label class="form-check-label" for="filter-reptiles">Reptiles</label>
+          </div>
+       
+        </fieldset>
       
-            <!-- Card 1 -->
-            <div class="col">
-                <div class="card-container" style="perspective: 1000px;">
-                  <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
-                    <!-- Front Side -->
-                    <div class="card-front" style="backface-visibility: hidden; position: relative;">
-                      <img 
-                        src="../img/wildlife/amphibians/rosenbergsfrog.webp" 
-                        class="card-img-top" 
-                        loading="lazy" 
-                        alt="Hypsiboas Rosenbergi - Green and yellow amphibian in rainforest habitat" 
-                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
-                      <div class="hover-message">Click on me</div>
-                    </div>
-                    <!-- Back Side -->
-                    <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
-                      <p>Scientific Name: <i>Hypsiboas (Hyla) rosenbergi.</i><br>Name: Rosenberg's Treefrog.<br>Habitat: Rainforests, and tropical zones. In Costa Rica it is only found on the Pacific Slope.<br>Status: Least Concern.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-               <!-- Card 1 -->
-            <div class="col">
-                <div class="card-container" style="perspective: 1000px;">
-                  <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
-                    <!-- Front Side -->
-                    <div class="card-front" style="backface-visibility: hidden; position: relative;">
-                      <img 
-                        src="../img/wildlife/amphibians/jumpingleaffrog.webp" 
-                        class="card-img-top" 
-                        loading="lazy" 
-                        alt="Dendrobates Auratus - Bright green and black poison dart frog" 
-                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
-                      <div class="hover-message">Click on me</div>
-                    </div>
-                    <!-- Back Side -->
-                    <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
-                      <p>Scientific Name: <i>Agalychnis callidryas.</i><br>Name: Red-eyed Leaf Frog.<br>Habitat: Rainforests, and tropical zones. It has preference for rivers, creeks, and ponds. It is a common species.<br>Status: Least Concern.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-               <!-- Card 1 -->
-            <div class="col">
-                <div class="card-container" style="perspective: 1000px;">
-                  <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
-                    <!-- Front Side -->
-                    <div class="card-front" style="backface-visibility: hidden; position: relative;">
-                      <img 
-                        src="../img/wildlife/amphibians/marinetoad.webp" 
-                        class="card-img-top" 
-                        loading="lazy" 
-                        alt="Dendrobates Auratus - Bright green and black poison dart frog" 
-                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
-                      <div class="hover-message">Click on me</div>
-                    </div>
-                    <!-- Back Side -->
-                    <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
-                      <p>Scientific Name: <i>Rhinella (Bufo) marina.</i><br> Name: Marine Toad.<br>Habitat: Gardens, roads, and in general tropical zones. This is the most common and biggest toads in Costa Rica. It is nocturnal and it lives close to human settlements.<br>Status: Least Concern.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-          <!-- Card 3 -->
-          <div class="col">
-            <div class="card-container" style="perspective: 1000px;">
-              <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
-                <!-- Front Side -->
-                <div class="card-front" style="backface-visibility: hidden; position: relative;">
-                  <img 
-                    src="../img/wildlife/amphibians/savagefrogtiger.webp" 
-                    class="card-img-top" 
-                    loading="lazy" 
-                    alt="Savage Frog Tiger - Yellow and black amphibian in forest habitat" 
-                    style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
-                  <div class="hover-message">Click on me</div>
-                </div>
-                <!-- Back Side -->
-                <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
-                  <p>Scientific Name: <i>Leptodactylus savageii (pentadactylus).</i> <br> Name: Savage's Bull Frog.<br>Habitat: Tropical Forests, ponds, and creeks.<br>Status: Least Concern.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-      
-          <!-- Card 4 -->
-          <div class="col">
-            <div class="card-container" style="perspective: 1000px;">
-              <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
-                <!-- Front Side -->
-                <div class="card-front" style="backface-visibility: hidden; position: relative;">
-                  <img 
-                    src="../img/wildlife/amphibians/commonrainfrog.webp" 
-                    class="card-img-top" 
-                    loading="lazy" 
-                    alt="Common Rain Frog - Small, brown amphibian in rainforest habitat" 
-                    style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
-                  <div class="hover-message">Click on me</div>
-                </div>
-                <!-- Back Side -->
-                <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
-                  <p>Scientific Name: <i>Craugastor (Eleutherodactylus) fitzingeri.</i> <br> Name: Common Rain Frog <br>Habitat: Rainforests and gardens.<br>Status: Least Concern.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <button id="select-all">Select All</button>
+        <button id="clear-all">Clean Selection</button>
       </div>
       
+
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+      const filters  = Array.from(document.querySelectorAll('.category-filter'));
+      const items    = Array.from(document.querySelectorAll('.filter-item'));
+      const btnAll   = document.getElementById('select-all');
+      const btnClear = document.getElementById('clear-all');
   
+      function applyFilter() {
+        const selected = filters.filter(cb => cb.checked).map(cb => cb.value);
+        items.forEach(card => {
+          card.style.display = selected.includes(card.dataset.category) ? '' : 'none';
+        });
+      }
   
+      // Conecta los eventos
+      filters.forEach(cb => cb.addEventListener('change', applyFilter));
+      btnAll.addEventListener('click', () => {
+        filters.forEach(cb => cb.checked = true);
+        applyFilter();
+      });
+      btnClear.addEventListener('click', () => {
+        filters.forEach(cb => cb.checked = false);
+        applyFilter();
+      });
+  
+      // Filtro inicial (todo desmarcado → oculta todo)
+      applyFilter();
+    });
+    </script>
+    <p style="text-align: center; font-size: 30px;">
+        <br>
+        <b>Amphibians</b>
+        <div class="container custom-container">
+          <div class="row">
+            
+            <!-- Card 1 -->
+            <div class="col filter-item" data-category="amphibians">
+              <div class="card-container" style="perspective: 1000px;">
+                <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                  <!-- Front Side -->
+                  <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                    <img 
+                      src="../img/wildlife/amphibians/dartfrog.webp" 
+                      class="card-img-top" 
+                      loading="lazy" 
+                      alt="Dendrobates Auratus - Bright green and black poison dart frog" 
+                      style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                    <div class="hover-message">Click on me</div>
+                  </div>
+                  <!-- Back Side -->
+                  <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                    <p>
+                      Scientific Name: <i>Dendrobates Auratus</i>.<br>
+                      Common Name: Green and Black Poison Frog.<br>
+                      Habitat: Rainforests and tropical zones; preferring rivers, creeks, and ponds.<br>
+                      Status: Least Concern.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Card 2 -->
+            <div class="col filter-item" data-category="amphibians">
+              <div class="card-container" style="perspective: 1000px;">
+                <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                  <!-- Front Side -->
+                  <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                    <img 
+                      src="../img/wildlife/amphibians/oophagagranulifera.webp" 
+                      class="card-img-top" 
+                      loading="lazy" 
+                      alt="Oophaga Granulifera - Red and black endangered poison frog" 
+                      style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                    <div class="hover-message">Click on me</div>
+                  </div>
+                  <!-- Back Side -->
+                  <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                    <p>
+                      Scientific Name: <i>Oophaga Granulifera</i>.<br>
+                      Common Name: Granular Poison Frog.<br>
+                      Habitat: Rainforests and tropical zones; preferring rivers, creeks, and ponds.<br>
+                      Status: Endangered (endemic to Costa Rica, Pacific slope).
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Card 3 -->
+            <div class="col filter-item" data-category="amphibians">
+              <div class="card-container" style="perspective: 1000px;">
+                <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                  <!-- Front Side -->
+                  <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                    <img 
+                      src="./img/wildlife/amphibians/emeraldglassfrog.webp" 
+                      class="card-img-top" 
+                      loading="lazy" 
+                      alt="Emerald Glass Frog - Green amphibian in rainforest habitat" 
+                      style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                    <div class="hover-message">Click on me</div>
+                  </div>
+                  <!-- Back Side -->
+                  <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                    <p>
+                      Scientific Name: <i>Espadarana prosoblepon</i>.<br>
+                      Common Name: Emerald Glass Frog.<br>
+                      Description: Dorsal skin often has small black spots; nostrils on raised ridges.<br>
+                      Distribution: Honduras, Costa Rica, Panama, Colombia, Ecuador.<br>
+                      Habitat: Tropical rainforests up to 1,900 m a.s.l.<br>
+                      Status: Least Concern.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Card 4 -->
+            <div class="col filter-item" data-category="amphibians">
+              <div class="card-container" style="perspective: 1000px;">
+                <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                  <!-- Front Side -->
+                  <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                    <img 
+                      src="../img/wildlife/amphibians/rosenbergsfrog.webp" 
+                      class="card-img-top" 
+                      loading="lazy" 
+                      alt="Hypsiboas Rosenbergi - Green and yellow amphibian in rainforest habitat" 
+                      style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                    <div class="hover-message">Click on me</div>
+                  </div>
+                  <!-- Back Side -->
+                  <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                    <p>
+                      Scientific Name: <i>Hypsiboas (Hyla) rosenbergi</i>.<br>
+                      Common Name: Rosenberg's Treefrog.<br>
+                      Habitat: Rainforests and tropical zones (Pacific slope only in CR).<br>
+                      Status: Least Concern.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Card 5 -->
+            <div class="col filter-item" data-category="amphibians">
+              <div class="card-container" style="perspective: 1000px;">
+                <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                  <!-- Front Side -->
+                  <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                    <img 
+                      src="../img/wildlife/amphibians/jumpingleaffrog.webp" 
+                      class="card-img-top" 
+                      loading="lazy" 
+                      alt="Agalychnis callidryas - Red-eyed Leaf Frog" 
+                      style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                    <div class="hover-message">Click on me</div>
+                  </div>
+                  <!-- Back Side -->
+                  <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                    <p>
+                      Scientific Name: <i>Agalychnis callidryas</i>.<br>
+                      Common Name: Red-eyed Leaf Frog.<br>
+                      Habitat: Rainforests and tropical zones; common species near rivers, creeks, ponds.<br>
+                      Status: Least Concern.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Card 6 -->
+            <div class="col filter-item" data-category="amphibians">
+              <div class="card-container" style="perspective: 1000px;">
+                <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                  <!-- Front Side -->
+                  <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                    <img 
+                      src="../img/wildlife/amphibians/marinetoad.webp" 
+                      class="card-img-top" 
+                      loading="lazy" 
+                      alt="Rhinella marina - Marine Toad" 
+                      style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                    <div class="hover-message">Click on me</div>
+                  </div>
+                  <!-- Back Side -->
+                  <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                    <p>
+                      Scientific Name: <i>Rhinella (Bufo) marina</i>.<br>
+                      Common Name: Marine Toad.<br>
+                      Habitat: Gardens, roads, tropical zones; nocturnal, near human settlements.<br>
+                      Status: Least Concern.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Card 7 -->
+            <div class="col filter-item" data-category="amphibians">
+              <div class="card-container" style="perspective: 1000px;">
+                <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                  <!-- Front Side -->
+                  <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                    <img 
+                      src="../img/wildlife/amphibians/savagefrogtiger.webp" 
+                      class="card-img-top" 
+                      loading="lazy" 
+                      alt="Leptodactylus savageii - Savage's Bull Frog" 
+                      style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                    <div class="hover-message">Click on me</div>
+                  </div>
+                  <!-- Back Side -->
+                  <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                    <p>
+                      Scientific Name: <i>Leptodactylus savageii</i>.<br>
+                      Common Name: Savage's Bull Frog.<br>
+                      Habitat: Tropical forests, ponds, creeks.<br>
+                      Status: Least Concern.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Card 8 -->
+            <div class="col filter-item" data-category="amphibians">
+              <div class="card-container" style="perspective: 1000px;">
+                <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                  <!-- Front Side -->
+                  <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                    <img 
+                      src="../img/wildlife/amphibians/commonrainfrog.webp" 
+                      class="card-img-top" 
+                      loading="lazy" 
+                      alt="Craugastor fitzingeri - Common Rain Frog" 
+                      style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                    <div class="hover-message">Click on me</div>
+                  </div>
+                  <!-- Back Side -->
+                  <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                    <p>
+                      Scientific Name: <i>Craugastor (Eleutherodactylus) fitzingeri</i>.<br>
+                      Common Name: Common Rain Frog.<br>
+                      Habitat: Rainforests and gardens.<br>
+                      Status: Least Concern.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+          </div>
+        </div>
+      </p>
       
-   
-      
-</p>
 
 
 
@@ -396,6 +522,8 @@
     <div class="container custom-container">
       <div class="row">
         <div class="col">
+            <div class="col filter-item" data-category="birds">
+
             <div class="card-container" style="perspective: 1000px;">
                 <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                     <!-- Front Side -->
@@ -409,8 +537,11 @@
                     </div>
                 </div>
             </div>
+         </div>
         </div>
         <div class="col">
+            <div class="col filter-item" data-category="birds">
+
             <div class="card-container" style="perspective: 1000px;">
                 <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                     <!-- Front Side -->
@@ -424,8 +555,11 @@
                     </div>
                 </div>
             </div>
+            </div>
         </div>
         <div class="col">
+            <div class="col filter-item" data-category="birds">
+
             <div class="card-container" style="perspective: 1000px;">
                 <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                     <!-- Front Side -->
@@ -439,8 +573,11 @@
                     </div>
                 </div>
             </div>
+            </div>
         </div>
         <div class="col">
+            <div class="col filter-item" data-category="birds">
+
             <div class="card-container" style="perspective: 1000px;">
                 <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                     <!-- Front Side -->
@@ -454,8 +591,11 @@
                     </div>
                 </div>
             </div>
+            </div>
         </div>
         <div class="col">
+            <div class="col filter-item" data-category="birds">
+
             <div class="card-container" style="perspective: 1000px;">
                 <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                     <!-- Front Side -->
@@ -469,8 +609,11 @@
                     </div>
                 </div>
             </div>
+            </div>
         </div>
         <div class="col">
+            <div class="col filter-item" data-category="birds">
+
             <div class="card-container" style="perspective: 1000px;">
                 <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                     <!-- Front Side -->
@@ -484,9 +627,12 @@
                     </div>
                 </div>
             </div>
+            </div>
         </div>
           <!-- Card 1 -->
           <div class="col">
+            <div class="col filter-item" data-category="birds">
+
             <div class="card-container" style="perspective: 1000px;">
                 <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                     <!-- Front Side -->
@@ -500,10 +646,13 @@
                     </div>
                 </div>
             </div>
+            </div>
         </div>
   
           <!-- Card 2 -->
           <div class="col">
+            <div class="col filter-item" data-category="birds">
+
               <div class="card-container" style="perspective: 1000px;">
                   <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                       <!-- Front Side -->
@@ -521,10 +670,13 @@
                       </div>
                   </div>
               </div>
+              </div>
           </div>
   
             <!-- Card 2 -->
             <div class="col">
+                <div class="col filter-item" data-category="birds">
+
                 <div class="card-container" style="perspective: 1000px;">
                     <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                         <!-- Front Side -->
@@ -541,10 +693,13 @@
                             <br>Habitat: Common on both slopes (Caribbean and Pacific), up to 1,100 meters.<br>Status: Least Concern.</p>
                         </div>
                     </div>
+                    </div>
                 </div>
             </div>
           <!-- Card 3 -->
           <div class="col">
+            <div class="col filter-item" data-category="birds">
+
               <div class="card-container" style="perspective: 1000px;">
                   <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                       <!-- Front Side -->
@@ -561,11 +716,14 @@
                         <br>Habitat: Tropical rainforests, it is extremely rare to be seen, less than 60 thousands individuals in the world. Even uncommon to rare in protected areas. Up to 1,200 meters.<br>Status: Vulnerable.</p>
                     </div>
                   </div>
+                  </div>
               </div>
           </div>
   
           <!-- Card 4 -->
           <div class="col">
+            <div class="col filter-item" data-category="birds">
+
               <div class="card-container" style="perspective: 1000px;">
                   <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                       <!-- Front Side -->
@@ -583,9 +741,12 @@
                     </div>
                   </div>
               </div>
+              </div>
           </div>
             <!-- Card 5 -->
             <div class="col">
+                <div class="col filter-item" data-category="birds">
+
                 <div class="card-container" style="perspective: 1000px;">
                     <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                         <!-- Front Side -->
@@ -603,9 +764,12 @@
                             <br>Habitat: Rainforests, forests edges, road edges, and open areas.<br>Status: Least Concern.</p>
                         </div>
                     </div>
+                    </div>
                 </div>
             </div>
             <div class="col">
+                <div class="col filter-item" data-category="birds">
+
                 <div class="card-container" style="perspective: 1000px;">
                     <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                         <!-- Front Side -->
@@ -623,10 +787,13 @@
                             <br>Habitat: Forest edges. It is a migrant bird, Sep - May, below 2000 meters.<br>Status: Least Concern.</p>
                         </div>
                     </div>
+                    </div>
                 </div>
             </div>
                  <!-- Card 5 -->
                  <div class="col">
+                    <div class="col filter-item" data-category="birds">
+
                     <div class="card-container" style="perspective: 1000px;">
                         <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                             <!-- Front Side -->
@@ -644,10 +811,13 @@
                                 <br>Habitat: Wet lowlands, foothills, and middle elevations (1,500m).<br>Status: Least Concern.</p>
                             </div>
                         </div>
+                        </div>
                     </div>
                 </div>
                 <!-- Card 5 -->
                 <div class="col">
+                    <div class="col filter-item" data-category="birds">
+
                     <div class="card-container" style="perspective: 1000px;">
                         <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                             <!-- Front Side -->
@@ -666,9 +836,12 @@
                             </div>
                         </div>
                     </div>
+                    </div>
                 </div>
                     <!-- Card 5 -->
             <div class="col">
+                <div class="col filter-item" data-category="birds">
+
                 <div class="card-container" style="perspective: 1000px;">
                     <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                         <!-- Front Side -->
@@ -686,10 +859,13 @@
                             <br>Habitat: Common throughout the country. It feeds on carrion and human garbage.<br>Status: Least Concern.</p>
                         </div>
                     </div>
+                    </div>
                 </div>
             </div>
               <!-- Card 6 -->
           <div class="col">
+            <div class="col filter-item" data-category="birds">
+
             <div class="card-container" style="perspective: 1000px;">
                 <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                     <!-- Front Side -->
@@ -708,10 +884,13 @@
                         <br>Habitat: Rainforests, forests edges, forest canopy, and gardens.<br>Status: Least Concern.</p>
                     </div>
                 </div>
+                </div>
             </div>
         </div>
           <!-- Card 7 -->
           <div class="col">
+            <div class="col filter-item" data-category="birds">
+
             <div class="card-container" style="perspective: 1000px;">
                 <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                     <!-- Front Side -->
@@ -722,20 +901,18 @@
                     <!-- Back Side -->
                     <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
                         <p>Scientific Name: <i>Thalurania colombica
-
-
-
                         </i>
                           <br>
                            Name: Crowned Woodnymph.
-
                         <br>Habitat: Mature wet forests, second growth and forests edges.<br>Status: Least Concern.</p>
                     </div>
+                </div>
                 </div>
             </div>
         </div>
             <!-- Card 7 -->
             <div class="col">
+                <div class="col filter-item" data-category="birds">
                 <div class="card-container" style="perspective: 1000px;">
                     <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                         <!-- Front Side -->
@@ -746,20 +923,19 @@
                         <!-- Back Side -->
                         <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
                             <p>Scientific Name: <i> Florisuga mellivora
-    
-    
-    
+
                             </i>
                               <br>
                                Name: White-necked Jacobin.
-    
                             <br>Habitat: Lowlands and foothills; 1,000 meters above sea level. It forages at all levels of forest edge and gardens.<br>Status: Least Concern.</p>
                         </div>
+                    </div>
                     </div>
                 </div>
             </div>
           <!-- Card 8 -->
           <div class="col">
+            <div class="col filter-item" data-category="birds">
             <div class="card-container" style="perspective: 1000px;">
                 <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                     <!-- Front Side -->
@@ -775,11 +951,13 @@
                            Name: Montezuma Oropendola.
                         <br>Habitat: Forests, forest edge, and gardens. It prefers open areas.<br>Status: Least Concern.</p>
                     </div>
+                    </div>
                 </div>
             </div>
         </div>
           <!-- Card 9 -->
           <div class="col">
+            <div class="col filter-item" data-category="birds">
             <div class="card-container" style="perspective: 1000px;">
                 <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                     <!-- Front Side -->
@@ -795,11 +973,13 @@
                            Name: Spectacled Owl.
                         <br>Habitat: Forests, second growth, and forest edges. Up to 1,500 meters.<br>Status: Least Concern.</p>
                     </div>
+                    </div>
                 </div>
             </div>
         </div>
            <!-- Card 9 -->
            <div class="col">
+            <div class="col filter-item" data-category="birds">
             <div class="card-container" style="perspective: 1000px;">
                 <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                     <!-- Front Side -->
@@ -815,12 +995,14 @@
                            Name: Ruddy Ground Dove.
                         <br>Habitat: Gardens and open areas. Up to 1,400 meters.<br>Status: Least Concern.</p>
                     </div>
+                    </div>
                 </div>
             </div>
         </div>
          
              <!-- Card 10 -->
              <div class="col">
+                <div class="col filter-item" data-category="birds">
                 <div class="card-container" style="perspective: 1000px;">
                     <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                         <!-- Front Side -->
@@ -837,10 +1019,13 @@
                             <br>Habitat: Mature wet forests, second growth, and forest edges. Up to 1,200 meters.<br>Status: Least Concern.</p>
                         </div>
                     </div>
+                    </div>
                 </div>
             </div>
             <!-- Card 10 -->
             <div class="col">
+                <div class="col filter-item" data-category="birds">
+
                 <div class="card-container" style="perspective: 1000px;">
                     <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                         <!-- Front Side -->
@@ -857,10 +1042,13 @@
                             <br>Habitat: Gallery forests, gardens, and forest edges. Up to 1,400 meters. <br>Status: Least Concern.</p>
                         </div>
                     </div>
+                    </div>
                 </div>
             </div>
          <!-- Card 11 -->
          <div class="col">
+            <div class="col filter-item" data-category="birds">
+
             <div class="card-container" style="perspective: 1000px;">
                 <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                     <!-- Front Side -->
@@ -876,11 +1064,14 @@
                            Name: Golden-naped Woodpecker.
                         <br>Habitat: Middle level of forests, and forest edges. Uncommon in wet forests. Endemic to Costa Rica and western Panama. Up to 1,500 meters.<br>Status: Least Concern.</p>
                     </div>
+                    </div>
                 </div>
             </div>
         </div>
              <!-- Card 11 -->
              <div class="col">
+                <div class="col filter-item" data-category="birds">
+
                 <div class="card-container" style="perspective: 1000px;">
                     <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                         <!-- Front Side -->
@@ -898,9 +1089,34 @@
                         </div>
                     </div>
                 </div>
+                </div>
+            </div>
+            <!-- Card 11 -->
+            <div class="col">
+                <div class="col filter-item" data-category="birds">
+
+                <div class="card-container" style="perspective: 1000px;">
+                    <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
+                        <!-- Front Side -->
+                        <div class="card-front" style="backface-visibility: hidden; position: relative;">
+                            <img src="./img/wildlife/birds/lineatedwoodpecker.webp"  class="card-img-top" loading="lazy" alt="Golden-naped Woodpecker" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                            <div class="hover-message">Click on me</div>
+                        </div>
+                        <!-- Back Side -->
+                        <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
+                            <p>Scientific Name: <i>Dryocopus lineatus.
+                            </i>
+                              <br>
+                               Name: Lineated Woodpecker.
+                            <br>Habitat: Fairly common in lowlands up to 1,400 meters. Generally, it prefers more open habitat areas.<br>Status: Least Concern.</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
             </div>
          <!-- Card 12 -->
          <div class="col">
+            <div class="col filter-item" data-category="birds">
             <div class="card-container" style="perspective: 1000px;">
                 <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                     <!-- Front Side -->
@@ -916,11 +1132,13 @@
                            Name: Red-crowned Woodpecker.
                         <br>Habitat: Second growth forests, open areas, and gardens. Up to 1,500 meters.<br>Status: Least Concern.</p>
                     </div>
+                    </div>
                 </div>
             </div>
         </div>
             <!-- Card 11 -->
             <div class="col">
+                <div class="col filter-item" data-category="birds">
                 <div class="card-container" style="perspective: 1000px;">
                     <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                         <!-- Front Side -->
@@ -937,10 +1155,12 @@
                             <br>Habitat: Forest edges and gardens, up to 1,000 meters.<br>Status: Least Concern.</p>
                         </div>
                     </div>
+                    </div>
                 </div>
             </div>
                <!-- Card 11 -->
                <div class="col">
+                <div class="col filter-item" data-category="birds">
                 <div class="card-container" style="perspective: 1000px;">
                     <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                         <!-- Front Side -->
@@ -957,10 +1177,12 @@
                             <br>Habitat: Mature wet forests, and at forest edges, up to 1,200 meters. Endemic to Costa Rica and Panama.<br>Status: Least Concern.</p>
                         </div>
                     </div>
+                    </div>
                 </div>
             </div>
            <!-- Card 13 -->
            <div class="col">
+            <div class="col filter-item" data-category="birds">
             <div class="card-container" style="perspective: 1000px;">
                 <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                     <!-- Front Side -->
@@ -976,11 +1198,13 @@
                            Name: Black-cowled Oriole.
                         <br>Habitat: Common migrant, July to October and March to April, uncommon during winter. Forest edges and gardens. Up to 1,500 meters.<br>Status: Least Concern.</p>
                     </div>
+                    </div>
                 </div>
             </div>
         </div>
            <!-- Card 14 -->
            <div class="col">
+            <div class="col filter-item" data-category="birds">
             <div class="card-container" style="perspective: 1000px;">
                 <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                     <!-- Front Side -->
@@ -996,11 +1220,13 @@
                            Name: Cherri's Tanager.
                         <br>Habitat: It lives in disturbed habitats with thickets and shrubs; endemic to Costa Rica and Panama. Up to 1,800 meters. It is found only on the Pacific slope.<br>Status: Least Concern.</p>
                     </div>
+                    </div>
                 </div>
             </div>
         </div>
           <!-- Card 14 -->
           <div class="col">
+            <div class="col filter-item" data-category="birds">
             <div class="card-container" style="perspective: 1000px;">
                 <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                     <!-- Front Side -->
@@ -1016,10 +1242,12 @@
                            Name: Golden-hooded Tanager.
                         <br>Habitat: Gardens, and forest edges. Up to 1,600 meters.<br>Status: Least Concern.</p>
                     </div>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="col">
+            <div class="col filter-item" data-category="birds">
             <div class="card-container" style="perspective: 1000px;">
                 <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                     <!-- Front Side -->
@@ -1035,10 +1263,12 @@
                            Name: Palm Tanager.
                         <br>Habitat: It is found only on gardens up to 1,500 meters.<br>Status: Least Concern.</p>
                     </div>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="col">
+            <div class="col filter-item" data-category="birds">
             <div class="card-container" style="perspective: 1000px;">
                 <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                     <!-- Front Side -->
@@ -1054,10 +1284,12 @@
                            Name: Baltimore Oriole.
                         <br>Habitat: Common and widespread migrant, from early Sept to early May. To (2,200m). It forages in forest edges and in gardens.<br>Status: Least Concern.</p>
                     </div>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="col">
+            <div class="col filter-item" data-category="birds">
             <div class="card-container" style="perspective: 1000px;">
                 <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                     <!-- Front Side -->
@@ -1073,6 +1305,7 @@
                            Name: Gray-headed Tanager.
                         <br>Habitat: Common in foothills and lowlands of Pacific Slope; to (1,200m). Forages in the understory of the forest and second growth. It commonly accompanies troops of White-faced Capuchin Monkeys and army-ant swarms.<br>Status: Least Concern.</p>
                     </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1087,6 +1320,8 @@
         <div class="row">
             <!-- Card 1 -->
             <div class="col">
+                <div class="col filter-item" data-category="fungi">
+
                 <div class="card-container" style="perspective: 1000px;">
                     <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                         <!-- Front Side -->
@@ -1103,11 +1338,13 @@
                             <br>Caracteristics: The apothecium is cup-shaped, orange, and measures 1cm to 4cm. It's edible. And it grows on rotten trunks.</p>
                         </div>
                     </div>
+                    </div>
                 </div>
             </div>
     
             <!-- Card 2 -->
             <div class="col">
+                <div class="col filter-item" data-category="fungi">
                 <div class="card-container" style="perspective: 1000px;">
                     <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                         <!-- Front Side -->
@@ -1124,10 +1361,12 @@
                             <br>Caracteristics: The stem is fragile, and white, they grow on rotten trunks.</p>
                         </div>
                     </div>
+                    </div>
                 </div>
             </div>
             <!-- Card 2 -->
             <div class="col">
+                <div class="col filter-item" data-category="fungi">
                 <div class="card-container" style="perspective: 1000px;">
                     <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                         <!-- Front Side -->
@@ -1144,12 +1383,14 @@
                             <br>Habitat: It grows on fallen trunks.
                             <br>Caracteristics: The body measures 5-10 cm. The hymenium is formed by brown tubes, the pores are hexagonal or angular.</p>
                         </div>
+                        </div>
                     </div>
                 </div>
             </div>
     
             <!-- Card 3 -->
             <div class="col">
+                <div class="col filter-item" data-category="fungi">
                 <div class="card-container" style="perspective: 1000px;">
                     <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                         <!-- Front Side -->
@@ -1167,10 +1408,12 @@
                         </div>
                     </div>
                 </div>
+                </div>
             </div>
     
             <!-- Card 4 -->
             <div class="col">
+                <div class="col filter-item" data-category="fungi">
                 <div class="card-container" style="perspective: 1000px;">
                     <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                         <!-- Front Side -->
@@ -1187,10 +1430,12 @@
                             <br>Caracteristics: It is reddish brown in color, it grows at the bases of fallen trunks, it is not edible.</p>
                         </div>
                     </div>
+                    </div>
                 </div>
             </div>
               <!-- Card 5 -->
               <div class="col">
+                <div class="col filter-item" data-category="fungi">
                   <div class="card-container" style="perspective: 1000px;">
                       <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                           <!-- Front Side -->
@@ -1207,10 +1452,12 @@
                             <br>Caracteristics: It is shaped like circular orange ledges, it is common to see them growing on fallen trunks.</p>
                         </div>
                       </div>
+                      </div>
                   </div>
               </div>
                 <!-- Card 6 -->
             <div class="col">
+                <div class="col filter-item" data-category="fungi">
               <div class="card-container" style="perspective: 1000px;">
                   <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                       <!-- Front Side -->
@@ -1226,10 +1473,12 @@
                            Name: Cookeina
                         <br>Carateristics: Ascocarps are hairy, cup-shaped, orange in color, and grow on fallen trunks.</p>
                     </div>
+                    </div>
                   </div>
               </div>
           </div>
           <div class="col">
+            <div class="col filter-item" data-category="fungi">
             <div class="card-container" style="perspective: 1000px;">
                 <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                     <!-- Front Side -->
@@ -1246,9 +1495,11 @@
                         <br>Carateristics: They grow on leaves, branches, or nuts. the pileus is thin and brown.</p>
                     </div>
                 </div>
+                </div>
             </div>
         </div>
         <div class="col">
+            <div class="col filter-item" data-category="fungi">
             <div class="card-container" style="perspective: 1000px;">
                 <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                     <!-- Front Side -->
@@ -1265,9 +1516,11 @@
                         <br>Carateristics: It is a saprophyte that plays an important role in the ecosystem by breaking down organic matter in the soil. Its habitat is primarily in broad-leaved forests, where it can be found on fallen leaves.</p>
                     </div>
                 </div>
+                </div>
             </div>
         </div>
         <div class="col">
+            <div class="col filter-item" data-category="fungi">
             <div class="card-container" style="perspective: 1000px;">
                 <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                     <!-- Front Side -->
@@ -1282,12 +1535,14 @@
                         Characteristics: Oudemansiella canarii is a fungus with a distinctive umbrella-shaped cap and a slimy surface. It plays an essential ecological role as a decomposer of organic matter, particularly in humid forest environments.<br>
                         Habitat: Found in tropical and subtropical forests, often on decaying wood, tree stumps, or fallen logs.</p>
                     </div>
+                    </div>
                 </div>
             </div>
         </div>
         
        
         <div class="col">
+            <div class="col filter-item" data-category="fungi">
             <div class="card-container" style="perspective: 1000px;">
                 <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                     <!-- Front Side -->
@@ -1304,6 +1559,7 @@
                         The family Hygrophoraceae is very poorly represented in tropical areas, it is considered to be from temperate areas.</p>
                     </div>
                 </div>
+            </div>
             </div>
         </div>
         
@@ -1322,6 +1578,8 @@
        
               <!-- Card 9 -->
               <div class="col">
+                <div class="col filter-item" data-category="arachnids">
+
                 <div class="card-container" style="perspective: 1000px;">
                     <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                         <div class="card-front" style="backface-visibility: hidden; position: relative;">
@@ -1336,7 +1594,7 @@
                             Characteristics: The Tailless Whip Scorpion is an arachnid found in tropical regions of Central America. Despite its name, it is not a true scorpion, as it lacks the venomous tail. Instead, this species uses its long, whip-like appendages to sense its environment and capture prey.
                             </p>
                         </div>
-                        
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1344,6 +1602,7 @@
 
               <!-- Card 2 -->
               <div class="col">
+                <div class="col filter-item" data-category="arachnids">
                 <div class="card-container" style="perspective: 1000px;">
                     <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                         <div class="card-front" style="backface-visibility: hidden; position: relative;">
@@ -1359,10 +1618,12 @@
                           </div>
                         
                     </div>
+                    </div>
                 </div>
             </div>
               <!-- Card 3 -->
               <div class="col">
+                <div class="col filter-item" data-category="arachnids">
                 <div class="card-container" style="perspective: 1000px;">
                     <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                         <div class="card-front" style="backface-visibility: hidden; position: relative;">
@@ -1378,12 +1639,13 @@
                             </p>
                         </div>
                         
-                        
+                        </div>
                     </div>
                 </div>
             </div>
                    <!-- Card 10 -->
        <div class="col">
+        <div class="col filter-item" data-category="arachnids">
         <div class="card-container" style="perspective: 1000px;">
             <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                 <div class="card-front" style="backface-visibility: hidden; position: relative;">
@@ -1398,12 +1660,13 @@
                         Characteristics: It is s a strikingly beautiful species of tarantula, known for its chevron-like pattern on the abdomen.
                     </p>
                 </div>
-                
+                </div>
             </div>
         </div>
     </div>
       <!-- Card 9 -->
       <div class="col">
+        <div class="col filter-item" data-category="arachnids">
         <div class="card-container" style="perspective: 1000px;">
             <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                 <div class="card-front" style="backface-visibility: hidden; position: relative;">
@@ -1418,11 +1681,12 @@
                     Characteristics: It is considered a tropical spider, it is regularly seen in gardens, and in warm and humid environments such as the tropical forest. It is considered a good biologic agent as a plague controller.
                     </p>
                 </div>
-                
+                </div>
             </div>
         </div>
     </div>
             <div class="col">
+                <div class="col filter-item" data-category="arachnids">
                 <div class="card-container" style="perspective: 1000px;">
                     <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                         <div class="card-front" style="backface-visibility: hidden; position: relative;">
@@ -1437,11 +1701,12 @@
                             Characteristics: It frequents the lower parts of the forest, rich in heliconias and broad-leaved plants. Here it finds its favorite habitat, since these plants serve as a platform for hunting.
                             </p>
                         </div>
-                        
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="col">
+                <div class="col filter-item" data-category="arachnids">
                 <div class="card-container" style="perspective: 1000px;">
                     <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                         <div class="card-front" style="backface-visibility: hidden; position: relative;">
@@ -1456,11 +1721,12 @@
                             Characteristics: They are typically found near lakes, ponds, and slow-moving streams. As the name suggests it captures prays from sources of water.
                             </p>
                         </div>
-                        
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="col">
+                <div class="col filter-item" data-category="arachnids">
                 <div class="card-container" style="perspective: 1000px;">
                     <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                         <div class="card-front" style="backface-visibility: hidden; position: relative;">
@@ -1476,11 +1742,12 @@
                             Characteristics: It lives in disturbed and pristine areas. Very widespread.
                             </p>
                         </div>
-                        
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="col">
+                <div class="col filter-item" data-category="arachnids">
                 <div class="card-container" style="perspective: 1000px;">
                     <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                         <div class="card-front" style="backface-visibility: hidden; position: relative;">
@@ -1496,11 +1763,12 @@
                             Characteristics: It lives in vegetation-rich environments where it skillfully camouflages itself, blending seamlessly into the foliage to evade predators as it navigates its complex life cycle. They can be found in the center of the spider web that they build only at night.
                             </p>
                         </div>
-                        
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="col">
+                <div class="col filter-item" data-category="arachnids">
                 <div class="card-container" style="perspective: 1000px;">
                     <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                         <div class="card-front" style="backface-visibility: hidden; position: relative;">
@@ -1516,7 +1784,7 @@
                             Characteristics: It lives in vegetation-rich environments where it skillfully camouflages itself. In Spanish it is known as Araña Bananera as it is found in banana plantations. It is a nocturnal spider that hunts at night, using its keen eyesight to locate prey.</p>
                             </p>
                         </div>
-                        
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1536,6 +1804,7 @@
       <div class="row">
         <div class="col">
             <!-- Card 1 -->
+            <div class="col filter-item" data-category="insects">
             <div class="card-container" style="perspective: 1000px;">
                 <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                     <div class="card-front" style="backface-visibility: hidden; position: relative;">
@@ -1550,12 +1819,13 @@
                         Characteristics: Known for its vibrant patterns and predatory behavior, this insect belongs to the Reduviidae family. It preys on other insects and uses itproboscis to inject saliva that digests the prey externally.
                         </p>
                     </div>
-                    
+                    </div>
                 </div>
             </div>
         </div>
           <!-- Card 2 -->
           <div class="col">
+            <div class="col filter-item" data-category="insects">
             <div class="card-container" style="perspective: 1000px;">
                 <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                     <div class="card-front" style="backface-visibility: hidden; position: relative;">
@@ -1570,12 +1840,13 @@
                         Characteristics: This scorpion is known for its distinctive coloration and potent venom. It is typically found in tropical and subtropical regions, where it inhabits leaf litter and under rocks. Its venom is used for hunting prey and self-defense.
                         </p>
                     </div>
-                    
+                    </div>
                 </div>
             </div>
         </div>
           <!-- Card 2 -->
           <div class="col">
+            <div class="col filter-item" data-category="insects">
             <div class="card-container" style="perspective: 1000px;">
               <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                 <!-- Front Side -->
@@ -1590,12 +1861,14 @@
                     Name: Cicada<br>
                     Characteristics: Cicadas are insects in the Cicadidae family known for their loud mating calls and unique life cycles, including long underground nymph stages and periodic emergences every 13 or 17 years. They have prominent eyes, transparent wings, and robust bodies, and are found in warm temperate to tropical regions.                  </p>
                 </div>
+                </div>
               </div>
             </div>
           </div>
           
           <!-- Card 2 -->
             <div class="col">
+                <div class="col filter-item" data-category="insects">
                 <div class="card-container" style="perspective: 1000px;">
                     <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                         <div class="card-front" style="backface-visibility: hidden; position: relative;">
@@ -1610,7 +1883,7 @@
                             Characteristics: This large beetle is known for its elongated body and strikingly long antennae, which can surpass its body length. It plays a vital ecological role in decomposing dead wood and recycling nutrients in the ecosystem. 
                             </p>
                         </div>
-                        
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1618,6 +1891,7 @@
           
                      <!-- Card 2 -->
                      <div class="col">
+                        <div class="col filter-item" data-category="insects">
                         <div class="card-container" style="perspective: 1000px;">
                             <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                                 <div class="card-front" style="backface-visibility: hidden; position: relative;">
@@ -1627,12 +1901,12 @@
                                 <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
                                     <p>Scientific Name: <i>Orthemis ferruginea</i>
                                     <br>
-                                     Name: 
+                                     Name: Roseate Skimmer.
                                     <br>
                                     Characteristics: The Orthemis ferruginea is a species of dragonfly belonging to the Libellulidae family. It is commonly found in tropical and subtropical regions, including Central America. This dragonfly is known for its striking coloration, with vibrant orange and black patterns on its wings and body.
                                     </p>
                                 </div>
-                                
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1640,6 +1914,7 @@
 
             <!-- Card 4 -->
             <div class="col">
+                <div class="col filter-item" data-category="insects">
                 <div class="card-container" style="perspective: 1000px;">
                     <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                         <div class="card-front" style="backface-visibility: hidden; position: relative;">
@@ -1654,13 +1929,14 @@
                             Characteristics: The Epilampra genus includes medium to large-sized cockroaches with a robust, oval body and a brown or dark mottled coloration, providing effective camouflage in their natural environment. 
                             </p>
                         </div>
-                        
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Card 5 -->
             <div class="col">
+                <div class="col filter-item" data-category="insects">
                 <div class="card-container" style="perspective: 1000px;">
                     <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                         <div class="card-front" style="backface-visibility: hidden; position: relative;">
@@ -1674,13 +1950,14 @@
                             <br>
 Characteristics: Heliconius butterflies are a group of vividly patterned species in the Nymphalidae family, primarily found in tropical and subtropical regions like Costa Rica. They are known for their long lifespans, mimicry, and unique ability to feed on pollen.                        </p>
                         </div>
-                        
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Card 6 -->
             <div class="col">
+                <div class="col filter-item" data-category="insects">
                 <div class="card-container" style="perspective: 1000px;">
                     <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                         <div class="card-front" style="backface-visibility: hidden; position: relative;">
@@ -1695,13 +1972,14 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                             Characteristics: The "click beetle" is a member of the Elateridae family, known for its unique ability to produce a clicking sound when it flips over or feels threatened. This sound is produced by a mechanism in its body that allows it to quickly flip back to its original position, helping it escape from predators. 
                             </p>
                         </div>
-                        
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Card 7 -->
             <div class="col">
+                <div class="col filter-item" data-category="insects">
                 <div class="card-container" style="perspective: 1000px;">
                     <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                         <div class="card-front" style="backface-visibility: hidden; position: relative;">
@@ -1716,13 +1994,14 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                             Characteristics: Enchophora sanguinea is a species of lantern bug, an insect from the hemiptera order.
                             </p>
                         </div>
-                        
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Card 8 -->
             <div class="col">
+                <div class="col filter-item" data-category="insects">
                 <div class="card-container" style="perspective: 1000px;">
                     <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                         <div class="card-front" style="backface-visibility: hidden; position: relative;">
@@ -1736,7 +2015,7 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                             <br>
                             Characteristics: The Morpho butterfly is a genus of large, vibrantly colored butterflies found in tropical forest. In Costa Rica lives the vibrant Morpho Helenor Narcissus.
                         </div>
-                        
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1745,6 +2024,7 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
        
                <!-- Card 11 -->
                <div class="col">
+                <div class="col filter-item" data-category="insects">
                 <div class="card-container" style="perspective: 1000px;">
                     <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                         <div class="card-front" style="backface-visibility: hidden; position: relative;">
@@ -1760,10 +2040,12 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                             </p>
                         </div>
                     </div>
+                    </div>
                 </div>
             </div>
 <!-- Card 12 -->
 <div class="col">
+    <div class="col filter-item" data-category="insects">
     <div class="card-container" style="perspective: 1000px;">
         <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
             <div class="card-front" style="backface-visibility: hidden; position: relative;">
@@ -1779,10 +2061,12 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                     Characteristics: A vital decomposer in Costa Rican soils, the common earthworm enriches soil fertility by breaking down organic matter, aerating the soil, and enhancing plant growth. It thrives in moist, nutrient-rich environments.
                 </p>                            
             </div>
+            </div>
         </div>
     </div>
 </div>
 <div class="col">
+    <div class="col filter-item" data-category="insects">
     <div class="card-container" style="perspective: 1000px;">
         <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
             <div class="card-front" style="backface-visibility: hidden; position: relative;">
@@ -1797,11 +2081,13 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                   </p>
                                              
             </div>
+            </div>
         </div>
     </div>
 </div>
 <!-- Card 12 -->
 <div class="col">
+    <div class="col filter-item" data-category="insects">
     <div class="card-container" style="perspective: 1000px;">
         <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
             <div class="card-front" style="backface-visibility: hidden; position: relative;">
@@ -1817,10 +2103,12 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                                         
             </div>
         </div>
+        </div>
     </div>
 </div>
 <!-- Card 12 -->
 <div class="col">
+    <div class="col filter-item" data-category="insects">
     <div class="card-container" style="perspective: 1000px;">
         <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
             <div class="card-front" style="backface-visibility: hidden; position: relative;">
@@ -1835,6 +2123,7 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                   </p>
                          
             </div>
+            </div>
         </div>
     </div>
 </div>
@@ -1843,6 +2132,7 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
         
              
                 <div class="col">
+                    <div class="col filter-item" data-category="insects">
                     <div class="card-container" style="perspective: 1000px;">
                         <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                             <!-- Front Side of the Card -->
@@ -1861,6 +2151,7 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                                 </p>
                             </div>
                         </div>
+                        </div>
                     </div>
                 </div>
                 
@@ -1878,6 +2169,7 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
       <div class="row">
           <!-- Card 1 -->
           <div class="col">
+            <div class="col filter-item" data-category="mammals">
               <div class="card-container" style="perspective: 1000px;">
                   <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                       <!-- Front Side -->
@@ -1894,10 +2186,12 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                     </div>
                   </div>
               </div>
+              </div>
           </div>
   
             <!-- Card 2 -->
             <div class="col">
+                <div class="col filter-item" data-category="mammals">
                 <div class="card-container" style="perspective: 1000px;">
                     <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                         <!-- Front Side -->
@@ -1916,11 +2210,13 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                                                   
                       </div>
                     </div>
+                    </div>
                 </div>
             </div>
   
           <!-- Card 3 -->
           <div class="col">
+            <div class="col filter-item" data-category="mammals">
               <div class="card-container" style="perspective: 1000px;">
                   <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                       <!-- Front Side -->
@@ -1937,10 +2233,12 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                     </div>
                   </div>
               </div>
+              </div>
           </div>
   
           <!-- Card 4 -->
           <div class="col">
+            <div class="col filter-item" data-category="mammals">
               <div class="card-container" style="perspective: 1000px;">
                   <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                       <!-- Front Side -->
@@ -1956,10 +2254,12 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                         </p>                                    
                     </div>
                   </div>
+                  </div>
               </div>
           </div>
           <!-- Card 4 -->
           <div class="col">
+            <div class="col filter-item" data-category="mammals">
             <div class="card-container" style="perspective: 1000px;">
                 <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                     <!-- Front Side -->
@@ -1975,10 +2275,12 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                         </p>                                  
                     </div>
                 </div>
+                </div>
             </div>
         </div>
             <!-- Card 4 -->
             <div class="col">
+                <div class="col filter-item" data-category="mammals">
                 <div class="card-container" style="perspective: 1000px;">
                     <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                         <!-- Front Side -->
@@ -1998,9 +2300,11 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                         </div>
                     </div>
                 </div>
+                </div>
             </div>
         <!-- Card 4 -->
         <div class="col">
+            <div class="col filter-item" data-category="mammals">
             <div class="card-container" style="perspective: 1000px;">
                 <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                     <!-- Front Side -->
@@ -2016,10 +2320,12 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                             Status: Least Concern.
                         </p>                          
                     </div>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="col">
+            <div class="col filter-item" data-category="mammals">
             <div class="card-container" style="perspective: 1000px;">
                 <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                     <!-- Front Side -->
@@ -2035,9 +2341,11 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                         </p>                          
                     </div>
                 </div>
+                </div>
             </div>
         </div>
         <div class="col">
+            <div class="col filter-item" data-category="mammals">
             <div class="card-container" style="perspective: 1000px;">
                 <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                     <!-- Front Side -->
@@ -2053,11 +2361,13 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                         </p>                          
                     </div>
                 </div>
+                </div>
             </div>
         </div>
         
           <!-- Card 2 -->
           <div class="col">
+            <div class="col filter-item" data-category="mammals">
             <div class="card-container" style="perspective: 1000px;">
                 <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                     <!-- Front Side -->
@@ -2076,17 +2386,19 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                   </div>
                 </div>
             </div>
+            </div>
         </div>
       </div>
   </div>
 </p>
 <p style="text-align: center; font-size: 30px; ">
     <br>
-    <b>Plants and Trees</b>  
+    <b>Flora</b>  
     <div class="container custom-container">
       <div class="row">
           <!-- Card 1 -->
           <div class="col">
+            <div class="col filter-item" data-category="flora">
             <div class="card-container" style="perspective: 1000px;">
                 <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                     <!-- Front Side -->
@@ -2101,10 +2413,12 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                           </p>
                   </div>
                 </div>
+                </div>
             </div>
         </div>
            <!-- Card 1 -->
            <div class="col">
+            <div class="col filter-item" data-category="flora">
             <div class="card-container" style="perspective: 1000px;">
                 <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                     <!-- Front Side -->
@@ -2119,10 +2433,12 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                             </p>
                   </div>
                 </div>
+                </div>
             </div>
         </div>
           <!-- Card 1 -->
           <div class="col">
+            <div class="col filter-item" data-category="flora">
             <div class="card-container" style="perspective: 1000px;">
                 <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                     <!-- Front Side -->
@@ -2137,10 +2453,12 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                             </p>
                   </div>
                 </div>
+                </div>
             </div>
         </div>
           <!-- Card 1 -->
           <div class="col">
+            <div class="col filter-item" data-category="flora">
             <div class="card-container" style="perspective: 1000px;">
                 <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                     <!-- Front Side -->
@@ -2155,10 +2473,12 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                             </p>
                   </div>
                 </div>
+                </div>
             </div>
         </div>
           <!-- Card 1 -->
           <div class="col">
+            <div class="col filter-item" data-category="flora">
             <div class="card-container" style="perspective: 1000px;">
                 <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                     <!-- Front Side -->
@@ -2173,10 +2493,12 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                             </p>
                   </div>
                 </div>
+                </div>
             </div>
         </div>
           <!-- Card 1 -->
           <div class="col">
+            <div class="col filter-item" data-category="flora">
             <div class="card-container" style="perspective: 1000px;">
                 <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                     <!-- Front Side -->
@@ -2191,10 +2513,12 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                             </p>
                   </div>
                 </div>
+                </div>
             </div>
         </div>
           <!-- Card 1 -->
           <div class="col">
+            <div class="col filter-item" data-category="flora">
             <div class="card-container" style="perspective: 1000px;">
                 <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                     <!-- Front Side -->
@@ -2209,10 +2533,12 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                             </p>
                   </div>
                 </div>
+                </div>
             </div>
         </div>
           <!-- Card 1 -->
           <div class="col">
+            <div class="col filter-item" data-category="flora">
             <div class="card-container" style="perspective: 1000px;">
                 <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                     <!-- Front Side -->
@@ -2227,10 +2553,12 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                             </p>
                   </div>
                 </div>
+                </div>
             </div>
         </div>
           <!-- Card 1 -->
           <div class="col">
+            <div class="col filter-item" data-category="flora">
             <div class="card-container" style="perspective: 1000px;">
                 <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                     <!-- Front Side -->
@@ -2245,10 +2573,12 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                             </p>
                   </div>
                 </div>
+                </div>
             </div>
         </div>
           <!-- Card 1 -->
           <div class="col">
+            <div class="col filter-item" data-category="flora">
             <div class="card-container" style="perspective: 1000px;">
                 <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                     <!-- Front Side -->
@@ -2263,10 +2593,12 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                             </p>
                   </div>
                 </div>
+                </div>
             </div>
         </div>
           <!-- Card 1 -->
           <div class="col">
+            <div class="col filter-item" data-category="flora">
               <div class="card-container" style="perspective: 1000px;">
                   <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                       <!-- Front Side -->
@@ -2281,10 +2613,12 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                             <br>Habitat: Widespread and ocurring on both slopes in wet environments, sea level to 1800 m.</p>
                     </div>
                   </div>
+                  </div>
               </div>
           </div>
   
           <div class="col">
+            <div class="col filter-item" data-category="flora">
             <div class="card-container" style="perspective: 1000px;">
                 <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                     <!-- Front Side -->
@@ -2300,11 +2634,13 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                         Habitat: Native to the tropical regions of South America, especially in the Amazon Basin, it grows in humid, lowland forests.</p>
                     </div>
                 </div>
+                </div>
             </div>
         </div>
         
           <!-- Card 2 -->
           <div class="col">
+            <div class="col filter-item" data-category="flora">
               <div class="card-container" style="perspective: 1000px;">
                   <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                       <!-- Front Side -->
@@ -2320,10 +2656,12 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                     </div>
                   </div>
               </div>
+              </div>
           </div>
   
           <!-- Card 3 -->
           <div class="col">
+            <div class="col filter-item" data-category="flora">
               <div class="card-container" style="perspective: 1000px;">
                   <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                       <!-- Front Side -->
@@ -2338,11 +2676,13 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                             <br>Habitat: Primary forests. The inferior of the leaf has a sticky texture as velcro.</p>
                     </div>
                   </div>
+                  </div>
               </div>
           </div>
   
           <!-- Card 4 -->
           <div class="col">
+            <div class="col filter-item" data-category="flora">
               <div class="card-container" style="perspective: 1000px;">
                   <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                       <!-- Front Side -->
@@ -2358,9 +2698,11 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                     </div>
                   </div>
               </div>
+              </div>
           </div>
                  <!-- Card 4 -->
                  <div class="col">
+                    <div class="col filter-item" data-category="flora">
                     <div class="card-container" style="perspective: 1000px;">
                         <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                             <!-- Front Side -->
@@ -2374,11 +2716,13 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                                     <br> Name: Poró.
                                     <br>Habitat: 400 - 1.500 msnm. It is used for building natural fences for cattle, and reforestation. The flowers attract hummingbirds. </p>
                             </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                        <!-- Card 4 -->
           <div class="col">
+            <div class="col filter-item" data-category="flora">
             <div class="card-container" style="perspective: 1000px;">
                 <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                     <!-- Front Side -->
@@ -2392,11 +2736,13 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                             <br> Name: Lantana.
                             <br>Habitat: It is mainly used in gardes as it attracts hummingbirds and butterflies.  </p>
                     </div>
+                    </div>
                 </div>
             </div>
         </div>
                <!-- Card 4 -->
                <div class="col">
+                <div class="col filter-item" data-category="flora">
                 <div class="card-container" style="perspective: 1000px;">
                     <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                         <!-- Front Side -->
@@ -2411,9 +2757,11 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                                 <br>Habitat: From 0 - 1.200 msnm. Very good ornamental for gardens. They are considered invasive shrubs (weeds), though. However, migrant and resident birds feed from its ripe fruits.  </p>
                         </div>
                     </div>
+                    </div>
                 </div>
             </div>
             <div class="col">
+                <div class="col filter-item" data-category="flora">
                 <div class="card-container" style="perspective: 1000px;">
                     <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                         <!-- Front Side -->
@@ -2428,10 +2776,12 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                                 <br>Habitat: From 0 - 1.200 msnm. Very good ornamental for gardens. They are considered invasive shrubs (weeds), though. However, migrant and resident birds feed from its ripe fruits.  </p>
                         </div>
                     </div>
+                    </div>
                 </div>
             </div>
                    <!-- Card 4 -->
           <div class="col">
+            <div class="col filter-item" data-category="flora">
             <div class="card-container" style="perspective: 1000px;">
                 <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                     <!-- Front Side -->
@@ -2447,10 +2797,12 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                             <br>Habitat: Tropical rainforest. It serves as a food for hummingbirds and fruit-eating birds. It is a relative of the coffee.  </p>
                     </div>
                 </div>
+                </div>
             </div>
         </div>
                <!-- Card 4 -->
                <div class="col">
+                <div class="col filter-item" data-category="flora">
                 <div class="card-container" style="perspective: 1000px;">
                     <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                         <!-- Front Side -->
@@ -2467,9 +2819,11 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                         </div>
                     </div>
                 </div>
+                </div>
             </div>
                        <!-- Card 4 -->
                        <div class="col">
+                        <div class="col filter-item" data-category="flora">
                         <div class="card-container" style="perspective: 1000px;">
                             <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                                 <!-- Front Side -->
@@ -2485,12 +2839,14 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                                         <br>Habitat: Dry to wet forest, on Caribbean and Pacific Slope, up to 1,000 meters. Native to Africa.  </p>
                                 </div>
                             </div>
+                            </div>
                         </div>
                     </div>
 
 
                      <!-- Card 4 -->
                      <div class="col">
+                        <div class="col filter-item" data-category="flora">
                         <div class="card-container" style="perspective: 1000px;">
                             <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                                 <!-- Front Side -->
@@ -2506,10 +2862,12 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                                         <br>Habitat: Tropical rainforest. In places such as Tortuguero, La Selva (Sarapiquí), and the Osa Peninsula. Up to 750 meters.  </p>
                                 </div>
                             </div>
+                            </div>
                         </div>
                     </div>
                                <!-- Card 4 -->
                                <div class="col">
+                                <div class="col filter-item" data-category="flora">
                                 <div class="card-container" style="perspective: 1000px;">
                                     <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                                         <!-- Front Side -->
@@ -2525,10 +2883,12 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                                                 <br>Habitat: Native to tropical rainforests of the americas.   </p>
                                         </div>
                                     </div>
+                                    </div>
                                 </div>
                             </div>
                      <!-- Card 4 -->
                      <div class="col">
+                        <div class="col filter-item" data-category="flora">
                         <div class="card-container" style="perspective: 1000px;">
                             <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                                 <!-- Front Side -->
@@ -2545,10 +2905,12 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                                     </p>
                                 </div>
                             </div>
+                            </div>
                         </div>
                     </div>
                      <!-- Card 4 -->
                      <div class="col">
+                        <div class="col filter-item" data-category="flora">
                         <div class="card-container" style="perspective: 1000px;">
                             <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                                 <!-- Front Side -->
@@ -2564,10 +2926,12 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                                         <br>Habitat: Tropical rainforest. It is found in the Osa Peninsula. </p>
                                 </div>
                             </div>
+                            </div>
                         </div>
                     </div>
                      <!-- Card 4 -->
                      <div class="col">
+                        <div class="col filter-item" data-category="flora">
                         <div class="card-container" style="perspective: 1000px;">
                             <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                                 <!-- Front Side -->
@@ -2583,10 +2947,12 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                                         <br>Habitat: Tropical rainforest. It is distributed in Costa Rica from Carara to the Osa Peninsula. </p>
                                 </div>
                             </div>
+                            </div>
                         </div>
                     </div>
                      <!-- Card 4 -->
                      <div class="col">
+                        <div class="col filter-item" data-category="flora">
                         <div class="card-container" style="perspective: 1000px;">
                             <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                                 <!-- Front Side -->
@@ -2602,10 +2968,12 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                                         <br>Habitat: Dry to wet habitat across Costa Rica. This is one of the most famous species to build natural fences. While associated to dry forests, it is found in places as La Selva and Osa. </p>
                                 </div>
                             </div>
+                            </div>
                         </div>
                     </div>
                      <!-- Card 4 -->
                      <div class="col">
+                        <div class="col filter-item" data-category="flora">
                         <div class="card-container" style="perspective: 1000px;">
                             <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                                 <!-- Front Side -->
@@ -2621,10 +2989,12 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                                         <br>Habitat: Dry to wet ecosystems. It is a strangler fig, which means that it grows on other trees.  </p>
                                 </div>
                             </div>
+                            </div>
                         </div>
                     </div>
                      <!-- Card 4 -->
                      <div class="col">
+                        <div class="col filter-item" data-category="flora">
                         <div class="card-container" style="perspective: 1000px;">
                             <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                                 <!-- Front Side -->
@@ -2640,11 +3010,13 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                                         <br>Habitat: Common on coastal areas. Wet to very wet climate, it is found on the Caribbean and the Pacific Slope. It is known as Monkey Apple because it is a great source of food for monkeys.</p>
                                 </div>
                             </div>
+                            </div>
                         </div>
                     </div>
                     
                      <!-- Card 4 -->
                      <div class="col">
+                        <div class="col filter-item" data-category="flora">
                         <div class="card-container" style="perspective: 1000px;">
                             <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                                 <!-- Front Side -->
@@ -2660,10 +3032,12 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                                         <br>Habitat: It grows on the Pacific Slope, up to 1,000 meters. Very common in Guanacaste.  </p>
                                 </div>
                             </div>
+                            </div>
                         </div>
                     </div>
                      <!-- Card 4 -->
                      <div class="col">
+                        <div class="col filter-item" data-category="flora">
                         <div class="card-container" style="perspective: 1000px;">
                             <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                                 <!-- Front Side -->
@@ -2681,10 +3055,12 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                                         Astrocaryum alatum is especially common in swamp forests.  </p>
                                 </div>
                             </div>
+                            </div>
                         </div>
                     </div>
                          <!-- Card 4 -->
                          <div class="col">
+                            <div class="col filter-item" data-category="flora">
                             <div class="card-container" style="perspective: 1000px;">
                                 <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                                     <!-- Front Side -->
@@ -2700,10 +3076,12 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                                             <br>Habitat: Native to Brasil, it is only found if planted. Introduced in Costa Rica. </p>
                                     </div>
                                 </div>
+                                </div>
                             </div>
                         </div>
                              <!-- Card 4 -->
                      <div class="col">
+                        <div class="col filter-item" data-category="flora">
                         <div class="card-container" style="perspective: 1000px;">
                             <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                                 <!-- Front Side -->
@@ -2720,9 +3098,11 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                                 </div>
                             </div>
                         </div>
+                        </div>
                     </div>
                     
                     <div class="col">
+                        <div class="col filter-item" data-category="flora">
                         <div class="card-container" style="perspective: 1000px;">
                             <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                                 <!-- Front Side -->
@@ -2738,6 +3118,7 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                                         <br>Habitat: Tropical rainforest. It is distributed from Carara to Osa Peninsula. </p>
                                 </div>
                             </div>
+                            </div>
                         </div>
                     </div>
                     
@@ -2745,6 +3126,7 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                     
                    <!-- Card 4 -->
           <div class="col">
+            <div class="col filter-item" data-category="flora">
             <div class="card-container" style="perspective: 1000px;">
                 <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                     <!-- Front Side -->
@@ -2759,11 +3141,13 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                             <br>Name: Passiflora.
                             <br>Habitat: Tropical rainforest, wet or moist forest understoty or edge, common on Osa region. It lives on the treetops of the high trees. It canopies down and the flowers are near the ground. </p>
                     </div>
+                    </div>
                 </div>
             </div>
         </div>
                <!-- Card 4 -->
                <div class="col">
+                <div class="col filter-item" data-category="flora">
                 <div class="card-container" style="perspective: 1000px;">
                     <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                         <!-- Front Side -->
@@ -2779,10 +3163,12 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                                 <br>Habitat: Tropical rainforest. Normally, it is found above 1000 msnm, however, it has been occasionally seen at loweer wet sites as La Selva (Sarapiqui), and the Osa region. </p>
                         </div>
                     </div>
+                    </div>
                 </div>
             </div>
                    <!-- Card 4 -->
           <div class="col">
+            <div class="col filter-item" data-category="flora">
             <div class="card-container" style="perspective: 1000px;">
                 <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                     <!-- Front Side -->
@@ -2794,13 +3180,15 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                     <div class="card-back" style="backface-visibility: hidden; transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; border-radius: 8px;">
                         <p>Scientific Name: <i> Asterogyne martiana
                         </i>
-                            <br> Name: Rooster Tail.
+                            <br> Name: Suita.
                             <br>Habitat: Tropical rainforest. Up to 1000 msnm, specially notable in the northeast and Osa region. In the past, people would use its leaves to build roofs for their open air houses, or ranchos. However, it led to cause a massive destruction of the environment.</p>
                     </div>
+                </div>
                 </div>
             </div>
         </div>
         <div class="col">
+            <div class="col filter-item" data-category="flora">
             <div class="card-container" style="perspective: 1000px;">
                 <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                     <!-- Front Side -->
@@ -2816,6 +3204,7 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                             <br>Habitat: This tree is native to Costa Rica and is found mostly in humid forests. It is found understory, along the streams, and forest edges. Mostly at 30-1000m.</p>
                     </div>
                 </div>
+                </div>
             </div>
         </div>
       </div>
@@ -2830,6 +3219,8 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
       <div class="row">
           <!-- Card 1 -->
           <div class="col">
+            <div class="col filter-item" data-category="reptiles">
+
               <div class="card-container" style="perspective: 1000px;">
                   <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                       <!-- Front Side -->
@@ -2846,9 +3237,11 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                     </div>
                   </div>
               </div>
+              </div>
           </div>
        <!-- Card 10 -->
        <div class="col">
+        <div class="col filter-item" data-category="reptiles">
         <div class="card-container" style="perspective: 1000px;">
             <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                 <div class="card-front" style="backface-visibility: hidden; position: relative;">
@@ -2863,12 +3256,13 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
 
                     </p>
                 </div>
-                
+                </div>
             </div>
         </div>
     </div>
           <!-- Card 2 -->
           <div class="col">
+            <div class="col filter-item" data-category="reptiles">
               <div class="card-container" style="perspective: 1000px;">
                   <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                       <!-- Front Side -->
@@ -2884,6 +3278,7 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                             <br>Habitat: It can be found all across the country. Dark postocular stripe and vertical pupils. Terrestrial. Necessary immediate medical attention.</p>
                     </div>
                   </div>
+                  </div>
               </div>
           </div>
   
@@ -2891,6 +3286,7 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
   
           <!-- Card 4 -->
           <div class="col">
+            <div class="col filter-item" data-category="reptiles">
               <div class="card-container" style="perspective: 1000px;">
                   <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                       <!-- Front Side -->
@@ -2906,10 +3302,12 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                             <br>Habitat: It lives in the rainforest on the Pacific side. Middorsal area is crisscrossed by multiple black lines.</p>
                     </div>
                   </div>
+                  </div>
               </div>
           </div>
           <!-- Card 4 -->
           <div class="col">
+            <div class="col filter-item" data-category="reptiles">
             <div class="card-container" style="perspective: 1000px;">
                 <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                     <!-- Front Side -->
@@ -2925,10 +3323,12 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                             <br>Habitat: It is found all across the country. Extremely variable in coloration. Secretively moves through the forest, when it feels threatened it flattens its body.</p>
                     </div>
                 </div>
+                </div>
             </div>
         </div>
         <!-- Card 4 -->
         <div class="col">
+            <div class="col filter-item" data-category="reptiles">
             <div class="card-container" style="perspective: 1000px;">
                 <div class="card" onclick="flipCard(this)" style="width: 18rem; transform-style: preserve-3d; transition: transform 0.6s;">
                     <!-- Front Side -->
@@ -2943,6 +3343,7 @@ Characteristics: Heliconius butterflies are a group of vividly patterned species
                             <br>Name: Oropel.
                             <br>Habitat: Elavated scales on dorsal margin of eye form 2 eyelash-like projections. It is normally found on trees, never on the ground. Extremely poisonous, it requires immediate medical attention.</p>
                     </div>
+                </div>
                 </div>
             </div>
         </div>

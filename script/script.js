@@ -109,3 +109,19 @@ carousel.addEventListener('slid.bs.carousel', function () {
 
   // Inicializa
   updatePosition();
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+  
